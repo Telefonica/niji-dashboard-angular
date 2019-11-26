@@ -15,7 +15,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
-
+import {MatListModule} from '@angular/material/list';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import {MatTreeModule} from '@angular/material/tree';
+import { MainMenuComponent } from './main-menu/main-menu.component';
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto'
@@ -25,6 +28,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AppComponent,
     PruebaComponent,
     SidenavAutosizeExampleComponent,
+    MainLayoutComponent,
+    MainMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    SwiperModule
+    SwiperModule,
+    MatListModule,
+    MatTreeModule
   ],
   providers: [
     {
