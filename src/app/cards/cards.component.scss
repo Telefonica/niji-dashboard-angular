@@ -1,0 +1,12 @@
+// .mat-card-header{
+//   margin-left: 30px;
+// }
+// :host {
+//   background-color: yellow;
+// }
+// :host{
+//   background-color: yellow;
+:host ::ng-deep .mat-card-header-text{
+  margin-left:0;
+}
+// }

@@ -28,3 +28,27 @@
 //   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
 //   background-size: cover;
 // }
+// *[class^='main-menu']{
+  .mat-drawer-inner-container{
+  .mat-list-base .mat-list-item .mat-list-item-content{
+    padding: 0;
+    button{
+      padding:0;
+      width:100%;
+    }
+  }
+  // .mat-expansion-panel-spacing{
+  //   margin:0;
+  // }
+  .mat-expansion-panel{
+    min-width:300px;
+  }
+}
+.header-image{
+  height: 100px;
+  background-color: #00a9e0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
