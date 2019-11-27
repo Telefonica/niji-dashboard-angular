@@ -22,6 +22,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
 import { MainMenuDropdownComponent } from './main-menu-dropdown/main-menu-dropdown.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CardsComponent } from './cards/cards.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -35,7 +36,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MainLayoutComponent,
     MainMenuComponent,
     MainMenuDropdownComponent,
-    CardsComponent
+    CardsComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
