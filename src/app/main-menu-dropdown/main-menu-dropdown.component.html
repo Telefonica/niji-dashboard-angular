@@ -1,0 +1,81 @@
+<mat-accordion multi="true" displayMode="flat">
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Menu 1
+      </mat-panel-title>
+      <!-- <mat-panel-description>
+          Type your name and age
+        </mat-panel-description> -->
+    </mat-expansion-panel-header>
+    <mat-list>
+      <mat-list-item> <button mat-button class="text-left">option2 </button> </mat-list-item>
+      <mat-list-item> <button mat-button class="text-left">option2 </button> </mat-list-item>
+      <mat-list-item> <button mat-button class="text-left">option2 </button> </mat-list-item>
+    </mat-list>
+
+  </mat-expansion-panel>
+  <mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Menu 2
+      </mat-panel-title>
+      <!-- <mat-panel-description>
+Type your name and age
+</mat-panel-description> -->
+    </mat-expansion-panel-header>
+    <mat-list>
+      <mat-list-item> option2 </mat-list-item>
+      <mat-list-item> option2 </mat-list-item>
+      <mat-list-item> option2 </mat-list-item>
+
+    </mat-list>
+
+  </mat-expansion-panel>
+  <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Menu 2
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+  Type your name and age
+  </mat-panel-description> -->
+      </mat-expansion-panel-header>
+      <mat-list>
+        <mat-list-item> option2 </mat-list-item>
+        <mat-list-item> option2 </mat-list-item>
+        <mat-list-item> option2 </mat-list-item>
+
+      </mat-list>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Menu 2
+          </mat-panel-title>
+          <!-- <mat-panel-description>
+    Type your name and age
+    </mat-panel-description> -->
+        </mat-expansion-panel-header>
+        <mat-list>
+          <mat-list-item> option2 </mat-list-item>
+          <mat-list-item> option2 </mat-list-item>
+          <mat-list-item> option2 </mat-list-item>
+
+        </mat-list>
+
+      </mat-expansion-panel>
+  <!-- <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Self aware panel
+        </mat-panel-title> -->
+  <!-- <mat-panel-description>
+          Currently I am {{panelOpenState ? 'open' : 'closed'}}
+        </mat-panel-description> -->
+  <!-- </mat-expansion-panel-header>
+      <button mat-icon-button class="ml-auto">option2 </button>
+    </mat-expansion-panel> -->
+</mat-accordion>
