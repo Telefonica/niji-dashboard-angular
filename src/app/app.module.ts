@@ -21,7 +21,8 @@ import { MainMenuDropdownComponent } from './main-menu-dropdown/main-menu-dropdo
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CardsComponent } from './cards/cards.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -49,7 +50,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatListModule,
     MatTreeModule,
     MatExpansionModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     {

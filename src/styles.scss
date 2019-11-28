@@ -8,32 +8,5 @@
 @import "~bootstrap/scss/utilities";
 @import "./assets/reset"; // needed to join bootstrap and material
 
-@import "./assets/global.scss";
-
-.mat-drawer-inner-container {
-  .mat-list-base .mat-list-item .mat-list-item-content {
-    padding: 0;
-
-    button {
-      padding: 0;
-      width: 100%;
-    }
-  }
-
-  .mat-expansion-panel {
-    min-width: 300px;
-  }
-}
-
-.header-image {
-  height: 100px;
-  background-color: $primary;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-bar {
-  background-color: $primary-50-op;
-}
+@import "./assets/global.scss"; // change it for OB
+// @import "./assets/brazil.scss"; // change it for OB

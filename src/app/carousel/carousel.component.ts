@@ -39,7 +39,7 @@ export class CarouselComponent implements OnInit {
 
   public config: SwiperConfigInterface = {
     direction: 'horizontal',
-    spaceBetween:10,
+    spaceBetween: 10,
     slidesPerView: 2,
     keyboard: true,
     mousewheel: true,
@@ -47,7 +47,7 @@ export class CarouselComponent implements OnInit {
     navigation: false,
     pagination: true,
     autoplay: {
-      delay: 5000,
+      delay: 150000,
     }
   };
   constructor() { }
