@@ -5,8 +5,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
-import { PruebaComponent } from './prueba/prueba.component';
-import { SidenavAutosizeExampleComponent } from './sidenav-autosize-example/sidenav-autosize-example.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -23,6 +21,7 @@ import { MainMenuDropdownComponent } from './main-menu-dropdown/main-menu-dropdo
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CardsComponent } from './cards/cards.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -31,8 +30,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
 @NgModule({
   declarations: [
     AppComponent,
-    PruebaComponent,
-    SidenavAutosizeExampleComponent,
     MainLayoutComponent,
     MainMenuComponent,
     MainMenuDropdownComponent,
@@ -51,7 +48,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SwiperModule,
     MatListModule,
     MatTreeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSlideToggleModule
   ],
   providers: [
     {

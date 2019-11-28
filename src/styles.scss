@@ -1,54 +1,39 @@
 // Imports functions, variables, and mixins that are needed by other Bootstrap files
-@import "variables";
+@import "./assets/variables"; // needed to join bootstrap and material
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/utilities"; // add css utilities
-@import "reset";
+@import "~bootstrap/scss/utilities";
+@import "./assets/reset"; // needed to join bootstrap and material
 
+@import "./assets/global.scss";
 
-/* You can add global styles to this file, and also import other style files */
-
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-// .example-container {
-//   width: 100%;
-//   height: 100%;
-//   margin: 10px;
-//   border: 1px solid #555;
-// }
-// .example-card {
-//   max-width: 400px;
-//   margin: 20px;
-// }
-
-// .example-header-image {
-//   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-//   background-size: cover;
-// }
-// *[class^='main-menu']{
-  .mat-drawer-inner-container{
-  .mat-list-base .mat-list-item .mat-list-item-content{
+.mat-drawer-inner-container {
+  .mat-list-base .mat-list-item .mat-list-item-content {
     padding: 0;
-    button{
-      padding:0;
-      width:100%;
+
+    button {
+      padding: 0;
+      width: 100%;
     }
   }
-  // .mat-expansion-panel-spacing{
-  //   margin:0;
-  // }
-  .mat-expansion-panel{
-    min-width:300px;
+
+  .mat-expansion-panel {
+    min-width: 300px;
   }
 }
-.header-image{
+
+.header-image {
   height: 100px;
-  background-color: #00a9e0;
+  background-color: $primary;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-bar {
+  background-color: $primary-50-op;
 }

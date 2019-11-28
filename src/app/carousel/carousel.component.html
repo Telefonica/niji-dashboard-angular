@@ -1,10 +1,9 @@
 <swiper *ngIf="type == 'component' && show" class="swiper-container" fxFlex="auto" [config]="config" [disabled]="disabled">
     <div *ngFor="let slide of slides" class="swiper-slide">
       <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
-        <!-- <h1 class="mat-headline" style="margin:20px;">{{slide}}</h1> -->
-        <br>
-        <img src="https://picsum.photos/seed/picsum/1000/300" alt="" class="w-100">
-        <p class="body-text" style="margin:20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptatem cupiditate maxime deleniti quia, magnam corrupti ipsa quisquam perspiciatis autem nemo fugit quibusdam quod nostrum fugiat architecto officiis cum voluptate.</p>
+        <h1 class="mat-headline">{{slide.name}}</h1>
+        <img src={{slide.img}} alt="">
+        <p class="body-text" class="mb-5 mt-2">{{slide.text}}</p>
       </div>
     </div>
   </swiper>
