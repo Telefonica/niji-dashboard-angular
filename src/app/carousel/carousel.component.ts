@@ -47,7 +47,7 @@ export class CarouselComponent implements OnInit {
     navigation: false,
     pagination: true,
     autoplay: {
-      delay: 150000,
+      delay: 5000,
     }
   };
   constructor() { }
