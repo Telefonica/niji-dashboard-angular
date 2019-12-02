@@ -1,0 +1,9 @@
+<swiper *ngIf="type == 'component' && show" class="swiper-container" fxFlex="auto" [config]="config" [disabled]="disabled">
+    <div *ngFor="let slide of slides" class="swiper-slide">
+      <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+        <h1 class="mat-headline">{{slide.name}}</h1>
+        <img src={{slide.img}} alt="">
+        <p class="body-text" class="mb-5 mt-2">{{slide.text}}</p>
+      </div>
+    </div>
+  </swiper>

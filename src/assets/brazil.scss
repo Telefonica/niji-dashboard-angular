@@ -1,4 +1,3 @@
-// Imports functions, variables, and mixins that are needed by other Bootstrap files
 @import "./assets/variables"; // needed to join bootstrap and material
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -7,6 +6,7 @@
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/utilities";
 @import "./assets/reset"; // needed to join bootstrap and material
+@import "./assets/global/variables"; // needed to join bootstrap and material
 
-@import "./assets/global.scss"; // change it for OB
-// @import "./assets/brazil.scss"; // change it for OB
+@import "./assets/brazil/variables.scss"; // OB theme
+@import "./assets/common.scss"; // common styles
