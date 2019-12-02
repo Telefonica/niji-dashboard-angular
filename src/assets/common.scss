@@ -1,38 +1,64 @@
-.header-image {
-  height: 100px;
+// ### colors clases ###
+.primary {
+  color: $primary;
+}
+.primary-bg {
   background-color: $primary;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 
-.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-bar {
-  background-color: $primary-50-op;
+// ### LAYOUT ELEMENTS ###
+.mat-toolbar{
+  &.mat-primary {
+    background: $primary;
+  }
 }
 
+.sub-header {
+  // height: 100px;
+  // background-color: $primary;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+}
+
+// ### MAIN MENU ###
+.mat-drawer-inner-container{
+  .mat-list-base {
+    .mat-list-item,
+     .mat-list-option{
+      height: 30px;
+    }
+  }
+}
+
+// ### COMPONENTS ###
+//switch
+.mat-slide-toggle{
+  &.mat-primary{
+    &.mat-checked{
+      .mat-slide-toggle-bar {
+        background-color: $primary-50-op;
+      }
+      .mat-slide-toggle-thumb {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+
+//loader
 mat-progress-spinner {
   margin: 0 auto;
   opacity: .3;
 }
-
-.primary {
-  color: $primary;
-}
-
-.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
-  background-color: $primary;
-}
-
-.mat-toolbar.mat-primary {
-  background: $primary;
-}
-
 .mat-progress-spinner circle,
 .mat-spinner circle {
   stroke: $primary;
 }
 
+//carousel
 .swiper-pagination-bullet-active {
-  background-color: $primary !important;
+  background-color: $primary;
 }

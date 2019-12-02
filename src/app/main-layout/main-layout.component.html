@@ -5,6 +5,8 @@
       <mat-icon>menu</mat-icon>
     </button>
   </mat-toolbar>
+
+  <div class="sub-header">&nbsp;</div>
   <mat-sidenav-container class="main-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
 
     <mat-sidenav #snav [(opened)]="opened" [mode]="mobileQuery.matches ? 'over' : 'side'"
@@ -13,9 +15,8 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <div class="header-image">&nbsp;</div>
       <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
-      <div class="container mt-5">
+      <div class="container">
         <app-cards></app-cards>
       </div>
     </mat-sidenav-content>

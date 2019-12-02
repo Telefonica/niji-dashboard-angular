@@ -17,7 +17,7 @@ export class MainLayoutComponent implements OnDestroy {
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
     console.log("this.mobileQuery: ",this.mobileQuery.matches);
-    !this.mobileQuery.matches ?  this.opened = true : this.opened = false;
+    this.mobileQuery.matches ?  this.opened = false : this.opened = true;
   }
 
   ngOnDestroy(): void {

@@ -1,6 +1,11 @@
 :host ::ng-deep {
-.mat-card-header-text{
-  margin-left:0;
-}
-}
+  .mat-card-header-text {
+    margin-left: 0;
+  }
 
+  .mat-card-subtitle,
+  .mat-card-content,
+  .mat-card-actions {
+    margin-left: 32px;
+  }
+}
