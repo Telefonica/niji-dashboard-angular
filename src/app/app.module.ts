@@ -15,8 +15,6 @@ import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { MatListModule } from '@angular/material/list';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
-import { MatTreeModule } from '@angular/material/tree';
-import { MainMenuComponent } from './main-menu/main-menu.component';
 import { MainMenuDropdownComponent } from './main-menu-dropdown/main-menu-dropdown.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CardsComponent } from './cards/cards.component';
@@ -32,7 +30,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   declarations: [
     AppComponent,
     MainLayoutComponent,
-    MainMenuComponent,
     MainMenuDropdownComponent,
     CardsComponent,
     CarouselComponent
@@ -48,7 +45,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatButtonModule,
     SwiperModule,
     MatListModule,
-    MatTreeModule,
     MatExpansionModule,
     MatSlideToggleModule,
     MatProgressSpinnerModule

@@ -1,11 +1,39 @@
+@import "./../../assets/global/variables.scss";
 :host ::ng-deep {
+  .mat-card{
+    color: $default-text;
+    padding:0;
+  }
+  .mat-card-header{
+    padding: 16px ;
+    border-bottom:1px solid #e9eae8;
+      .mat-card-title{
+        margin-bottom: 0;
+      }
+      .mat-card-subtitle {
+        margin-bottom: 0;
+        &:not(:first-child),
+        &:first-child{
+          margin-top:16px;
+        }
+      }
+  }
+
   .mat-card-header-text {
     margin-left: 0;
   }
-
+  .mat-card-content{
+    margin-left: 38px;
+    padding: 14px;
+    border-bottom:1px solid #e9eae8;
+    display:flex;
+    margin-bottom: 0;
+    padding-right: 0;
+    margin-right: 14px;
+}
   .mat-card-subtitle,
-  .mat-card-content,
   .mat-card-actions {
     margin-left: 32px;
   }
+
 }

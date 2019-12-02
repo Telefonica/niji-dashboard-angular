@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-12  col-lg-6 mt-4">
+  <div class="col-12  col-lg-8 mt-4">
     <mat-card>
       <mat-card-content>
         <mat-progress-spinner mode="indeterminate">
@@ -7,238 +7,29 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <div class="w-100 d-sm-none"></div>
-  <div class="col-12  col-lg-6 mt-4">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>
-          <mat-icon class="align-middle primary mat-primary" aria-hidden="false" aria-label="conexión">verified_user</mat-icon>
-          <span class="align-middle ml-2">TITLE</span>
-        </mat-card-title>
-        <mat-card-subtitle class="primary mat-primary">Subtitle</mat-card-subtitle>
-        <mat-slide-toggle class="ml-auto mt-1" color="primary" checked="checked">
-        </mat-slide-toggle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nesciunt, similique facilis dolore
-          consequuntur, excepturi eligendi laboriosam asperiores eius sequi officiis maxime sapiente, dicta
-          cupiditate
-          alias libero illo nisi quaerat.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>OPTION A</button>
-        <button mat-button>OPTION 2</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-  <div class="w-100 d-sm-none"></div>
-  <div class="col-12  col-lg-6 mt-4">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>
-          <mat-icon class="align-middle mr-1 primary" aria-hidden="false" aria-label="conexión">language</mat-icon><span
-            class="align-middle">TITLE</span>
-        </mat-card-title>
-        <mat-card-subtitle class="primary">Subtitle</mat-card-subtitle>
-        <mat-slide-toggle class="ml-auto mt-1" color="primary">
-        </mat-slide-toggle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nesciunt, similique facilis dolore
-          consequuntur, excepturi eligendi laboriosam asperiores eius sequi officiis maxime sapiente, dicta
-          cupiditate
-          alias libero illo nisi quaerat.
-        </p>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <div class="w-100 d-sm-none"></div>
-  <div class="col-12  col-lg-6 mt-4">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>
-          <mat-icon class="align-middle mr-1 primary" aria-hidden="false" aria-label="conexión">start</mat-icon><span
-            class="align-middle">TITLE</span>
-        </mat-card-title>
-        <mat-card-subtitle class="primary">Subtitle</mat-card-subtitle>
-        <mat-slide-toggle class="ml-auto mt-1" color="primary" disabled="disabled">
-        </mat-slide-toggle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nesciunt, similique facilis dolore
-          consequuntur, excepturi eligendi laboriosam asperiores eius sequi officiis maxime sapiente, dicta
-          cupiditate
-          alias libero illo nisi quaerat.
-        </p>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <div class="w-100 d-sm-none"></div>
-  <div class="col-12  col-lg-6 mt-4">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>
-          <mat-icon class="align-middle mr-1" aria-hidden="false" aria-label="conexión">home</mat-icon><span
-            class="align-middle">TITLE</span>
-        </mat-card-title>
-        <mat-card-subtitle class="primary">Subtitle</mat-card-subtitle>
-        <mat-slide-toggle class="ml-auto mt-1" color="primary" checked="checked">
-        </mat-slide-toggle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nesciunt, similique facilis dolore
-          consequuntur, excepturi eligendi laboriosam asperiores eius sequi officiis maxime sapiente, dicta
-          cupiditate
-          alias libero illo nisi quaerat.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>OPTION A</button>
-        <button mat-button>OPTION 2</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-  <div class="w-100 d-sm-none"></div>
-  <div class="col-12  col-lg-6 mt-4">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>
-          <mat-icon class="align-middle mr-1" aria-hidden="false" aria-label="conexión">home</mat-icon><span
-            class="align-middle">TITLE</span>
-        </mat-card-title>
-        <mat-card-subtitle class="primary">Subtitle</mat-card-subtitle>
-        <mat-slide-toggle class="ml-auto mt-1" color="primary" checked="checked">
-        </mat-slide-toggle>
-      </mat-card-header>
-      <mat-card-content>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nesciunt, similique facilis dolore
-        consequuntur, excepturi eligendi laboriosam asperiores eius sequi officiis maxime sapiente, dicta
-        cupiditate
-        alias libero illo nisi quaerat.
-      </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>OPTION A</button>
-        <button mat-button>OPTION 2</button>
-      </mat-card-actions>
-    </mat-card>
 
-  </div>
-  <div class="w-100 d-sm-none"></div>
-  <div class="col-12  col-lg-6 mt-4">
+  <div *ngFor="let card of cards" class="col-12  col-lg-8 mt-4">
     <mat-card>
       <mat-card-header>
         <mat-card-title>
-          <mat-icon class="align-middle mr-1" aria-hidden="false" aria-label="conexión">home</mat-icon><span
-            class="align-middle">TITLE</span>
+          <mat-icon class="align-middle primary mat-primary" aria-hidden="false" aria-label="conexión">{{card.icon}}
+          </mat-icon>
+          <span class="align-middle ml-2">{{card.title}}</span>
         </mat-card-title>
-        <mat-card-subtitle class="primary">Subtitle</mat-card-subtitle>
-        <mat-slide-toggle class="ml-auto mt-1" color="primary" checked="checked">
+        <mat-card-subtitle *ngIf="card.subtitle" class="primary mat-primary">{{card.subtitle}}
+          <mat-icon class="align-middle primary mat-primary" aria-hidden="true">keyboard_arrow_right</mat-icon>
+        </mat-card-subtitle>
+        <mat-slide-toggle class="ml-auto mt-1" color="primary"
+          checked={{card.checked}} disabled={{card.disabled}}>
         </mat-slide-toggle>
       </mat-card-header>
-      <mat-card-content>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nesciunt, similique facilis dolore
-          consequuntur, excepturi eligendi laboriosam asperiores eius sequi officiis maxime sapiente, dicta
-          cupiditate
-          alias libero illo nisi quaerat.
-        </p>
+      <mat-card-content *ngFor="let content of card.contents">
+         <div>{{content.num}}</div> <mat-icon *ngIf="card.link" class="align-middle ml-auto" aria-hidden="true">keyboard_arrow_right</mat-icon>
       </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>OPTION A</button>
-        <button mat-button>OPTION 2</button>
-      </mat-card-actions>
     </mat-card>
   </div>
   <div class="w-100 d-sm-none"></div>
-  <div class="col-12  col-lg-6 mt-4">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>
-          <mat-icon class="align-middle mr-1" aria-hidden="false" aria-label="conexión">home</mat-icon><span
-            class="align-middle">TITLE</span>
-        </mat-card-title>
-        <mat-card-subtitle class="primary">Subtitle</mat-card-subtitle>
-        <mat-slide-toggle class="ml-auto mt-1" color="primary" checked="checked">
-        </mat-slide-toggle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nesciunt, similique facilis dolore
-          consequuntur, excepturi eligendi laboriosam asperiores eius sequi officiis maxime sapiente, dicta
-          cupiditate
-          alias libero illo nisi quaerat.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>OPTION A</button>
-        <button mat-button>OPTION 2</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-  <div class="w-100 d-sm-none"></div>
-  <div class="col-12  col-lg-6 mt-4">
-    <mat-card>
-
-      <mat-card-header>
-        <mat-card-title>
-          <mat-icon class="align-middle mr-1" aria-hidden="false" aria-label="conexión">home</mat-icon><span
-            class="align-middle">TITLE</span>
-        </mat-card-title>
-        <mat-card-subtitle class="primary">Subtitle</mat-card-subtitle>
-        <mat-slide-toggle class="ml-auto mt-1" color="primary" checked="checked">
-        </mat-slide-toggle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nesciunt, similique facilis dolore
-          consequuntur, excepturi eligendi laboriosam asperiores eius sequi officiis maxime sapiente, dicta
-          cupiditate
-          alias libero illo nisi quaerat.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>OPTION A</button>
-        <button mat-button>OPTION 2</button>
-      </mat-card-actions>
-    </mat-card>
-
-  </div>
-  <div class="w-100 d-sm-none"></div>
-  <div class="col-12  col-lg-6 mt-4">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>
-          <mat-icon class="align-middle mr-1" aria-hidden="false" aria-label="conexión">home</mat-icon><span
-            class="align-middle">TITLE</span>
-        </mat-card-title>
-        <mat-card-subtitle class="primary">Subtitle</mat-card-subtitle>
-        <mat-slide-toggle class="ml-auto mt-1" color="primary" checked="checked">
-        </mat-slide-toggle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nesciunt, similique facilis dolore
-          consequuntur, excepturi eligendi laboriosam asperiores eius sequi officiis maxime sapiente, dicta
-          cupiditate
-          alias libero illo nisi quaerat.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>OPTION A</button>
-        <button mat-button>OPTION 2</button>
-      </mat-card-actions>
-    </mat-card>
-
-  </div>
-  <div class="w-100 d-sm-none"></div>
-  <div class="col-12  col-lg-6 mt-4">
+  <div class="col-12 col-lg-8 mt-4">
     <app-carousel></app-carousel>
   </div>
 
