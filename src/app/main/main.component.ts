@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 @Component({
-  selector: 'app-cards',
-  templateUrl: './cards.component.html',
-  styleUrls: ['./cards.component.scss']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss']
 })
-export class CardsComponent implements OnInit {
+export class MainComponent implements OnInit {
   public cards = [
     {
       title: 'Protección Red WiFi',
-      // subtitle: 'Descubre más',
       showCheck: true,
       icon: './../../assets/global/img/icons/wifi-icon.svg',
       contents: [{
@@ -33,7 +32,6 @@ export class CardsComponent implements OnInit {
     },
     {
       title: 'Protección Red Móvil',
-      // subtitle: 'Descubre más',
       showCheck: true,
       icon: './../../assets/global/img/icons/smartphone-icon.svg',
       contents: [
@@ -93,7 +91,7 @@ export class CardsComponent implements OnInit {
     {
       title: 'Servicios Premium',
       showCheck: true,
-      subtitle: 'Descubre más',
+      // subtitle: 'Descubre más',
       icon: './../../assets/global/img/icons/star-icon.svg',
       contents: [{ num: '3-Lorem ipsum dolor sit amet, consectetur adipisicing elit.' }],
       checked: false,

@@ -17,7 +17,7 @@ import { MatListModule } from '@angular/material/list';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { MainMenuDropdownComponent } from './main-menu-dropdown/main-menu-dropdown.component';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { CardsComponent } from './cards/cards.component';
+import { MainComponent } from './main/main.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -31,7 +31,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AppComponent,
     MainLayoutComponent,
     MainMenuDropdownComponent,
-    CardsComponent,
+    MainComponent,
     CarouselComponent
   ],
   imports: [
