@@ -1,14 +1,17 @@
 <div class="row">
-  <div class="col-12  col-lg-8 mt-4">
+  <div class="col col-lg-84">
+
+
+  <div class="col  mt-4">
     <mat-card>
       <mat-card-content>
-        <mat-progress-spinner mode="indeterminate">
+        <mat-progress-spinner mode="indeterminate" strokeWidth="1">
         </mat-progress-spinner>
       </mat-card-content>
     </mat-card>
   </div>
 
-  <div *ngFor="let card of cards" class="col-12  col-lg-8 mt-4">
+  <div *ngFor="let card of cards" class="col mt-4">
     <mat-card>
       <mat-card-header>
         <mat-card-title>
@@ -28,12 +31,14 @@
           <span>{{content.alias}} {{content.num}}</span>
           <div class="services-icons" *ngFor="let service of content.services">
 
-            <img *ngIf="service.name === 'service1'" src="./../../assets/global/img/icons/tick-shield-b-icon.svg" alt="">
+            <img *ngIf="service.name === 'service1' && service.status === 'active'" src="./../../assets/global/img/icons/tick-shield-icon.svg" alt="">
+            <img *ngIf="service.name === 'service1' && service.status === 'inactive'" src="./../../assets/global/img/icons/tick-shield-inactive-icon.svg" alt="">
 
-            <img *ngIf="service.name === 'service2' && service.status === 'active'" src="./../../assets/global/img/icons/content-block-b-icon.svg" alt="">
-            <img *ngIf="service.name === 'service2' && service.status === 'inactive'" src="./../../assets/global/img/icons/content-block-grey-icon.svg" alt="">
+            <img *ngIf="service.name === 'service2' && service.status === 'active'" src="./../../assets/global/img/icons/content-block-icon.svg" alt="">
+            <img *ngIf="service.name === 'service2' && service.status === 'inactive'" src="./../../assets/global/img/icons/content-block-inactive-icon.svg" alt="">
 
-            <img *ngIf="service.name === 'service3'" src="./../../assets/global/img/icons/zoom-lens-shield-b-icon.svg" alt="">
+            <img *ngIf="service.name === 'service3' && service.status === 'active'" src="./../../assets/global/img/icons/zoom-lens-shield-icon.svg" alt="">
+            <img *ngIf="service.name === 'service3' && service.status === 'inactive'" src="./../../assets/global/img/icons/zoom-lens-shield-inactive-icon.svg" alt="">
 
             <!-- iconos de prueba -->
             <!-- <mat-icon *ngIf="service.name === 'service1'" class="align-middle" [ngClass]="{'inactive': service.status !== 'active'}" aria-hidden="true">home</mat-icon>
@@ -45,8 +50,10 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <div class="w-100 d-sm-none"></div>
-  <div class="col-12 col-lg-8 mt-4">
+</div>
+  <!-- <div class="w-100 d-sm-none"></div> -->
+  <div class="col col-lg-4 mt-4">
+  <div class="col">
     <mat-card>
         <mat-card-header>
       <mat-card-title>
@@ -57,5 +64,5 @@
       <app-carousel></app-carousel>
     </mat-card>
   </div>
-
+</div>
 </div>

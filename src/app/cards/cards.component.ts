@@ -20,7 +20,7 @@ export class CardsComponent implements OnInit {
         },
         {
           name: 'service2',
-          status: 'inactive'
+          status: 'active'
         },
         {
           name: 'service3',
@@ -42,11 +42,11 @@ export class CardsComponent implements OnInit {
           num: '634 567 879',
           services: [{
             name: 'service1',
-            status: 'active'
+            status: 'inactive'
           },
           {
             name: 'service2',
-            status: 'inactive'
+            status: 'active'
           },
           {
             name: 'service3',
@@ -62,7 +62,7 @@ export class CardsComponent implements OnInit {
           },
           {
             name: 'service2',
-            status: 'active'
+            status: 'inactive'
           },
           {
             name: 'service3',
@@ -82,7 +82,7 @@ export class CardsComponent implements OnInit {
           },
           {
             name: 'service3',
-            status: 'active'
+            status: 'inactive'
           }],
         }
       ],
