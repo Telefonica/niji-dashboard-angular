@@ -3,9 +3,12 @@
   .mat-card{
     color: $default-text;
     padding:0;
+    box-shadow: none;
+    border: 1px solid #e9eae8;
   }
   .mat-card-header{
     padding: 16px ;
+
     border-bottom:1px solid #e9eae8;
       .mat-card-title{
         margin-bottom: 0;
@@ -18,6 +21,18 @@
         }
       }
   }
+  .num-list{
+    display: block;
+    width: 100%;
+    >span{
+      display: block;
+
+    }
+    .services-icons{
+      display: inline-block;
+      margin-right: 5px;;
+    }
+  }
 
   .mat-card-header-text {
     margin-left: 0;
@@ -25,15 +40,20 @@
   .mat-card-content{
     margin-left: 38px;
     padding: 14px;
-    border-bottom:1px solid #e9eae8;
     display:flex;
     margin-bottom: 0;
     padding-right: 0;
     margin-right: 14px;
+    &:not(:last-child){
+      border-bottom:1px solid #e9eae8;
+    }
 }
   .mat-card-subtitle,
   .mat-card-actions {
     margin-left: 32px;
+  }
+  .swiper-container{
+    margin: 8px;
   }
 
 }

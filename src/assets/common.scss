@@ -6,6 +6,9 @@
   background-color: $primary;
 }
 
+.inactive{
+  opacity: .3;
+}
 // ### LAYOUT ELEMENTS ###
 .mat-toolbar{
   &.mat-primary {
