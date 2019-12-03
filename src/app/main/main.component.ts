@@ -91,7 +91,7 @@ export class MainComponent implements OnInit {
     {
       title: 'Servicios Premium',
       showCheck: true,
-      // subtitle: 'Descubre más',
+      subtitle: 'Descubre más',
       icon: './../../assets/global/img/icons/star-icon.svg',
       contents: [{ num: '3-Lorem ipsum dolor sit amet, consectetur adipisicing elit.' }],
       checked: false,
