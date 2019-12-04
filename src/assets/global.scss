@@ -1,3 +1,64 @@
+
+@import '~@angular/material/theming';
+
+$mat-spain: (
+    50 : #e0f5fb,
+    100 : #b3e5f6,
+    200 : #80d4f0,
+    300 : #4dc3e9,
+    400 : #26b6e5,
+    500 : #00a9e0,
+    600 : #00a2dc,
+    700 : #0098d8,
+    800 : #008fd3,
+    900 : #007ecb,
+    A100 : #f3faff,
+    A200 : #c0e4ff,
+    A400 : #8dceff,
+    A700 : #74c3ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$niji-app-primary: mat-palette($mat-spain);
+$niji-app-accent:  mat-palette($mat-spain, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$niji-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$niji-app-theme: mat-light-theme($niji-app-primary, $niji-app-accent, $niji-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($niji-app-theme);
+
+// Imports functions, variables, and mixins that are needed by other Bootstrap files
 @import "./assets/variables"; // needed to join bootstrap and material
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -6,8 +67,8 @@
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/utilities";
 @import "./assets/reset"; // needed to join bootstrap and material
-@import "./assets/global/variables"; // needed to join bootstrap and material
 
 @import "./assets/global/variables.scss"; // OB theme
 @import "./assets/common.scss"; // common styles
+@import "./assets/global/fonts.scss"; // common styles
 

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -15,14 +17,13 @@ import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { MatListModule } from '@angular/material/list';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
-import { MatTreeModule } from '@angular/material/tree';
-import { MainMenuComponent } from './main-menu/main-menu.component';
 import { MainMenuDropdownComponent } from './main-menu-dropdown/main-menu-dropdown.component';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { CardsComponent } from './cards/cards.component';
+import { MainComponent } from './main/main.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ProtectionComponent } from './protection/protection.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -32,14 +33,16 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   declarations: [
     AppComponent,
     MainLayoutComponent,
-    MainMenuComponent,
     MainMenuDropdownComponent,
-    CardsComponent,
-    CarouselComponent
+    MainComponent,
+    CarouselComponent,
+    ProtectionComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule,
     MatSliderModule,
     MatSidenavModule,
     MatToolbarModule,
@@ -48,7 +51,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatButtonModule,
     SwiperModule,
     MatListModule,
-    MatTreeModule,
     MatExpansionModule,
     MatSlideToggleModule,
     MatProgressSpinnerModule

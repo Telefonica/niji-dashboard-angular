@@ -1,31 +1,106 @@
-.header-image {
-  height: 100px;
-  background-color: $primary;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-bar {
-  background-color: $primary-50-op;
-}
-
-mat-progress-spinner {
-  margin: 0 auto;
-  opacity: .3;
-}
-
+// ### colors clases ###
 .primary {
   color: $primary;
 }
 
-.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
+.primary-bg {
   background-color: $primary;
 }
 
-.mat-toolbar.mat-primary {
-  background: $primary;
+.inactive {
+  opacity: .3;
+}
+
+.link {
+  cursor: pointer;
+}
+
+// ### LAYOUT ELEMENTS ###
+.mat-toolbar {
+  &.mat-primary {
+    background: $primary;
+  }
+}
+mat-sidenav{
+  &.mat-drawer {
+    background-color:transparent;
+    .mat-expansion-panel {
+      background-color:transparent;
+    }
+    .mat-drawer-inner-container{
+      background-color: #f6f6f6;
+    }
+  }
+}
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none;;
+}
+
+.mat-drawer-inner-container {
+  scrollbar-width: thin;
+
+  // -webkit-scrollbar-button: 5px;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  &::-webkit-scrollbar:vertical {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-button:increment,
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #dadada;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+}
+
+
+// ### MAIN MENU ###
+.mat-drawer-inner-container {
+  .mat-list-base {
+
+    .mat-list-item,
+    .mat-list-option {
+      height: 30px;
+    }
+  }
+}
+
+// ### COMPONENTS ###
+//switch
+.mat-slide-toggle {
+  &.mat-primary {
+    &.mat-checked {
+      .mat-slide-toggle-bar {
+        background-color: $primary-50-op;
+      }
+
+      .mat-slide-toggle-thumb {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+
+//loader
+mat-progress-spinner {
+  margin: 0 auto;
+  opacity: .3;
 }
 
 .mat-progress-spinner circle,
@@ -33,6 +108,7 @@ mat-progress-spinner {
   stroke: $primary;
 }
 
+//carousel
 .swiper-pagination-bullet-active {
-  background-color: $primary !important;
+  background-color: $primary;
 }

@@ -1,4 +1,32 @@
+@import "./../../assets/global/variables.scss";
+
 :host ::ng-deep {
+  .sub-header{
+    background-image: url('./../../assets/global/img/movistar-mobile-header.svg');
+    background-color: $primary;
+    height: 97px;
+    background-size: 100%;
+    >div{
+      font-size: 20px;
+      font-weight: bold;
+      &:first-child{
+        padding-top: 10px;
+        font-size: 18px;
+        font-weight: normal;
+      }
+      color: #FFF;
+      margin-left: 30px;
+    }
+  }
+  .logo{
+    background-image: url('./../../assets/global/img/movistar-logo.svg');
+    width: 32px;
+    height:23px;
+
+  }
+  .mat-drawer-container{
+    background-color: #f6f6f6;
+  }
   .mat-drawer-inner-container {
     .mat-list-base .mat-list-item .mat-list-item-content {
       padding: 0;

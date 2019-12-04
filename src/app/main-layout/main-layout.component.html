@@ -1,22 +1,28 @@
 <div class="main-container" [class.main-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="main-toolbar">
-    <h1 class="main-app-name">Conexión segura</h1>
+    <div class="logo" routerLink="/"></div>
+    <!-- <h1 class="main-app-name">Conexión segura</h1> -->
     <button mat-icon-button class="ml-auto" (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
   </mat-toolbar>
+
+
   <mat-sidenav-container class="main-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
 
     <mat-sidenav #snav [(opened)]="opened" [mode]="mobileQuery.matches ? 'over' : 'side'"
-    [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <app-main-menu-dropdown></app-main-menu-dropdown>
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <div class="header-image">&nbsp;</div>
       <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
-      <div class="container mt-5">
-        <app-cards></app-cards>
+      <div class="sub-header d-block d-sm-none" *ngIf="router.url === '/'">
+        <div>¡Bienvenido!</div>
+        <div>Todo en calma, estás protegido</div>
+      </div>
+      <div class="container">
+        <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
