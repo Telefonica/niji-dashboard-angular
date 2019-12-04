@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -21,6 +23,7 @@ import { MainComponent } from './main/main.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ProtectionComponent } from './protection/protection.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -32,11 +35,14 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MainLayoutComponent,
     MainMenuDropdownComponent,
     MainComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProtectionComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule,
     MatSliderModule,
     MatSidenavModule,
     MatToolbarModule,
