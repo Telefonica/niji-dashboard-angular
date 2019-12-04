@@ -9,7 +9,6 @@ export class MainComponent implements OnInit {
   public cards = [
     {
       title: 'Protección Red WiFi',
-      showCheck: true,
       icon: './../../assets/global/img/icons/wifi-icon.svg',
       contents: [{
         alias: 'Casa',
@@ -26,14 +25,11 @@ export class MainComponent implements OnInit {
           name: 'service3',
           status: 'active'
         }],
+        link: 'protection'
       }],
-      link: '/num',
-      checked: true,
-      disabled: false
     },
     {
       title: 'Protección Red Móvil',
-      showCheck: true,
       icon: './../../assets/global/img/icons/smartphone-icon.svg',
       contents: [
         {
@@ -51,6 +47,7 @@ export class MainComponent implements OnInit {
             name: 'service3',
             status: 'active'
           }],
+          link: 'otherlink'
         },
         {
           alias: 'Daniel',
@@ -85,18 +82,13 @@ export class MainComponent implements OnInit {
           }],
         }
       ],
-      link: '/num',
-      checked: false,
-      disabled: false
     },
     {
       title: 'Servicios Premium',
-      showCheck: true,
+      showCheck: false,
       subtitle: 'Descubre más',
       icon: './../../assets/global/img/icons/star-icon.svg',
-      contents: [{ num: '3-Lorem ipsum dolor sit amet, consectetur adipisicing elit.' }],
-      checked: false,
-      disabled: true
+      contents: [{ num: '3-Lorem ipsum dolor sit amet, consectetur adipisicing elit.' }]
     }
   ];
 

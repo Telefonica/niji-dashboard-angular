@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col col-lg-84">
+  <div class="col col-lg-8">
 
 
   <div class="col  mt-4">
@@ -23,11 +23,11 @@
         <mat-card-subtitle *ngIf="card.subtitle" class="primary mat-primary">{{card.subtitle}}
           <mat-icon class="align-middle primary mat-primary" aria-hidden="true">keyboard_arrow_right</mat-icon>
         </mat-card-subtitle>
-        <mat-slide-toggle *ngIf="card.showCheck" class="ml-auto mt-1" color="primary" checked={{card.checked}} disabled={{card.disabled}}>
-        </mat-slide-toggle>
+        <!-- <mat-slide-toggle *ngIf="card.showCheck" class="ml-auto mt-1" color="primary" checked={{card.checked}} disabled={{card.disabled}}>
+        </mat-slide-toggle> -->
       </mat-card-header>
       <mat-card-content *ngFor="let content of card.contents">
-        <div class="num-list">
+        <div class="num-list" [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}">
           <span>{{content.alias}} {{content.num}}</span>
           <div class="services-icons" *ngFor="let service of content.services">
 
@@ -39,14 +39,9 @@
 
             <img *ngIf="service.name === 'service3' && service.status === 'active'" src="./../../assets/global/img/icons/zoom-lens-shield-icon.svg" alt="">
             <img *ngIf="service.name === 'service3' && service.status === 'inactive'" src="./../../assets/global/img/icons/zoom-lens-shield-inactive-icon.svg" alt="">
-
-            <!-- iconos de prueba -->
-            <!-- <mat-icon *ngIf="service.name === 'service1'" class="align-middle" [ngClass]="{'inactive': service.status !== 'active'}" aria-hidden="true">home</mat-icon>
-            <mat-icon *ngIf="service.name === 'service2'" class="align-middle" [ngClass]="{'inactive': service.status !== 'active'}" aria-hidden="true">close</mat-icon>
-            <mat-icon *ngIf="service.name === 'service3'" class="align-middle" [ngClass]="{'inactive': service.status !== 'active'}"  aria-hidden="true">menu</mat-icon> -->
           </div>
         </div>
-        <mat-icon *ngIf="card.link" class="align-middle ml-auto" aria-hidden="true">keyboard_arrow_right</mat-icon>
+        <mat-icon *ngIf="content.hasOwnProperty('link')" class="align-middle ml-auto" aria-hidden="true">keyboard_arrow_right</mat-icon>
       </mat-card-content>
     </mat-card>
   </div>
