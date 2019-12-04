@@ -1,1 +1,35 @@
-<p>protection works!</p>
+<div class="row">
+    <div class="col-12 col-lg-8  mt-4">
+      <p>Casa</p>
+      <p>916 817 417</p>
+      <p>Nivel de protección: ALTA</p>
+      <mat-slider min="0" max="10" step="1" value="9" class="slider-telefonica w-100" disabled="disabled"></mat-slider>
+      <mat-card>
+        <mat-card-content>
+          <mat-progress-spinner mode="indeterminate" strokeWidth="1">
+          </mat-progress-spinner>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div *ngFor="let card of cards" class="col-12 col-lg-8 mt-4">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <img src="{{card.icon}}" alt="">
+            <span class="align-middle ml-2">{{card.title}}</span>
+          </mat-card-title>
+          <mat-card-subtitle *ngIf="card.subtitle" class="primary mat-primary">{{card.subtitle}}
+          </mat-card-subtitle>
+          <mat-slide-toggle *ngIf="card.showCheck" class="ml-auto mt-1" color="primary" checked={{card.checked}} disabled={{card.disabled}}>
+          </mat-slide-toggle>
+        </mat-card-header>
+        <mat-card-content *ngFor="let content of card.contents">
+          <div class="num-list">
+            <span>{{content.alias}} {{content.num}}</span>
+
+          </div>
+          <mat-icon *ngIf="content.hasOwnProperty('link')" class="align-middle ml-auto" aria-hidden="true">keyboard_arrow_right</mat-icon>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
