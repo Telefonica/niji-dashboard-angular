@@ -6,10 +6,7 @@
       <app-main-menu-dropdown></app-main-menu-dropdown>
     </mat-sidenav>
     <mat-sidenav-content>
-      <div class="sub-header d-block d-sm-none" *ngIf="router.url === '/'">
-        <div>¡Bienvenido!</div>
-        <div>Todo en calma, estás protegido</div>
-      </div>
+      <app-header-state *ngIf="router.url === '/'"></app-header-state>
       <div class="container">
         <router-outlet></router-outlet>
       </div>

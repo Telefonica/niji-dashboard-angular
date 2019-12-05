@@ -25,6 +25,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProtectionComponent } from './protection/protection.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HeaderStateComponent } from './components/header-state/header-state.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -38,7 +39,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MainComponent,
     CarouselComponent,
     ProtectionComponent,
-    HeaderComponent
+    HeaderComponent,
+    HeaderStateComponent
   ],
   imports: [
     BrowserModule,
