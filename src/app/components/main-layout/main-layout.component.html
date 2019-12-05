@@ -1,10 +1,5 @@
 <div class="main-container" [class.main-is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="main-toolbar">
-    <div class="logo" routerLink="/"></div>
-    <button mat-icon-button class="ml-auto" (click)="snav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-  </mat-toolbar>
+<app-header (click)="snav.toggle()"></app-header>
   <mat-sidenav-container class="main-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav #snav [(opened)]="opened" [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
