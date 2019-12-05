@@ -1,8 +1,8 @@
-@import "./../../assets/global/variables.scss";
+@import "./../../../assets/global/variables.scss";
 
 :host ::ng-deep {
   .sub-header{
-    background-image: url('./../../assets/global/img/movistar-mobile-header.svg');
+    background-image: url('./../../../assets/global/img/movistar-mobile-header.svg');
     background-color: $primary;
     height: 97px;
     background-size: 100%;
@@ -19,7 +19,7 @@
     }
   }
   .logo{
-    background-image: url('./../../assets/global/img/movistar-logo.svg');
+    background-image: url('./../../../assets/global/img/movistar-logo.svg');
     width: 32px;
     height:23px;
 
