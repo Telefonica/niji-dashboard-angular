@@ -1,24 +1,29 @@
-import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
-import { Router } from '@angular/router';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { Router, RoutesRecognized } from '@angular/router';
 
 @Component({
   selector: 'main-layout',
   templateUrl: 'main-layout.component.html',
   styleUrls: ['main-layout.component.scss'],
 })
-export class MainLayoutComponent implements OnDestroy {
+export class MainLayoutComponent implements OnDestroy, OnInit {
   mobileQuery: MediaQueryList;
   opened: boolean;
-
+  routeDataTitle: string;
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,  public router: Router) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
-    console.log("this.mobileQuery: ",this.mobileQuery.matches);
-    this.mobileQuery.matches ?  this.opened = false : this.opened = true;
+  }
+  ngOnInit() {
+    this.router.events.subscribe((data) => {
+      if (data instanceof RoutesRecognized) {
+        this.routeDataTitle = data.state.root.firstChild.data.title;
+      }
+    });
   }
 
   ngOnDestroy(): void {
