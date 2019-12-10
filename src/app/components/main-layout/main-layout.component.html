@@ -1,5 +1,5 @@
 <div class="main-container" [class.main-is-mobile]="mobileQuery.matches">
-  <app-header (toggleNav)="snav.toggle()" [title]="routeDataTitle" [status]="routeDataStatus" [media]="mobileQuery.matches"></app-header>
+  <app-header (toggleNav)="snav.toggle()" [title]="routeDataTitle" [media]="mobileQuery.matches"></app-header>
   <mat-sidenav-container class="main-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav #snav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
@@ -8,7 +8,6 @@
     <mat-sidenav-content>
       <app-header-state *ngIf="router.url === '/'"></app-header-state>
       <div class="container">
-
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
