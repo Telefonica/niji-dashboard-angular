@@ -69,4 +69,26 @@
     margin: 8px;
   }
 
+  .header-detail {
+
+    .header-text,
+    .header-num {
+      font-size: 20px;
+    }
+
+    .detail,
+    .detail-level {
+      font-size: 12px;
+    }
+    .detail{
+      color: $grey;
+    }
+    .detail-level {
+      color: $primary;
+    }
+    .link{
+      color: $primary;
+    }
+  }
+
 }

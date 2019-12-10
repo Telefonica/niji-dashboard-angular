@@ -1,6 +1,5 @@
 <mat-toolbar color="primary" class="main-toolbar">
-  <div class="logo link" routerLink="/"></div>
-  <button mat-icon-button class="ml-auto">
-    <mat-icon>menu</mat-icon>
-  </button>
+  <div class="logo link" *ngIf="router.url === '/' || media===false" routerLink="/"></div>
+  <mat-icon class="link" *ngIf="router.url !== '/' && media" routerLink="..">keyboard_backspace</mat-icon>
+  <mat-icon (click)="toggleMenu()" class="ml-auto link">menu</mat-icon>
 </mat-toolbar>
