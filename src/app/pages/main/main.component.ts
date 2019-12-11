@@ -23,7 +23,7 @@ export class MainComponent implements OnInit {
         },
         {
           name: 'service3',
-          status: 'active'
+          status: 'inactive'
         }],
         link: 'protection'
       }],
@@ -85,13 +85,28 @@ export class MainComponent implements OnInit {
     },
     {
       title: 'Servicios Premium',
-      showCheck: false,
-      subtitle: 'Descubre más',
       icon: './../../assets/global/img/icons/star-icon.svg',
-      contents: [{ num: '3-Lorem ipsum dolor sit amet, consectetur adipisicing elit.' }]
+      type: 'imagesList',
+      contents: [
+        {
+          img: './../../assets/global/img/device-protection.png',
+          type: 'PREMIUM',
+          title: 'Qustodio Kids',
+          subtitle: 'Mantén protegidos a tus hijos',
+          price: '65' + '€',
+          tax: '/mes IVA incl.'
+        },
+        {
+          img: './../../assets/global/img/qustodio-kids.png',
+          type: 'PREMIUM',
+          title: 'Seguridad Dispositivo',
+          subtitle: 'Protección adicional para dispositivos',
+          price: '65' + '€',
+          tax: '/mes IVA incl.'
+        }
+      ]
     }
   ];
-
   constructor() { }
 
   ngOnInit() {

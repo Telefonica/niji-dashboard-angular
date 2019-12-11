@@ -3,7 +3,7 @@ import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router';
 
 @Component({
-  selector: 'main-layout',
+  selector: 'app-main-layout',
   templateUrl: 'main-layout.component.html',
   styleUrls: ['main-layout.component.scss'],
 })
@@ -13,10 +13,10 @@ export class MainLayoutComponent implements OnDestroy, OnInit {
   routeDataTitle: string;
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, public router: Router) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
+    this.mobileQuery.addEventListener('change', () => { this._mobileQueryListener; });
   }
   ngOnInit() {
     this.router.events.subscribe((data) => {
@@ -27,7 +27,7 @@ export class MainLayoutComponent implements OnDestroy, OnInit {
   }
 
   ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.mobileQuery.removeEventListener('change', () => { this._mobileQueryListener });
   }
 
 }

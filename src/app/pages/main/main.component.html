@@ -1,8 +1,8 @@
 <div class="row">
-  <div class="col col-lg-8">
+  <div class="col col-lg-8 p-0">
     <div class="col mt-4">
       <mat-card>
-        <mat-card-content>
+        <mat-card-content class="m-0">
           <mat-progress-spinner mode="indeterminate" strokeWidth="1">
           </mat-progress-spinner>
         </mat-card-content>
@@ -19,45 +19,49 @@
           <mat-card-subtitle *ngIf="card.subtitle" class="primary mat-primary">{{card.subtitle}}
           </mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content *ngFor="let content of card.contents">
-          <div class="num-list" [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}">
-            <span>{{content.alias}} {{content.num}}</span>
-            <div class="services-icons" *ngFor="let service of content.services">
-
-              <img *ngIf="service.name === 'service1' && service.status === 'active'"
-                src="./../../assets/global/img/icons/tick-shield-icon.svg" alt="">
-              <img *ngIf="service.name === 'service1' && service.status === 'inactive'"
-                src="./../../assets/global/img/icons/tick-shield-inactive-icon.svg" alt="">
-
-              <img *ngIf="service.name === 'service2' && service.status === 'active'"
-                src="./../../assets/global/img/icons/content-block-icon.svg" alt="">
-              <img *ngIf="service.name === 'service2' && service.status === 'inactive'"
-                src="./../../assets/global/img/icons/content-block-inactive-icon.svg" alt="">
-
-              <img *ngIf="service.name === 'service3' && service.status === 'active'"
-                src="./../../assets/global/img/icons/zoom-lens-shield-icon.svg" alt="">
-              <img *ngIf="service.name === 'service3' && service.status === 'inactive'"
-                src="./../../assets/global/img/icons/zoom-lens-shield-inactive-icon.svg" alt="">
+        <div *ngIf="card.type !== 'imagesList'">
+          <mat-card-content *ngFor="let content of card.contents">
+            <div class="num-list" [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}">
+              <span>{{content.alias}} {{content.num}}</span>
+              <div class="services-icons" *ngFor="let service of content.services">
+                <app-status-icons [service]="service"></app-status-icons>
+              </div>
             </div>
-          </div>
-          <mat-icon *ngIf="content.hasOwnProperty('link')" class="align-middle ml-auto" aria-hidden="true">
-            keyboard_arrow_right</mat-icon>
-        </mat-card-content>
+            <mat-icon *ngIf="content.hasOwnProperty('link')" class="align-middle ml-auto" aria-hidden="true">
+              keyboard_arrow_right</mat-icon>
+          </mat-card-content>
+        </div>
+
+        <div *ngIf="card.type === 'imagesList'" class="imagesList">
+          <mat-card-content *ngFor="let content of card.contents">
+            <div class="row w-100">
+              <div class="col-auto">
+                <img src="{{content.img}}" alt="">
+              </div>
+              <div class="col pl-0 pr-0">
+                <div class="type">{{content.type}}</div>
+                <div class="title">{{content.title}}</div>
+                <div class="subtitle">{{content.subtitle}}</div>
+                <div class="price">{{content.price}}<span>{{content.tax}}</span></div>
+              </div>
+            </div>
+          </mat-card-content>
+        </div>
       </mat-card>
     </div>
+
   </div>
   <!-- <div class="w-100 d-sm-none"></div> -->
   <div class="col col-lg-4 mt-4">
-    <div class="col">
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>
-            <img src="./../../assets/global/img/icons/heart-icon.svg" alt="">
-            <span class="align-middle ml-2">Consejos navegación segura</span>
-          </mat-card-title>
-        </mat-card-header>
-        <app-carousel></app-carousel>
-      </mat-card>
-    </div>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <img src="./../../assets/global/img/icons/heart-icon.svg" alt="">
+          <span class="align-middle ml-2">Consejos navegación segura</span>
+        </mat-card-title>
+      </mat-card-header>
+      <app-carousel></app-carousel>
+    </mat-card>
   </div>
+
 </div>
