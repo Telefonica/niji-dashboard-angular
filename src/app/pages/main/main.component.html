@@ -24,7 +24,7 @@
             <div class="num-list" [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}">
               <span>{{content.alias}} {{content.num}}</span>
               <div class="services-icons" *ngFor="let service of content.services">
-                <img *ngIf="service.name === 'service1' && service.status === 'active'"
+                  <!-- <img *ngIf="service.name === 'service1' && service.status === 'active'"
                   src="./../../assets/global/img/icons/tick-shield-icon.svg" alt="">
                 <img *ngIf="service.name === 'service1' && service.status === 'inactive'"
                   src="./../../assets/global/img/icons/tick-shield-inactive-icon.svg" alt="">
@@ -37,7 +37,8 @@
                 <img *ngIf="service.name === 'service3' && service.status === 'active'"
                   src="./../../assets/global/img/icons/zoom-lens-shield-icon.svg" alt="">
                 <img *ngIf="service.name === 'service3' && service.status === 'inactive'"
-                  src="./../../assets/global/img/icons/zoom-lens-shield-inactive-icon.svg" alt="">
+                  src="./../../assets/global/img/icons/zoom-lens-shield-inactive-icon.svg" alt=""> -->
+                <app-status-icons [service]="service"></app-status-icons>
               </div>
             </div>
             <mat-icon *ngIf="content.hasOwnProperty('link')" class="align-middle ml-auto" aria-hidden="true">

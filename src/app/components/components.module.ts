@@ -22,6 +22,7 @@ import { HeaderComponent } from './header/header.component';
 import { HeaderStateComponent } from './header-state/header-state.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { MainMenuDropdownComponent } from './main-menu-dropdown/main-menu-dropdown.component';
+import { StatusIconsComponent } from './status-icons/status-icons.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -34,14 +35,16 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MainMenuDropdownComponent,
     CarouselComponent,
     HeaderComponent,
-    HeaderStateComponent
+    HeaderStateComponent,
+    StatusIconsComponent
   ],
   exports: [
     MainLayoutComponent,
     MainMenuDropdownComponent,
     CarouselComponent,
     HeaderComponent,
-    HeaderStateComponent
+    HeaderStateComponent,
+    StatusIconsComponent
   ],
   imports: [
     CommonModule,

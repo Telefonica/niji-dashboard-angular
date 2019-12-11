@@ -23,7 +23,7 @@ export class MainComponent implements OnInit {
         },
         {
           name: 'service3',
-          status: 'active'
+          status: 'inactive'
         }],
         link: 'protection'
       }],
