@@ -5,7 +5,7 @@
       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <app-main-menu-dropdown></app-main-menu-dropdown>
     </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content class="pb-4">
       <app-header-state *ngIf="router.url === '/'"></app-header-state>
       <div class="container">
         <router-outlet></router-outlet>

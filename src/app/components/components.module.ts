@@ -13,13 +13,9 @@ import {
   MatSlideToggleModule,
   MatProgressSpinnerModule,
   MatExpansionModule
- } from '@angular/material';
-
-
+} from '@angular/material';
 
 import { SwiperModule, SWIPER_CONFIG, SwiperConfigInterface } from 'ngx-swiper-wrapper';
-
-
 
 import { CarouselComponent } from './carousel/carousel.component';
 import { HeaderComponent } from './header/header.component';

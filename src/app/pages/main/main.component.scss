@@ -6,6 +6,33 @@
     box-shadow: none;
     border: 1px solid #e9eae8;
   }
+  .imagesList{
+    .mat-card-content{
+      margin-left:0;
+    }
+    img {
+      max-width:97px;
+    }
+    .type{
+      color: $image-list-type;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .title{
+      font-size: 16px;
+    }
+    .subtitle{
+      font-size: 12px;
+      color: $grey;
+    }
+    .price{
+      font-size: 20px;
+      span {
+        font-size: 14px;
+        color: $grey;;
+      }
+    }
+  }
   .mat-card-header{
     padding: 16px ;
 
