@@ -6,7 +6,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./protection.component.scss']
 })
 export class ProtectionComponent implements OnInit {
-  prueba: 'PRUEBA';
   public header = [
     {
       title: 'Casa',
@@ -24,7 +23,26 @@ export class ProtectionComponent implements OnInit {
       showCheck: true,
       icon: './../../assets/global/img/icons/shield-icon.svg',
       checked: true,
-      disabled: false
+      disabled: false,
+      states:[
+        {
+          // unprotected: {
+          //   title: '¡Estás desprotegido!',
+          //   icon: './../../assets/global/img/icons/no-shield-tick-icon.svg',
+          //   label: 'Protección desactivada'
+          // },
+          undetected: {
+            title: '¡Sin amenazas detectadas!',
+            icon: './../../assets/global/img/icons/no-threats-detected-icon.svg',
+            label: 'Protección desactivad'
+          },
+          // detected: {
+          //   title: '30/04/2019 - 25/05/2019',
+          //   total: '114',
+          //   label: 'Amenazas bloqueadas'
+          // }
+        }
+      ]
     },
     {
       title: 'Bloqueo de contenido',
@@ -48,6 +66,7 @@ export class ProtectionComponent implements OnInit {
   }
 
   ngOnInit() {
+    // console.log(this.cards[0].states.unprotected.title)
   }
 
 }

@@ -58,6 +58,18 @@
     &:not(:last-child) {
       border-bottom: 1px solid $light-grey;
     }
+
+    // &.states {
+    //   margin-left: 14px;
+    //   align-items: center;
+    //   flex-direction: column;
+    //   >div{
+    //     >*{
+    //       display:flex;
+    //       justify-content: center
+    //     }
+    //   }
+    // }
   }
 
   .mat-card-subtitle,
@@ -80,13 +92,16 @@
     .detail-level {
       font-size: 12px;
     }
-    .detail{
+
+    .detail {
       color: $grey;
     }
+
     .detail-level {
       color: $primary;
     }
-    .link{
+
+    .link {
       color: $primary;
     }
   }

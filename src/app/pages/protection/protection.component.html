@@ -27,7 +27,8 @@
         </div>
       </div>
 
-      <mat-slider min="0" max="10" step="1" value="{{header[0].protection}}" class="slider-telefonica w-100 mb-0" disabled="disabled"></mat-slider>
+      <mat-slider min="0" max="10" step="1" value="{{header[0].protection}}" class="slider-telefonica w-100 mb-0"
+        disabled="disabled"></mat-slider>
 
       <div class="row mb-4">
         <div class="col">
@@ -42,7 +43,8 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <div *ngFor="let card of cards" class="col-12 col-lg-8 mt-4">
+
+  <div *ngFor="let card of cards" class="col mt-4">
     <mat-card>
       <mat-card-header>
         <mat-card-title>
@@ -55,8 +57,29 @@
           disabled={{card.disabled}}>
         </mat-slide-toggle>
       </mat-card-header>
+
+      <app-sec-status [card]="card"></app-sec-status>
+        <!-- <div *ngIf="card.states && card.checked === false" class="w-100">
+          <div>{{card.states[0].unprotected.title}}</div>
+          <div><img src="{{ card.states[0].unprotected.icon }}" alt=""></div>
+          <div>{{card.states[0].unprotected.label}}</div>
+        </div>
+
+        <div *ngIf="card.states  && card.checked === true  && !card.states[0].detected.total" class="w-100">
+          <div>{{card.states[0].undetected.title}}</div>
+          <div><img src="{{ card.states[0].undetected.icon }}" alt=""></div>
+          <div>{{card.states[0].undetected.label}}</div>
+        </div>
+
+        <div *ngIf="card.states && card.checked === true && card.states[0].detected.total" class="w-100">
+          <div>{{card.states[0].detected.title}}</div>
+          <h2>{{ card.states[0].detected.total }}</h2>
+          <div>{{card.states[0].detected.label}}</div>
+        </div> -->
+
+
       <mat-card-content *ngFor="let content of card.contents">
-        <div class="num-list">
+        <div class="num-list" [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}">
           <span>{{content.alias}} {{content.num}}</span>
         </div>
         <mat-icon *ngIf="content.hasOwnProperty('link')" class="align-middle ml-auto" aria-hidden="true">
