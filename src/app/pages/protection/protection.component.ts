@@ -72,6 +72,15 @@ export class ProtectionComponent implements OnInit {
       checked: true,
       disabled: false
     },
+    {
+      title: 'Seguridad Dispositivo',
+      subtitleLlink: 'Descubre más',
+      showCheck: true,
+      icon: './../../assets/global/img/icons/lock-icon.svg',
+      checked: true,
+      disabled: false,
+      cardDescription:  'Protege 5 dispositivos a tu elección, tanto dentro como fuera de casa.',
+    },
   ];
   public title: any;
 
