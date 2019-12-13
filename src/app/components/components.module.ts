@@ -23,6 +23,7 @@ import { HeaderStateComponent } from './header-state/header-state.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { MainMenuDropdownComponent } from './main-menu-dropdown/main-menu-dropdown.component';
 import { StatusIconsComponent } from './status-icons/status-icons.component';
+
 import { SecStatusComponent } from './sec-status/sec-status.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -39,6 +40,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HeaderStateComponent,
     StatusIconsComponent,
     SecStatusComponent
+
   ],
   exports: [
     MainLayoutComponent,
@@ -48,6 +50,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HeaderStateComponent,
     StatusIconsComponent,
     SecStatusComponent
+
   ],
   imports: [
     CommonModule,
