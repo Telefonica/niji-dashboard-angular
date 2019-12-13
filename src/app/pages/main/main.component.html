@@ -18,8 +18,6 @@
             </span>
             <span class="align-middle ml-2">{{card.title}}</span>
           </mat-card-title>
-          <mat-card-subtitle *ngIf="card.subtitle" class="primary mat-primary">{{card.subtitle}}
-          </mat-card-subtitle>
         </mat-card-header>
         <div *ngIf="card.type !== 'imagesList'">
           <mat-card-content *ngFor="let content of card.contents">

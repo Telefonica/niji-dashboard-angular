@@ -65,9 +65,9 @@
           <span class="linkTitle">{{content.linkTitle}}</span>
           <span class="description">{{content.description}}</span>
         </div>
-        <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.hasOwnProperty('link')">
+        <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.linkTitle">
       </mat-card-content>
-      <mat-card-content *ngIf="card.hasOwnProperty('cardDescription')" style="flex-direction: column;">
+      <mat-card-content *ngIf="card.cardDescription" style="flex-direction: column;">
         <div>{{card.cardDescription}}</div>
         <br>
         <button mat-flat-button color="accept">Proteger</button>

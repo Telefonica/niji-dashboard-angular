@@ -24,7 +24,7 @@ export class ProtectionComponent implements OnInit {
       icon: './../../assets/global/img/icons/shield-icon.svg',
       checked: true,
       disabled: false,
-      states:[
+      states: [
         // samples of states
         {
           // unprotected: {
