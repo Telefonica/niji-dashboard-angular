@@ -1,14 +1,18 @@
+@import "./../../../assets/global/variables.scss";
+
 :host ::ng-deep {
 .mat-card-content {
   &.states {
     margin-left: 14px;
     align-items: center;
     flex-direction: column;
+    border-bottom: 1px solid $light-grey;
     >div{
       >*{
         display:flex;
         justify-content: center
       }
+
     }
   }
 }

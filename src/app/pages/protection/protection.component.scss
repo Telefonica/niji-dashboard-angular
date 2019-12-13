@@ -22,7 +22,7 @@
 
       &:not(:first-child),
       &:first-child {
-        margin-top: 16px;
+        margin-top: 5px;
       }
     }
   }
@@ -58,18 +58,13 @@
     &:not(:last-child) {
       border-bottom: 1px solid $light-grey;
     }
-
-    // &.states {
-    //   margin-left: 14px;
-    //   align-items: center;
-    //   flex-direction: column;
-    //   >div{
-    //     >*{
-    //       display:flex;
-    //       justify-content: center
-    //     }
-    //   }
-    // }
+    .linkTitle{
+      font-size: 16px;
+    }
+    .description{
+      font-size: 15px;
+      color: $grey;
+    }
   }
 
   .mat-card-subtitle,
@@ -105,5 +100,9 @@
       color: $primary;
     }
   }
-
+  .spacer-line{
+    border-top:1px solid $light-grey;
+    border-bottom: none;
+    margin:0;
+  }
 }
