@@ -7,7 +7,7 @@ import { ProtectionComponent } from './pages/protection/protection.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent, data: { title: 'Dashboard'} },
-  { path: 'protection', component: ProtectionComponent, data: { title: 'Protección de dispositvos'} },
+  { path: 'wifi-protection', component: ProtectionComponent, data: { title: 'Protección Wifi Hogar'} },
   { path: '**', redirectTo: '' }
 ];
 

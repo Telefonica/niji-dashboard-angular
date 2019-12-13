@@ -1,0 +1,20 @@
+<mat-card-content class="states" *ngIf="card.hasOwnProperty('states')">
+
+ <div *ngIf="card.states[0].hasOwnProperty('unprotected')" class="w-100">
+    <div class="mt-2 mb-1">{{card.states[0].unprotected.title}}</div>
+    <div><img src="{{ card.states[0].unprotected.icon }}" alt=""></div>
+    <div class="mt-1 mb-2">{{card.states[0].unprotected.label}}</div>
+  </div>
+
+  <div *ngIf="card.states[0].hasOwnProperty('undetected')" class="w-100">
+    <div class="mt-2 mb-1">{{card.states[0].undetected.title}}</div>
+    <div><img src="{{ card.states[0].undetected.icon }}" alt=""></div>
+    <div class="mt-1 mb-2">{{card.states[0].undetected.label}}</div>
+  </div>
+
+  <div *ngIf="card.states[0].hasOwnProperty('detected')" class="w-100">
+    <div class="mt-2 mb-1">{{card.states[0].detected.title}}</div>
+    <h2>{{ card.states[0].detected.total }}</h2>
+    <div class="mt-1 mb-2">{{card.states[0].detected.label}}</div>
+  </div>
+</mat-card-content>

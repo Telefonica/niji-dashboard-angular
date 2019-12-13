@@ -5,13 +5,13 @@
     color: $default-text;
     padding: 0;
     box-shadow: none;
-    border: 1px solid #e9eae8;
+    border: 1px solid $light-grey;
   }
 
   .mat-card-header {
     padding: 16px;
 
-    border-bottom: 1px solid #e9eae8;
+    border-bottom: 1px solid $light-grey;
 
     .mat-card-title {
       margin-bottom: 0;
@@ -22,7 +22,7 @@
 
       &:not(:first-child),
       &:first-child {
-        margin-top: 16px;
+        margin-top: 5px;
       }
     }
   }
@@ -56,7 +56,14 @@
     margin-right: 14px;
 
     &:not(:last-child) {
-      border-bottom: 1px solid #e9eae8;
+      border-bottom: 1px solid $light-grey;
+    }
+    .linkTitle{
+      font-size: 16px;
+    }
+    .description{
+      font-size: 15px;
+      color: $grey;
     }
   }
 
@@ -80,15 +87,22 @@
     .detail-level {
       font-size: 12px;
     }
-    .detail{
+
+    .detail {
       color: $grey;
     }
+
     .detail-level {
       color: $primary;
     }
-    .link{
+
+    .link {
       color: $primary;
     }
   }
-
+  .spacer-line{
+    border-top:1px solid $light-grey;
+    border-bottom: none;
+    margin:0;
+  }
 }

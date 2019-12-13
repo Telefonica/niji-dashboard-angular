@@ -25,7 +25,7 @@ export class MainComponent implements OnInit {
           name: 'service3',
           status: 'inactive'
         }],
-        link: 'protection'
+        link: 'wifi-protection'
       }],
     },
     {

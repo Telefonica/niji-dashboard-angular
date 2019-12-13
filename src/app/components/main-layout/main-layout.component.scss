@@ -14,7 +14,7 @@
         font-size: 18px;
         font-weight: normal;
       }
-      color: #FFF;
+      color: $text-contrast;
       margin-left: 30px;
     }
   }
@@ -25,7 +25,7 @@
 
   }
   .mat-drawer-container{
-    background-color: #f6f6f6;
+    background-color: $background;
   }
   .mat-drawer-inner-container {
     .mat-list-base .mat-list-item .mat-list-item-content {

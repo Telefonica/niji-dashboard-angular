@@ -13,7 +13,9 @@
       <mat-card>
         <mat-card-header>
           <mat-card-title>
-            <img src="{{card.icon}}" alt="">
+            <span>
+              <img src="{{card.icon}}" alt="">
+            </span>
             <span class="align-middle ml-2">{{card.title}}</span>
           </mat-card-title>
           <mat-card-subtitle *ngIf="card.subtitle" class="primary mat-primary">{{card.subtitle}}
@@ -27,8 +29,8 @@
                 <app-status-icons [service]="service"></app-status-icons>
               </div>
             </div>
-            <mat-icon *ngIf="content.hasOwnProperty('link')" class="align-middle ml-auto" aria-hidden="true">
-              keyboard_arrow_right</mat-icon>
+              <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.hasOwnProperty('link')">
+
           </mat-card-content>
         </div>
 

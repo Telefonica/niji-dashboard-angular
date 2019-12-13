@@ -1,7 +1,9 @@
 :host ::ng-deep {
   h1 {
-  display: flex;
+    display: flex;
     flex: auto;
     justify-content: center;
+    font-weight: normal;
+    font-size: 18px;
   }
 }

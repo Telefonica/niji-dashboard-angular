@@ -23,19 +23,24 @@
     background: $primary;
   }
 }
-mat-sidenav{
+
+mat-sidenav {
   &.mat-drawer {
-    background-color:transparent;
+    background-color: transparent;
+
     .mat-expansion-panel {
-      background-color:transparent;
+      background-color: transparent;
     }
-    .mat-drawer-inner-container{
+
+    .mat-drawer-inner-container {
       background-color: #f6f6f6;
     }
   }
 }
+
 .mat-expansion-panel:not([class*=mat-elevation-z]) {
-  box-shadow: none;;
+  box-shadow: none;
+  ;
 }
 
 .mat-drawer-inner-container {
@@ -84,6 +89,15 @@ mat-sidenav{
 }
 
 // ### COMPONENTS ###
+// buttons
+
+.mat-flat-button.mat-accept,
+.mat-raised-button.mat-accept,
+.mat-fab.mat-accept,
+.mat-mini-fab.mat-accept {
+  background-color: $accept;
+  color:#FFF;
+}
 
 //switch
 .mat-slide-toggle {
@@ -98,6 +112,12 @@ mat-sidenav{
       }
     }
   }
+}
+
+// card
+.icon-title-container {
+  width: 20px;
+  display: inline-block;
 }
 
 //loader
