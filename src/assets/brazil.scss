@@ -1,37 +1,6 @@
 @import '~@angular/material/theming';
 
-$mat-brazil: (
-    50 : #ede0f3,
-    100 : #d1b3e0,
-    200 : #b380cc,
-    300 : #944db8,
-    400 : #7d26a8,
-    500 : #660099,
-    600 : #5e0091,
-    700 : #530086,
-    800 : #49007c,
-    900 : #38006b,
-    A100 : #c69aff,
-    A200 : #aa67ff,
-    A400 : #8d34ff,
-    A700 : #7f1aff,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #ffffff,
-        400 : #ffffff,
-        500 : #ffffff,
-        600 : #ffffff,
-        700 : #ffffff,
-        800 : #ffffff,
-        900 : #ffffff,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #ffffff,
-        A700 : #ffffff,
-    )
-);
+@import "./assets/brazil/mat-brazil.scss";
 
 
 // Plus imports for other components in your app.
@@ -59,14 +28,14 @@ $niji-app-theme: mat-light-theme($niji-app-primary, $niji-app-accent, $niji-app-
 @include angular-material-theme($niji-app-theme);
 
 // Imports functions, variables, and mixins that are needed by other Bootstrap files
-@import "./assets/variables"; // needed to join bootstrap and material
+@import "./assets/commons/variables"; // needed to join bootstrap and material
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/utilities";
-@import "./assets/reset"; // needed to join bootstrap and material
+@import "./assets/commons/reset"; // needed to join bootstrap and material
 
 @import "./assets/brazil/variables.scss"; // OB theme
-@import "./assets/common.scss"; // common styles
+@import "./assets/commons/common.scss"; // common styles
