@@ -1,44 +1,53 @@
 @import "./../../../assets/global/variables.scss";
 
 :host ::ng-deep {
-  .sub-header{
+  .sub-header {
     background-image: url('./../../../assets/global/img/movistar-mobile-header.svg');
     background-color: $primary;
     height: 97px;
     background-size: 100%;
-    >div{
+
+    >div {
       font-size: 20px;
       font-weight: bold;
-      &:first-child{
+
+      &:first-child {
         padding-top: 10px;
         font-size: 18px;
         font-weight: normal;
       }
+
       color: $text-contrast;
       margin-left: 30px;
     }
   }
-  .logo{
+
+  .logo {
     background-image: url('./../../../assets/global/img/movistar-logo.svg');
     width: 32px;
-    height:23px;
+    height: 23px;
 
   }
-  .mat-drawer-container{
+
+  .mat-drawer-container {
     background-color: $background;
   }
+
   .mat-drawer-inner-container {
     .mat-list-base .mat-list-item .mat-list-item-content {
       padding: 0;
+
       button {
         padding: 0;
         width: 100%;
       }
     }
+
     .mat-expansion-panel {
       min-width: 300px;
     }
   }
+
   .main-container {
     display: flex;
     flex-direction: column;
@@ -71,5 +80,70 @@
     flex: 1 0 auto;
   }
 
+  .mat-toolbar {
+    &.mat-primary {
+      background: $primary;
+    }
+  }
 
+  mat-sidenav {
+    &.mat-drawer {
+      background-color: transparent;
+
+      .mat-expansion-panel {
+        background-color: transparent;
+      }
+
+      .mat-drawer-inner-container {
+        background-color: #f6f6f6;
+      }
+    }
+  }
+
+  .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+    ;
+  }
+
+  .mat-drawer-inner-container {
+    scrollbar-width: thin;
+
+    // -webkit-scrollbar-button: 5px;
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:vertical {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-button:increment,
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #dadada;
+      border-radius: 20px;
+      border: 2px solid #f1f2f3;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+  }
+
+  .mat-drawer-inner-container {
+    .mat-list-base {
+
+      .mat-list-item,
+      .mat-list-option {
+        height: 30px;
+      }
+    }
+  }
 }

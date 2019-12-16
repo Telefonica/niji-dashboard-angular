@@ -1,4 +1,4 @@
-// ### COLORS CLASES ###
+// ### CUSTOM CLASES ###
 
 .primary {
   color: $primary;
@@ -16,77 +16,7 @@
   cursor: pointer;
 }
 
-// ### LAYOUT ELEMENTS ###
 
-.mat-toolbar {
-  &.mat-primary {
-    background: $primary;
-  }
-}
-
-mat-sidenav {
-  &.mat-drawer {
-    background-color: transparent;
-
-    .mat-expansion-panel {
-      background-color: transparent;
-    }
-
-    .mat-drawer-inner-container {
-      background-color: #f6f6f6;
-    }
-  }
-}
-
-.mat-expansion-panel:not([class*=mat-elevation-z]) {
-  box-shadow: none;
-  ;
-}
-
-.mat-drawer-inner-container {
-  scrollbar-width: thin;
-
-  // -webkit-scrollbar-button: 5px;
-  &::-webkit-scrollbar {
-    -webkit-appearance: none;
-  }
-
-  &::-webkit-scrollbar:vertical {
-    width: 10px;
-  }
-
-  &::-webkit-scrollbar-button:increment,
-  &::-webkit-scrollbar-button {
-    display: none;
-  }
-
-  &::-webkit-scrollbar:horizontal {
-    height: 10px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #dadada;
-    border-radius: 20px;
-    border: 2px solid #f1f2f3;
-  }
-
-  &::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-}
-
-
-// ### MAIN MENU ###
-
-.mat-drawer-inner-container {
-  .mat-list-base {
-
-    .mat-list-item,
-    .mat-list-option {
-      height: 30px;
-    }
-  }
-}
 
 // ### COMPONENTS ###
 // buttons
@@ -115,9 +45,94 @@ mat-sidenav {
 }
 
 // card
-.icon-title-container {
-  width: 20px;
-  display: inline-block;
+
+.custom-card{
+  &.mat-card{
+    color: $default-text;
+    padding:0;
+    box-shadow: none;
+    border: 1px solid #e9eae8;
+    .mat-card-header{
+      padding: 16px ;
+
+      border-bottom:1px solid $light-grey;
+        .mat-card-title{
+          margin-bottom: 0;
+          >span:first-child{
+            width:20px;
+            display:inline-block;
+            text-align: center;
+          }
+        }
+        .mat-card-subtitle {
+          margin-bottom: 0;
+          margin-top: 5px;
+
+        }
+    }
+  }
+  .imagesList{
+    .mat-card-content{
+      margin-left:0;
+    }
+    img {
+      max-width:97px;
+    }
+    .type{
+      color: $image-list-type;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .title{
+      font-size: 16px;
+    }
+    .subtitle{
+      font-size: 12px;
+      color: $grey;
+    }
+    .price{
+      font-size: 20px;
+      span {
+        font-size: 14px;
+        color: $grey;;
+      }
+    }
+  }
+
+  .num-list{
+    display: block;
+    width: 100%;
+    >span{
+      display: block;
+
+    }
+    .services-icons{
+      display: inline-block;
+      margin-right: 5px;;
+    }
+  }
+
+  .mat-card-header-text {
+    margin-left: 0;
+  }
+  .mat-card-content{
+    margin-left: 31px;
+    padding: 14px;
+    display:flex;
+    margin-bottom: 0;
+    padding-right: 0;
+    margin-right: 14px;
+    &:not(:last-child){
+      border-bottom:1px solid #e9eae8;
+    }
+}
+  .mat-card-subtitle,
+  .mat-card-actions {
+    margin-left: 32px;
+  }
+  .swiper-container{
+    margin: 8px;
+  }
 }
 
 //loader

@@ -19,7 +19,7 @@ export class ProtectionComponent implements OnInit {
   public cards = [
     {
       title: 'Protección WiFi Hogar',
-      subtitle: 'Descubre más',
+      subtitleLlink: 'Descubre más',
       showCheck: true,
       icon: './../../assets/global/img/icons/shield-icon.svg',
       checked: true,
