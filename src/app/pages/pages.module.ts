@@ -9,16 +9,11 @@ import { ComponentsModule } from '../components/components.module';
 
 import {
   MatSliderModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatIconModule,
   MatCardModule,
   MatButtonModule,
-  MatListModule,
   MatSlideToggleModule,
-  MatProgressSpinnerModule,
-  MatExpansionModule
- } from '@angular/material';
+  MatProgressSpinnerModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -30,13 +25,8 @@ import {
     ComponentsModule,
     AppRoutingModule,
     MatSliderModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatIconModule,
     MatCardModule,
     MatButtonModule,
-    MatListModule,
-    MatExpansionModule,
     MatSlideToggleModule,
     MatProgressSpinnerModule
   ]

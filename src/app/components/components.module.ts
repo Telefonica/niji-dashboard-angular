@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './../app-routing.module';
 
+import { FormsModule } from '@angular/forms';
+import { ModalDialogComponent, ModalDialogContent } from './modal-dialog/modal-dialog.component';
+
 import {
   MatSliderModule,
   MatSidenavModule,
@@ -12,7 +15,10 @@ import {
   MatListModule,
   MatSlideToggleModule,
   MatProgressSpinnerModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatDialogModule
 } from '@angular/material';
 
 import { SwiperModule, SWIPER_CONFIG, SwiperConfigInterface } from 'ngx-swiper-wrapper';
@@ -39,7 +45,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HeaderComponent,
     HeaderStateComponent,
     StatusIconsComponent,
-    SecStatusComponent
+    SecStatusComponent,
+    ModalDialogComponent,
+    ModalDialogContent
 
   ],
   exports: [
@@ -49,12 +57,15 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HeaderComponent,
     HeaderStateComponent,
     StatusIconsComponent,
-    SecStatusComponent
+    SecStatusComponent,
+    ModalDialogComponent,
+    ModalDialogContent
 
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
+    FormsModule,
     MatSliderModule,
     MatSidenavModule,
     MatToolbarModule,
@@ -65,7 +76,14 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatListModule,
     MatExpansionModule,
     MatSlideToggleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule
+
+  ],
+  entryComponents: [
+    ModalDialogContent
   ],
   providers: [
     {

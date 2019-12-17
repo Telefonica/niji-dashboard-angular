@@ -51,7 +51,7 @@
     color: $default-text;
     padding: 0;
     box-shadow: none;
-    border: 1px solid #e9eae8;
+    border: 1px solid $light-grey;
 
     .mat-card-header {
       padding: 16px;
@@ -138,7 +138,7 @@
     margin-right: 14px;
 
     &:not(:last-child) {
-      border-bottom: 1px solid #e9eae8;
+      border-bottom: 1px solid $light-grey;
     }
   }
 
