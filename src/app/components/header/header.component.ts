@@ -6,11 +6,11 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-  export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit {
   @Input() title;
   @Input() media;
 
-  constructor(private router: Router) {
+  constructor(public router: Router) {
   }
 
   @Output() toggleNav = new EventEmitter<string>();

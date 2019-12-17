@@ -1,13 +1,14 @@
 @font-face {
   font-family: 'Telefonica';
   src: url('./assets/global/fonts/Telefonica-Regular.eot?#iefix') format('embedded-opentype'),
-  url('./assets/global/fonts/Telefonica-Regular.woff2') format('woff2'),
-  url('./assets/global/fonts/Telefonica-Regular.woff') format('woff'),
-  url('./assets/global/fonts/Telefonica-Regular.ttf') format('truetype'),
-  url('./assets/global/fonts/Telefonica-Regular.svg#Telefonica-Regular') format('svg');
+    url('./assets/global/fonts/Telefonica-Regular.woff2') format('woff2'),
+    url('./assets/global/fonts/Telefonica-Regular.woff') format('woff'),
+    url('./assets/global/fonts/Telefonica-Regular.ttf') format('truetype'),
+    url('./assets/global/fonts/Telefonica-Regular.svg#Telefonica-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-*{
+
+* {
   font-family: 'Telefonica';
 }

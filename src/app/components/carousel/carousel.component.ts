@@ -8,7 +8,7 @@ import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
-  public show: boolean = true;
+  public show = true;
 
    public slides = [
     {
@@ -33,7 +33,7 @@ export class CarouselComponent implements OnInit {
     }
   ];
 
-  public type: string = 'component';
+  public type = 'component';
 
   public disabled: boolean = false;
 

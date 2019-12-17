@@ -38,7 +38,6 @@
   </div>
 
   <div *ngFor="let card of cards" class="col-12 col-lg-8 mt-4">
-
     <mat-card class="custom-card">
       <mat-card-header>
         <mat-card-title>
@@ -56,9 +55,7 @@
         <mat-slide-toggle *ngIf="card.showCheck" class="ml-auto mt-1" color="primary" checked={{card.checked}}
           disabled={{card.disabled}}>
         </mat-slide-toggle>
-
       </mat-card-header>
-
       <app-sec-status [card]="card" class="bottom-border"></app-sec-status>
       <mat-card-content *ngFor="let content of card.contents">
         <div [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}" class="num-list">
@@ -68,14 +65,11 @@
         <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.linkTitle">
       </mat-card-content>
       <mat-card-content *ngIf="card.cardDescription" style="flex-direction: column;">
-
         <div>{{card.cardDescription}}</div>
         <br>
         <button mat-flat-button color="accept">Proteger</button>
       </mat-card-content>
-
     </mat-card>
-
   </div>
 
 </div>
