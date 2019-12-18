@@ -17,7 +17,10 @@
 .link {
   cursor: pointer;
 }
-
+//STATUS COLORS
+.warning{
+    color: $warning;
+}
 
 // ### COMPONENTS ###
 // buttons
@@ -168,48 +171,3 @@ mat-progress-spinner {
   background-color: $primary;
 }
 
-// Slider
-.slider-telefonica {
-  &.mat-slider {
-    padding: 0;
-  }
-
-  &.mat-accent .mat-slider-track-fill {
-    display: none;
-  }
-
-  &.mat-slider-disabled .mat-slider-thumb {
-    position: absolute;
-    right: -10px;
-    bottom: -12px;
-    box-sizing: border-box;
-    width: 20px;
-    height: 24px;
-    border: 0;
-    border-radius: 0;
-    transform: scale(1);
-    background-image: url('./assets/global/img/icons/shield-bar-icon.svg');
-    background-size: 98%;
-    background-color: transparent;
-    background-repeat: no-repeat;
-  }
-
-  &.mat-slider-horizontal {
-    height: 31px;
-
-    .mat-slider-wrapper {
-      left: 0;
-      right: 0;
-      height: 8px;
-      background-image: linear-gradient(to right, $gradient-bar-1 15%, $gradient-bar-2 58%, $gradient-bar-3 80%);
-    }
-
-    .mat-slider-track-background {
-      display: none;
-    }
-  }
-
-  .mat-slider-wrapper {
-    top: 12px;
-  }
-}

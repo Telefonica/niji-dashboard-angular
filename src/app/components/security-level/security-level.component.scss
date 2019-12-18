@@ -1,0 +1,61 @@
+@import "./../../../assets/global/variables.scss";
+
+:host ::ng-deep {
+    .custom-slider {
+        &.mat-slider {
+            padding: 0;
+        }
+
+        .mat-slider-track-fill {
+            background-image: linear-gradient(to right, $gradient-bar-1 15%, $gradient-bar-2 58%, $gradient-bar-3 80%);
+            height: 8px;
+        }
+
+        .mat-slider-thumb {
+            position: absolute;
+            right: -10px;
+            bottom: -12px;
+            box-sizing: border-box;
+            width: 20px;
+            height: 24px;
+            border: 0;
+            transform: scale(1);
+            background-image: url('./../../../assets/global/img/icons/shield-bar-icon.svg');
+            background-size: 94%;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+        }
+
+        &.mat-slider-horizontal {
+            height: 31px;
+
+            .mat-slider-wrapper {
+                top: 12px;
+                left: 0;
+                right: 0;
+                height: 8px;
+            }
+
+            .mat-slider-track-wrapper {
+                border-radius: 5px;
+                height: 8px;
+            }
+
+            .mat-slider-track-background {
+                height: 8px;
+            }
+        }
+
+    }
+
+    .detail,
+    .detail-level {
+        font-size: 12px;
+    }
+
+    .warning-status-message {
+        font-size: 14px;
+    }
+}
