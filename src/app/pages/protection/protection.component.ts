@@ -62,7 +62,9 @@ export class ProtectionComponent implements OnInit {
       title: 'Bloqueo de contenido',
       subtitle: 'Filtrado de sitios web apropiados para la edad',
       subtitleLlink: 'Activar en Smart Wifi',
-      showCheck: false,
+      showCheck: true,
+      disabled: false,
+      checked: true,
       icon: './../../assets/global/img/icons/block-icon.svg',
     },
     {

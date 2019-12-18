@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class MainComponent implements OnInit {
+    public ourCards: any;
   public cards = [
     {
       title: 'Protección Red WiFi',
@@ -107,9 +110,14 @@ export class MainComponent implements OnInit {
       ]
     }
   ];
-  constructor() { }
 
-  ngOnInit() {
-  }
+    constructor(private route: ActivatedRoute) {
 
+    }
+
+    ngOnInit() {        
+        console.log(this.route.snapshot.data.user);
+        // this.ourCards = this.route.snapshot.user;
+        // console.log(this.ourCards);
+    }
 }
