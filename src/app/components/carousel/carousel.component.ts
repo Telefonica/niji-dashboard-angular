@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
-  SwiperScrollbarInterface, SwiperPaginationInterface } from 'ngx-swiper-wrapper';
+import {
+  SwiperComponent, SwiperDirective, SwiperConfigInterface,
+  SwiperScrollbarInterface, SwiperPaginationInterface
+} from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-carousel',
@@ -10,7 +12,7 @@ import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
 export class CarouselComponent implements OnInit {
   public show = true;
 
-   public slides = [
+  public slides = [
     {
       name: 'uno',
       img: 'https://picsum.photos/id/1/1000/300',
@@ -40,7 +42,7 @@ export class CarouselComponent implements OnInit {
   public config: SwiperConfigInterface = {
     direction: 'horizontal',
     spaceBetween: 10,
-    slidesPerView: 2,
+    slidesPerView: 1,
     keyboard: true,
     mousewheel: true,
     scrollbar: false,

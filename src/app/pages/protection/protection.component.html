@@ -1,63 +1,65 @@
 <div class="row">
-    <div class="col-12 col-lg-8  mt-4">
-        <div class="header-detail  px-3">
-            <div class="row">
-                <div class="col-auto">
-                    <div class="header-text">{{header[0].title}}</div>
-                </div>
-                <div class="col-auto pl-0 d-flex align-items-center">
-                    <img src="./../../../assets/global/img/icons/pen-icon.svg" alt="">
-                </div>
-                <div class="col-auto ml-auto">
-                    <img src="./../../../assets/global/img/icons/question-icon.svg" alt="">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="header-num">{{header[0].num}}</div>
-                </div>
-            </div>
-
-            <app-security-level></app-security-level>
-
-
+  <div class="col-12 col-lg-8  mt-4">
+    <div class="header-detail  px-3">
+      <div class="row">
+        <div class="col-auto">
+          <div class="header-text">{{header[0].title}}</div>
         </div>
+        <div class="col-auto pl-0 d-flex align-items-center">
+          <img src="./../../../assets/global/img/icons/pen-icon.svg" alt="">
+        </div>
+        <div class="col-auto ml-auto">
+          <img src="./../../../assets/global/img/icons/question-icon.svg" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="header-num">{{header[0].num}}</div>
+        </div>
+      </div>
+
+      <app-security-level></app-security-level>
+
+
     </div>
+  </div>
 
-    <div *ngFor="let card of cards" class="col-12 col-lg-8 mt-4">
-        <mat-card class="custom-card">
-            <mat-card-header>
-                <mat-card-title>
-                    <span class="icon-title-container">
-                        <img src="{{card.icon}}" alt="">
-                    </span>
-                    <span class="align-middle ml-2">{{card.title}}</span>
-                </mat-card-title>
+  <div *ngFor="let card of cards" class="col-12 col-lg-8 mt-4">
+    <mat-card class="custom-card">
+      <mat-card-header>
+        <mat-card-title>
+          <span class="icon-title-container">
+            <img src="{{card.icon}}" alt="">
+          </span>
+          <span class="align-middle ml-2">{{card.title}}</span>
+        </mat-card-title>
 
-                <mat-card-subtitle *ngIf="card.subtitle">{{card.subtitle}}
-                </mat-card-subtitle>
+        <mat-card-subtitle *ngIf="card.subtitle">{{card.subtitle}}
+        </mat-card-subtitle>
 
-                <mat-card-subtitle *ngIf="card.subtitleLlink" class="primary mat-primary link">{{card.subtitleLlink}}
-                </mat-card-subtitle>
-                <mat-slide-toggle *ngIf="card.showCheck" class="ml-auto mt-1" color="primary" checked={{card.checked}}
-                    disabled={{card.disabled}}>
-                </mat-slide-toggle>
-            </mat-card-header>
-            <app-sec-status [card]="card" class="bottom-border"></app-sec-status>
-            <mat-card-content *ngFor="let content of card.contents">
-                <div [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}"
-                    class="num-list">
-                    <span class="linkTitle">{{content.linkTitle}}</span>
-                    <span class="description">{{content.description}}</span>
-                </div>
-                <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.linkTitle">
-            </mat-card-content>
-            <mat-card-content *ngIf="card.cardDescription" style="flex-direction: column;">
-                <div>{{card.cardDescription}}</div>
-                <br>
-                <button mat-flat-button color="accept">Proteger</button>
-            </mat-card-content>
-        </mat-card>
-    </div>
+        <mat-card-subtitle *ngIf="card.subtitleLlink" class="primary mat-primary link">{{card.subtitleLlink}}
+        </mat-card-subtitle>
+        <mat-slide-toggle *ngIf="card.showCheck" class="ml-auto mt-1" color="primary" checked={{card.checked}}
+          disabled={{card.disabled}}>
+        </mat-slide-toggle>
+      </mat-card-header>
+      <app-sec-status [card]="card" class="bottom-border"></app-sec-status>
+      <mat-card-content *ngFor="let content of card.contents">
+        <div [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}" class="num-list">
+          <span class="linkTitle">{{content.linkTitle}}</span>
+          <span class="description">{{content.description}}</span>
+        </div>
+        <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.linkTitle">
+      </mat-card-content>
+      <mat-card-content *ngIf="card.cardDescription" style="flex-direction: column;">
+        <div>{{card.cardDescription}}</div>
+        <br>
+        <button mat-flat-button color="accept">Proteger</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-12 col-lg-8 mt-4">
+    <app-premium-services></app-premium-services>
+  </div>
 
 </div>

@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class MainComponent implements OnInit {
-    public ourCards: any;
+  public ourCards: any;
   public cards = [
     {
       title: 'Protección Red WiFi',
@@ -85,39 +85,16 @@ export class MainComponent implements OnInit {
           }],
         }
       ],
-    },
-    {
-      title: 'Servicios Premium',
-      icon: './../../assets/global/img/icons/star-icon.svg',
-      type: 'imagesList',
-      contents: [
-        {
-          img: './../../assets/global/img/device-protection.png',
-          type: 'PREMIUM',
-          title: 'Qustodio Kids',
-          subtitle: 'Mantén protegidos a tus hijos',
-          price: '65' + '€',
-          tax: '/mes IVA incl.'
-        },
-        {
-          img: './../../assets/global/img/qustodio-kids.png',
-          type: 'PREMIUM',
-          title: 'Seguridad Dispositivo',
-          subtitle: 'Protección adicional para dispositivos',
-          price: '65' + '€',
-          tax: '/mes IVA incl.'
-        }
-      ]
     }
   ];
 
-    constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute) {
 
-    }
+  }
 
-    ngOnInit() {        
-        console.log(this.route.snapshot.data.user);
-        // this.ourCards = this.route.snapshot.user;
-        // console.log(this.ourCards);
-    }
+  ngOnInit() {
+    console.log(this.route.snapshot.data.user);
+    // this.ourCards = this.route.snapshot.user;
+    // console.log(this.ourCards);
+  }
 }

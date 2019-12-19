@@ -6,19 +6,19 @@ import { FormsModule } from '@angular/forms';
 import { ModalDialogComponent, ModalDialogContent } from './modal-dialog/modal-dialog.component';
 
 import {
-    MatSliderModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    MatButtonModule,
-    MatListModule,
-    MatSlideToggleModule,
-    MatProgressSpinnerModule,
-    MatExpansionModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDialogModule
+  MatSliderModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatButtonModule,
+  MatListModule,
+  MatSlideToggleModule,
+  MatProgressSpinnerModule,
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatDialogModule
 } from '@angular/material';
 
 import { SwiperModule, SWIPER_CONFIG, SwiperConfigInterface } from 'ngx-swiper-wrapper';
@@ -32,67 +32,70 @@ import { StatusIconsComponent } from './status-icons/status-icons.component';
 
 import { SecStatusComponent } from './sec-status/sec-status.component';
 import { SecurityLevelComponent } from './security-level/security-level.component';
+import { PremiumServicesComponent } from './premium-services/premium-services.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-    direction: 'horizontal',
-    slidesPerView: 'auto'
+  direction: 'horizontal',
+  slidesPerView: 'auto'
 };
 
 @NgModule({
-    declarations: [
-        MainLayoutComponent,
-        MainMenuDropdownComponent,
-        CarouselComponent,
-        HeaderComponent,
-        HeaderStateComponent,
-        StatusIconsComponent,
-        SecStatusComponent,
-        ModalDialogComponent,
-        ModalDialogContent,
-        SecurityLevelComponent
+  declarations: [
+    MainLayoutComponent,
+    MainMenuDropdownComponent,
+    CarouselComponent,
+    HeaderComponent,
+    HeaderStateComponent,
+    StatusIconsComponent,
+    SecStatusComponent,
+    ModalDialogComponent,
+    ModalDialogContent,
+    SecurityLevelComponent,
+    PremiumServicesComponent
 
-    ],
-    exports: [
-        MainLayoutComponent,
-        MainMenuDropdownComponent,
-        CarouselComponent,
-        HeaderComponent,
-        HeaderStateComponent,
-        StatusIconsComponent,
-        SecStatusComponent,
-        ModalDialogComponent,
-        ModalDialogContent,
-        SecurityLevelComponent
+  ],
+  exports: [
+    MainLayoutComponent,
+    MainMenuDropdownComponent,
+    CarouselComponent,
+    HeaderComponent,
+    HeaderStateComponent,
+    StatusIconsComponent,
+    SecStatusComponent,
+    ModalDialogComponent,
+    ModalDialogContent,
+    SecurityLevelComponent,
+    PremiumServicesComponent
 
-    ],
-    imports: [
-        CommonModule,
-        AppRoutingModule,
-        FormsModule,
-        MatSliderModule,
-        MatSidenavModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatCardModule,
-        MatButtonModule,
-        SwiperModule,
-        MatListModule,
-        MatExpansionModule,
-        MatSlideToggleModule,
-        MatProgressSpinnerModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatDialogModule
+  ],
+  imports: [
+    CommonModule,
+    AppRoutingModule,
+    FormsModule,
+    MatSliderModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatButtonModule,
+    SwiperModule,
+    MatListModule,
+    MatExpansionModule,
+    MatSlideToggleModule,
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule
 
-    ],
-    entryComponents: [
-        ModalDialogContent
-    ],
-    providers: [
-        {
-            provide: SWIPER_CONFIG,
-            useValue: DEFAULT_SWIPER_CONFIG
-        }
-    ],
+  ],
+  entryComponents: [
+    ModalDialogContent
+  ],
+  providers: [
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    }
+  ],
 })
 export class ComponentsModule { }

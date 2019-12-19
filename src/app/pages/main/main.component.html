@@ -34,21 +34,6 @@
               *ngIf="content.hasOwnProperty('link')">
           </mat-card-content>
         </div>
-        <div *ngIf="card.type === 'imagesList'" class="imagesList">
-          <mat-card-content *ngFor="let content of card.contents">
-            <div class="row w-100">
-              <div class="col-auto">
-                <img src="{{content.img}}" alt="">
-              </div>
-              <div class="col pl-0 pr-0">
-                <div class="type">{{content.type}}</div>
-                <div class="title">{{content.title}}</div>
-                <div class="subtitle">{{content.subtitle}}</div>
-                <div class="price">{{content.price}}<span>{{content.tax}}</span></div>
-              </div>
-            </div>
-          </mat-card-content>
-        </div>
       </mat-card>
     </div>
 

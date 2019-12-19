@@ -1,0 +1,25 @@
+<mat-card class="custom-card">
+  <mat-card-header>
+    <mat-card-title>
+      <span>
+        <img src="{{premium[0].icon}}" alt="">
+      </span>
+      <span class="align-middle ml-2">{{premium[0].title}}</span>
+    </mat-card-title>
+  </mat-card-header>
+  <div *ngIf="premium[0].type === 'imagesList'" class="imagesList">
+    <mat-card-content *ngFor="let content of premium[0].contents">
+      <div class="row w-100">
+        <div class="col-auto">
+          <img src="{{content.img}}" alt="">
+        </div>
+        <div class="col pl-0 pr-0">
+          <div class="type">{{content.type}}</div>
+          <div class="title">{{content.title}}</div>
+          <div class="subtitle">{{content.subtitle}}</div>
+          <div class="price">{{content.price}}<span>{{content.tax}}</span></div>
+        </div>
+      </div>
+    </mat-card-content>
+  </div>
+</mat-card>
