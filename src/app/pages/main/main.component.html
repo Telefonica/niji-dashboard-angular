@@ -22,18 +22,6 @@
             <span class="align-middle ml-2">{{card.title}}</span>
           </mat-card-title>
         </mat-card-header>
-        <div *ngIf="card.type !== 'imagesList'">
-          <mat-card-content *ngFor="let content of card.contents">
-            <div class="num-list" [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}">
-              <span>{{content.alias}} {{content.num}}</span>
-              <div class="services-icons" *ngFor="let service of content.services">
-                <app-status-icons [service]="service"></app-status-icons>
-              </div>
-            </div>
-            <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt=""
-              *ngIf="content.hasOwnProperty('link')">
-          </mat-card-content>
-        </div>
       </mat-card>
     </div>
 
