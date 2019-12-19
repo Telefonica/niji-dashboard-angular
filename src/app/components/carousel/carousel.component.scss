@@ -1,6 +1,11 @@
-:host ::ng-deep{
+:host ::ng-deep {
 
-  img{
-    max-width:100%;
+  img {
+    max-width: 100%;
+  }
+
+  swiper>.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-last,
+  swiper>.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-first {
+    border: none;
   }
 }
