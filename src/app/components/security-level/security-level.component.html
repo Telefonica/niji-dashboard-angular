@@ -1,29 +1,29 @@
 <div class="row mt-2">
-    <div class="col-auto pr-0">
-        <span class="detail">{{securityLevel[0].levelCaption}}</span>
-    </div>
-    <div class="col-auto pl-1">
-        <!--  protection normal or hig use class primary-->
-        <span class="detail-level warning">{{securityLevel[0].protectionCaption}}</span>
-    </div>
+  <div class="col-auto pr-0">
+    <span class="detail">{{securityLevel[0].levelCaption}}</span>
+  </div>
+  <div class="col-auto pl-1">
+    <span class="detail-level" [ngClass]="{'warning':securityLevel[0].protection <= SECURITY_LEVEL_LOW,
+      'primary':securityLevel[0].protection > SECURITY_LEVEL_LOW}">{{securityLevel[0].protectionCaption}}</span>
+  </div>
 </div>
-<div class="row" *ngIf="securityLevel[0].protection < SECURITY_LEVEL_LOW">
-    <div class="col-auto pr-1">
-        <img src="./../../../assets/global/img/icons/warning-icon.svg" alt="warning">
-    </div>
-    <div class="col pl-0">
-        <span class="warning-status-message">Te recomendamos revisar este perfil, no tiene la protección básica
-            activada.</span>
-    </div>
+<div class="row" *ngIf="securityLevel[0].protection <= SECURITY_LEVEL_LOW">
+  <div class="col-auto pr-1">
+    <img src="./../../../assets/global/img/icons/warning-icon.svg" alt="warning">
+  </div>
+  <div class="col pl-0">
+    <span class="warning-status-message">Te recomendamos revisar este perfil, no tiene la protección básica
+      activada.</span>
+  </div>
 </div>
 <div class="row mt-2">
-    <div class="col">
-        <mat-slider min="0" max="10" step="1" value="{{securityLevel[0].protection}}" class="custom-slider w-100 mb-0"
-            disabled="disabled"></mat-slider>
-    </div>
+  <div class="col">
+    <mat-slider min="0" max="10" step="1" value="{{securityLevel[0].protection}}" class="custom-slider w-100 mb-0"
+      disabled="disabled"></mat-slider>
+  </div>
 </div>
 <div class="row my-2">
-    <div class="col">
-        <span class="link primary">{{securityLevel[0].link}}</span>
-    </div>
+  <div class="col">
+    <span class="link primary">{{securityLevel[0].link}}</span>
+  </div>
 </div>
