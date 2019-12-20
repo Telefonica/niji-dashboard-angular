@@ -1,81 +1,38 @@
 <mat-accordion multi="true" displayMode="flat">
-  <mat-expansion-panel expanded="true">
-    <mat-expansion-panel-header [collapsedHeight]="'50px'" [expandedHeight]="'50px'">
-      <mat-panel-title>
-        Menu 1
-      </mat-panel-title>
-      <!-- <mat-panel-description>
-          Type your name and age
-        </mat-panel-description> -->
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item> <button mat-button class="text-left">option2 </button> </mat-list-item>
-      <mat-list-item> <button mat-button class="text-left">option2 </button> </mat-list-item>
-      <mat-list-item> <button mat-button class="text-left">option2 </button> </mat-list-item>
-    </mat-list>
-
-  </mat-expansion-panel>
-  <mat-expansion-panel [expanded]="true">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Menu 2
-      </mat-panel-title>
-      <!-- <mat-panel-description>
-Type your name and age
-</mat-panel-description> -->
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item> option2 </mat-list-item>
-      <mat-list-item> option2 </mat-list-item>
-      <mat-list-item> option2 </mat-list-item>
-
-    </mat-list>
-
-  </mat-expansion-panel>
-  <mat-expansion-panel [expanded]="true">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Menu 2
-      </mat-panel-title>
-      <!-- <mat-panel-description>
-  Type your name and age
-  </mat-panel-description> -->
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item> option2 </mat-list-item>
-      <mat-list-item> option2 </mat-list-item>
-      <mat-list-item> option2 </mat-list-item>
-
-    </mat-list>
-
-  </mat-expansion-panel>
-  <mat-expansion-panel [expanded]="true">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Menu 2
-      </mat-panel-title>
-      <!-- <mat-panel-description>
-    Type your name and age
-    </mat-panel-description> -->
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item> option2 </mat-list-item>
-      <mat-list-item> option2 </mat-list-item>
-      <mat-list-item> option2 </mat-list-item>
-
-    </mat-list>
-
-  </mat-expansion-panel>
-  <!-- <mat-expansion-panel (opened)="panelOpenState = true"
-                         (closed)="panelOpenState = false">
-      <mat-expansion-panel-header>
+  <div *ngFor="let card of cards">
+    <mat-expansion-panel expanded="{{card.expanded}}" *ngIf="card.contents !== undefined">
+      <mat-expansion-panel-header [collapsedHeight]="optionHeight" [expandedHeight]="optionHeight">
         <mat-panel-title>
-          Self aware panel
-        </mat-panel-title> -->
-  <!-- <mat-panel-description>
-          Currently I am {{panelOpenState ? 'open' : 'closed'}}
-        </mat-panel-description> -->
-  <!-- </mat-expansion-panel-header>
-      <button mat-icon-button class="ml-auto">option2 </button>
-    </mat-expansion-panel> -->
+          <div class="row">
+            <div class="col-auto pr-0">
+              <div class="menu-icon">
+                <img src="{{card.icon}}" alt="">
+              </div>
+            </div>
+            <div class="col pl-2">
+              <span class="align-middle">{{card.title}}</span>
+            </div>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list *ngFor="let content of card.contents">
+        <mat-list-item> <button mat-button class="text-left" routerLink="{{content.link}}">
+            <span>{{content.alias}} - {{content.num}}</span></button>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+
+    <div *ngIf="card.contents === undefined" class="mat-expansion-panel mat-expansion-panel-header"
+      [ngStyle]="{'height': optionHeight}" routerLink="{{card.link}}">
+      <div class=" col-auto px-0">
+        <div class="menu-icon">
+          <img src="{{card.icon}}" alt="">
+        </div>
+      </div>
+      <div class="col pl-2">
+        <span class="align-middle">{{card.title}}</span>
+      </div>
+    </div>
+
+  </div>
 </mat-accordion>
