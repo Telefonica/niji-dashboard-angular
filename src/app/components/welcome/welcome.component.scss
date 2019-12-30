@@ -1,0 +1,90 @@
+@import "./../../../assets/global/variables.scss";
+
+:host ::ng-deep {
+  .welcome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    z-index: 9999999;
+    width: 100%;
+
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      z-index: 9;
+
+      span {
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+
+  swiper.swiper-container {
+    display: flex;
+    max-width: 600px;
+
+    height: 100%;
+    align-items: center;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slides-content {
+    overflow: auto;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p {
+    margin: 0 20px 20px 20px;
+  }
+
+  h1 {
+    font-size: 18px;
+    margin: 40px 20px 5px 20px;
+  }
+
+
+  .img-cont {
+    padding: 0 40px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .btn-pagination {
+    position: absolute;
+    text-align: center;
+    bottom: 10px;
+    left: 0;
+    width: 100%
+  }
+
+  swiper>.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-last,
+  swiper>.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-first {
+    border: none;
+  }
+
+}
