@@ -9,15 +9,18 @@
   </mat-card-header>
   <div *ngIf="premium[0].type === 'imagesList'" class="imagesList">
     <mat-card-content *ngFor="let content of premium[0].contents">
-      <div class="row w-100">
+      <div class="row">
         <div class="col-auto">
           <img src="{{content.img}}" alt="">
         </div>
-        <div class="col pl-0 pr-0">
-          <div class="type">{{content.type}}</div>
+        <div class="col pl-0">
+          <div class="d-flex">
+            <div class="type w-100 align-self-center h-28">{{content.type}}</div>
+            <div><img src={{content.icon}} alt=""></div>
+          </div>
           <div class="title">{{content.title}}</div>
           <div class="subtitle">{{content.subtitle}}</div>
-          <div class="price">{{content.price}}<span>{{content.tax}}</span></div>
+          <!-- <div class="price">{{content.price}}<span>{{content.tax}}</span></div> -->
         </div>
       </div>
     </mat-card-content>

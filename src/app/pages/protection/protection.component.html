@@ -20,7 +20,6 @@
 
       <app-security-level></app-security-level>
 
-
     </div>
   </div>
 
@@ -39,27 +38,39 @@
 
         <mat-card-subtitle *ngIf="card.subtitleLlink" class="primary mat-primary link">{{card.subtitleLlink}}
         </mat-card-subtitle>
+
         <mat-slide-toggle *ngIf="card.showCheck" class="ml-auto mt-1" color="primary" checked={{card.checked}}
           disabled={{card.disabled}}>
         </mat-slide-toggle>
+
       </mat-card-header>
+
       <app-sec-status [card]="card" class="bottom-border"></app-sec-status>
+
       <mat-card-content *ngFor="let content of card.contents">
-        <div [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}" class="num-list">
-          <span class="linkTitle">{{content.linkTitle}}</span>
-          <span class="description">{{content.description}}</span>
+        <div [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}"
+          class="d-flex w-100 ml-24">
+          <div class="ml-2">
+            <div class="linkTitle">{{content.linkTitle}}</div>
+            <div class="description mt-2">{{content.description}}</div>
+          </div>
         </div>
         <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.linkTitle">
       </mat-card-content>
+
       <mat-card-content *ngIf="card.cardDescription" style="flex-direction: column;">
         <div>{{card.cardDescription}}</div>
         <br>
         <button mat-flat-button color="accept">Proteger</button>
       </mat-card-content>
+
     </mat-card>
   </div>
+
   <div class="col-12 col-lg-8 mt-4">
+
     <app-premium-services></app-premium-services>
+
   </div>
 
 </div>

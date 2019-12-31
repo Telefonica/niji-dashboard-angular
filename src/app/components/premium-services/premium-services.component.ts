@@ -13,20 +13,21 @@ export class PremiumServicesComponent implements OnInit {
       type: 'imagesList',
       contents: [
         {
-          img: './../../assets/global/img/device-protection.png',
-          type: 'PREMIUM',
-          title: 'Qustodio Kids',
-          subtitle: 'Mantén protegidos a tus hijos',
-          price: '65' + '€',
-          tax: '/mes IVA incl.'
-        },
-        {
           img: './../../assets/global/img/qustodio-kids.png',
           type: 'PREMIUM',
+          title: 'Qustodio Kids',
+          subtitle: 'Mantén protegidos a tus hijos, bloquea contenido indeseado, decide cuanto tiempo están conectados…',
+          // price: '65' + '€',
+          // tax: '/mes IVA incl.'
+        },
+        {
+          img: './../../assets/global/img/device-protection.png',
+          type: 'PREMIUM',
           title: 'Seguridad Dispositivo',
-          subtitle: 'Protección adicional para dispositivos',
-          price: '65' + '€',
-          tax: '/mes IVA incl.'
+          icon: './../../../assets/global/img/icons/device-protection-icon.svg',
+          subtitle: 'Protege tus dispositivos de ciberamenazas, tanto fuera como dentro de casa.',
+          // price: '65' + '€',
+          // tax: '/mes IVA incl.'
         }
       ]
     }
