@@ -23,13 +23,21 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content *ngFor="let content of card.contents">
-          <div class="num-list" [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}">
-            <span>{{content.alias}} {{content.num}}</span>
-            <div class="services-icons" *ngFor="let service of content.services">
-              <app-status-icons [service]="service"></app-status-icons>
+          <div class="num-list d-flex w-100" [ngClass]="{'link': content.hasOwnProperty('link')}"
+            routerLink="/{{content.link}}">
+            <div class="warning-icon">
+              <img src="./../../assets/global/img/icons/warning-icon.svg" alt="">
+            </div>
+            <div class="flex-grow-1 ml-2">
+              <div>{{content.alias}} {{content.num}}</div>
+              <div class="services-icons" *ngFor="let service of content.services">
+                <app-status-icons [service]="service"></app-status-icons>
+              </div>
+            </div>
+            <div *ngIf="content.link">
+              <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="">
             </div>
           </div>
-          <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.link">
         </mat-card-content>
       </mat-card>
     </div>

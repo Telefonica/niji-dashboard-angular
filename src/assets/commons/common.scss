@@ -17,9 +17,10 @@
 .link {
   cursor: pointer;
 }
+
 //STATUS COLORS
-.warning{
-    color: $warning;
+.warning {
+  color: $warning;
 }
 
 // ### COMPONENTS ###
@@ -65,7 +66,7 @@
         margin-bottom: 0;
 
         >span:first-child {
-          width: 20px;
+          width: 24px;
           display: inline-block;
           text-align: center;
         }
@@ -114,18 +115,17 @@
   }
 
   .num-list {
-    display: block;
-    width: 100%;
 
-    >span {
-      display: block;
-
+    .warning-icon {
+      width: 24px;
+      text-align: center;
     }
 
     .services-icons {
       display: inline-block;
       margin-right: 5px;
     }
+
   }
 
   .mat-card-header-text {
@@ -133,8 +133,7 @@
   }
 
   .mat-card-content {
-    margin-left: 31px;
-    padding: 14px;
+    padding: 16px;
     display: flex;
     margin-bottom: 0;
     padding-right: 0;
@@ -170,4 +169,3 @@ mat-progress-spinner {
 .swiper-pagination-bullet-active {
   background-color: $primary;
 }
-

@@ -38,6 +38,7 @@ export class MainComponent implements OnInit {
         {
           alias: 'Julia',
           num: '634 567 879',
+          warning: true,
           services: [{
             name: 'service1',
             status: 'inactive'
