@@ -49,7 +49,12 @@ export class CarouselComponent implements OnInit {
     mousewheel: true,
     scrollbar: false,
     navigation: false,
-    pagination: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+      hideOnClick: false,
+    },
     autoplay: {
       delay: 5000,
     }

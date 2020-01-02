@@ -1,4 +1,3 @@
-<app-welcome></app-welcome>
 <div class="main-container" [class.main-is-mobile]="mobileQuery.matches">
   <app-header (toggleNav)="snav.toggle()" [title]="routeDataTitle" [media]="mobileQuery.matches"></app-header>
   <mat-sidenav-container class="main-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">

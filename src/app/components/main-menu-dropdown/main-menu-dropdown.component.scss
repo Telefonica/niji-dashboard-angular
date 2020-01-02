@@ -3,6 +3,12 @@
 :host ::ng-deep {
   .mat-expansion-panel {
     border-bottom: 1px solid $light-grey;
+
+    &.single-menu {
+      &:hover {
+        background: rgba(0, 0, 0, 0.04);
+      }
+    }
   }
 
   .mat-expansion-panel-header {
@@ -26,4 +32,5 @@
       margin-bottom: 15px;
     }
   }
+
 }
