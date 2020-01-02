@@ -43,13 +43,15 @@
     </div>
 
   </div>
-  <!-- <div class="w-100 d-sm-none"></div> -->
+  <!-- It needs to be in diferent col for responsive desktop -->
   <div class="col col-lg-4 mt-4">
     <mat-card class="custom-card">
       <mat-card-header>
         <mat-card-title>
-          <img src="./../../assets/global/img/icons/heart-icon.svg" alt="">
-          <span class="align-middle ml-2">Consejos navegación segura</span>
+          <span>
+            <img src="{{carousel[0].icon}}" alt="">
+          </span>
+          <span class="align-middle ml-2">{{carousel[0].title}}</span>
         </mat-card-title>
       </mat-card-header>
       <app-carousel></app-carousel>

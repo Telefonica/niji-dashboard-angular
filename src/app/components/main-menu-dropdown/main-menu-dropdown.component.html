@@ -15,11 +15,11 @@
           </div>
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <mat-list *ngFor="let content of card.contents">
-        <mat-list-item> <button mat-button class="text-left" routerLink="{{content.link}}">
-            <span>{{content.alias}} - {{content.num}}</span></button>
-        </mat-list-item>
-      </mat-list>
+      <div *ngFor="let content of card.contents" [ngStyle]="{'height': optionHeight}">
+        <button mat-button class="text-left pl-0 w-100" routerLink=" {{content.link}}">
+          <span>{{content.alias}} - {{content.num}}</span>
+        </button>
+      </div>
     </mat-expansion-panel>
 
     <div *ngIf="card.contents === undefined" class="mat-expansion-panel mat-expansion-panel-header single-menu"
