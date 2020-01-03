@@ -1,17 +1,23 @@
 <div class="main-container" [class.main-is-mobile]="mobileQuery.matches">
-  <app-header class="d-lg-none" (toggleNav)="snav.toggle()" [title]="routeDataTitle" [media]="mobileQuery.matches"
-    [menuClosed]="snav.opened">
+
+  <app-header *ngIf="mobileQuery.matches" class="d-lg-none" (toggleNav)="snav.toggle()" [title]="routeDataTitle"
+    [media]="mobileQuery.matches" [menuClosed]="snav.opened">
   </app-header>
   <app-header-state></app-header-state>
+
   <mat-sidenav-container class="main-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+
     <mat-sidenav #snav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <app-main-menu-dropdown></app-main-menu-dropdown>
     </mat-sidenav>
+
     <mat-sidenav-content class="pb-4">
       <div class="container">
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
+
   </mat-sidenav-container>
+
 </div>
