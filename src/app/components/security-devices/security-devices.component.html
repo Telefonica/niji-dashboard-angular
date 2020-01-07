@@ -1,0 +1,36 @@
+<mat-card-content class="device-card-content">
+  <div class="row">
+    <div class="col-12">
+      {{card[0].cardDescription}}
+    </div>
+
+    <div class="col-12 col-lg-8 mt-3">
+      <div class="box">
+        <div class="row mt-3 mb-3">
+          <div class="col pr-0">
+            <div class="text-center">
+              <img src="./../../../assets/global/img/shield-{{card[0].level}}.svg" alt="">
+            </div>
+            <div class="text-center">
+              <span class="primary fs-20">{{card[0].level}}</span><span class="fs-20"> / </span><span class="fs-20">
+                5</span>
+            </div>
+          </div>
+          <div class="col-auto px-0 v-line">
+          </div>
+          <div class=" col d-flex align-items-center justify-content-center">
+            {{card[0].licensesCaption}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-10 offset-1 col-lg-4 offset-lg-0 d-flex flex-column align-items-center justify-content-center mt-3">
+      <div class="mx-1">
+        <button class="w-100" mat-flat-button color="accept">{{card[0].btn}}</button>
+      </div>
+      <div class="link primary mt-2">
+        {{card[0].dimiss}}
+      </div>
+    </div>
+  </div>
+</mat-card-content>

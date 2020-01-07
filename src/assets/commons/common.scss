@@ -30,6 +30,10 @@
   font-size: 16px;
 }
 
+.fs-20 {
+  font-size: 20px;
+}
+
 //STATUS COLORS
 .warning {
   color: $warning;
@@ -194,4 +198,11 @@ mat-progress-spinner {
 //carousel
 .swiper-pagination-bullet-active {
   background-color: $primary;
+}
+
+//header card icon device protection
+.second-icon {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
 }

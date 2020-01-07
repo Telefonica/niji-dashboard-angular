@@ -1,0 +1,17 @@
+@import "./../../../assets/global/variables.scss";
+
+:host ::ng-deep {
+  .device-card-content {
+    flex-direction: column;
+    padding-left: 46px;
+
+    .box {
+      border: 1px solid $soft-grey;
+      border-radius: 4px;
+    }
+
+    .v-line {
+      border: 1px solid $soft-grey;
+    }
+  }
+}

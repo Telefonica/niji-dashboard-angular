@@ -34,6 +34,7 @@ import { SecStatusComponent } from './sec-status/sec-status.component';
 import { SecurityLevelComponent } from './security-level/security-level.component';
 import { PremiumServicesComponent } from './premium-services/premium-services.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { SecurityDevicesComponent } from './security-devices/security-devices.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -53,7 +54,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ModalDialogContent,
     SecurityLevelComponent,
     PremiumServicesComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SecurityDevicesComponent
 
   ],
   exports: [
@@ -68,7 +70,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ModalDialogContent,
     SecurityLevelComponent,
     PremiumServicesComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SecurityDevicesComponent
 
   ],
   imports: [

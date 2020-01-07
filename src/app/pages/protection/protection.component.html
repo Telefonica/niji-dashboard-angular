@@ -42,7 +42,9 @@
         <mat-slide-toggle *ngIf="card.showCheck" class="ml-auto mt-1" color="primary" checked={{card.checked}}
           disabled={{card.disabled}}>
         </mat-slide-toggle>
-
+        <div *ngIf="card.secondIcon" class="second-icon">
+          <img src="./../../../assets/global/img/icons/device-protection-icon.svg" alt="">
+        </div>
       </mat-card-header>
 
       <app-sec-status [card]="card" class="bottom-border"></app-sec-status>
@@ -58,11 +60,7 @@
         <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.linkTitle">
       </mat-card-content>
 
-      <mat-card-content *ngIf="card.cardDescription" style="flex-direction: column;">
-        <div>{{card.cardDescription}}</div>
-        <br>
-        <button mat-flat-button color="accept">Proteger</button>
-      </mat-card-content>
+      <app-security-devices *ngIf="card.secondIcon"></app-security-devices>
 
     </mat-card>
   </div>
