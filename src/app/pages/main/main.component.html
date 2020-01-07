@@ -9,8 +9,15 @@
         </mat-card-content>
       </mat-card>
     </div>
-    <div class="col mt-4">
-      <app-modal-dialog></app-modal-dialog>
+    <div class="d-flex">
+      <div class="col-auto mt-4">
+        <app-modal-dialog [type]="'button'" [linkText]="'Button modal text'" [title]="'el titulo'"
+          [content]="'el contenido de la modal'" [size]="400"></app-modal-dialog>
+      </div>
+      <div class="col-auto mt-4 d-flex align-items-center">
+        <app-modal-dialog [linkText]="'Link modal text'" [title]="'el titulo'" [content]="'el contenido de la modal'">
+        </app-modal-dialog>
+      </div>
     </div>
     <div *ngFor="let card of cards" class="col mt-4">
       <mat-card class="custom-card">

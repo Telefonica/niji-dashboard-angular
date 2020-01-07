@@ -46,6 +46,14 @@
   color: #FFF;
 }
 
+.mat-flat-button.mat-cancel,
+.mat-raised-button.mat-cancel,
+.mat-fab.mat-cancel,
+.mat-mini-fab.mat-cancel {
+  background-color: $cancel;
+  color: #FFF;
+}
+
 //switch
 .mat-slide-toggle {
   &.mat-primary {

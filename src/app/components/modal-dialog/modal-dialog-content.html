@@ -1,8 +1,8 @@
-<h1 mat-dialog-title>Titulo</h1>
+<h1 mat-dialog-title>{{data.title}}</h1>
 <div mat-dialog-content>
-  <p>Contenido</p>
+  <p>{{data.content}}</p>
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onClick(false)">No</button>
-  <button mat-button (click)="onClick(true)" cdkFocusInitial>Si</button>
+<div mat-dialog-actions class="align-items-end">
+  <button mat-flat-button color="cancel" (click)="onClick(false)">{{data.no}}</button>
+  <button mat-flat-button color="accept" (click)="onClick(true)" cdkFocusInitial>{{data.yes}}</button>
 </div>

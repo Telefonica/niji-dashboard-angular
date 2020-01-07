@@ -1,9 +1,12 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export interface DialogData {
   title: string;
-  content: string;
+  content: number;
+  size: number;
+  yes: string;
+  no: string;
 }
 
 
@@ -13,17 +16,22 @@ export interface DialogData {
   styleUrls: ['modal-dialog.component.scss'],
 })
 export class ModalDialogComponent {
-
-  title: 'titulo';
-  content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit expedita iusto, ex placeat veritatis laboriosam quam, soluta libero necessitatibus molestiae vel nam nobis commodi voluptas, earum quos repellat? Natus, dolor!';
-
+  @Input() title;
+  @Input() content;
+  @Input() size;
+  @Input() type;
+  @Input() linkText;
+  private yes = 'Si';
+  private no = 'No';
   constructor(public dialog: MatDialog) { }
 
-  openDialog(): void {
+  openDialog(title, content, size): void {
+    console.log(title, content, size);
     const dialogRef = this.dialog.open(ModalDialogContent, {
-      width: '250px',
-      data: { title: this.title, content: this.content }
+      width: size + 'px',
+      data: { title, content, yes: this.yes, no: this.no }
     });
+    console.log('dialogRef: ', dialogRef);
 
   }
 
