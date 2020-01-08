@@ -1,0 +1,19 @@
+<div class="row">
+  <div *ngFor="let card of cards" class="col-12 col-lg-5 mt-4">
+    <mat-card class="custom-card">
+      <mat-card-header>
+        <mat-card-title>
+          <span class="icon-title-container">
+            <img src="{{card.icon}}" alt="">
+          </span>
+          <span class="align-middle ml-2">{{card.title}}</span>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="flex-column">
+        <div class="text-description grey" [innerHTML]="card.description">
+        </div>
+        <div class="text-description link primary">{{card.link}}</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

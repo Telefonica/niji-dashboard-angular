@@ -4,6 +4,7 @@ import { AppRoutingModule } from './../app-routing.module';
 
 import { MainComponent } from './main/main.component';
 import { ProtectionComponent } from './protection/protection.component';
+import { DeviceProtectionMcafeeComponent } from './device-protection-mcafee/device-protection-mcafee.component';
 
 import { ComponentsModule } from '../components/components.module';
 
@@ -18,7 +19,8 @@ import {
 @NgModule({
   declarations: [
     MainComponent,
-    ProtectionComponent
+    ProtectionComponent,
+    DeviceProtectionMcafeeComponent
   ],
   imports: [
     CommonModule,

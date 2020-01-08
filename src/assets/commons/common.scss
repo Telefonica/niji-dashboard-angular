@@ -184,6 +184,15 @@
   }
 }
 
+//card text
+.text-description {
+  padding-left: 34px;
+
+  .grey {
+    color: $grey;
+  }
+}
+
 //loader
 mat-progress-spinner {
   margin: 0 auto;
