@@ -9,7 +9,7 @@
   </mat-card-header>
   <div *ngIf="premium[0].type === 'imagesList'" class="imagesList">
     <mat-card-content *ngFor="let content of premium[0].contents">
-      <div class="row">
+      <div class="row w-100">
         <div class="col-auto">
           <img src="{{content.img}}" alt="">
         </div>
