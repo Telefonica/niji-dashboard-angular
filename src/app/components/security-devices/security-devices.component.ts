@@ -13,7 +13,7 @@ export class SecurityDevicesComponent implements OnInit {
       btn: 'Descargar licencias',
       licensesCaption: 'Licencias Disponibles',
       dimiss: 'Dar de baja Seguridad Dispositivo',
-      level: 3,
+      level: 2,
       protectedDevices: [
         {
           name: 'iPhone 8',
