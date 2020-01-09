@@ -9,8 +9,12 @@ export class SecurityLevelComponent implements OnInit {
   public SECURITY_LEVEL_LOW = 2;
   public SECURITY_LEVEL_MEDIUM = 5;
   public SECURITY_LEVEL_HIGH = 8;
-  public open = true;
-  public warningStatusMsg = 'Te recomendamos revisar este perfil, no tiene la protección básica de tu red móvil activada. Y puede sufrir amenazas';
+  public config = {
+    msg: 'Esta es una vista de <strong>NO TITULAR</strong>, para ver todas las opciones que tienes para proteger tus dispositivos, accede con las credenciales del <strong>TITULAR</strong>',
+    linkTxt: 'Cambiar a titular',
+    link: 'sampleLink',
+  };
+
   public securityLevel = [
     {
       levelCaption: 'NIVEL DE PROTECCIÓN:',
@@ -23,7 +27,5 @@ export class SecurityLevelComponent implements OnInit {
 
   ngOnInit() {
   }
-  close() {
-    this.open = false;
-  }
+
 }

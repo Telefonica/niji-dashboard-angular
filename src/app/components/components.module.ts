@@ -35,6 +35,7 @@ import { SecurityLevelComponent } from './security-level/security-level.componen
 import { PremiumServicesComponent } from './premium-services/premium-services.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SecurityDevicesComponent } from './security-devices/security-devices.component';
+import { CloseCardComponent } from './close-card/close-card.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -55,7 +56,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SecurityLevelComponent,
     PremiumServicesComponent,
     WelcomeComponent,
-    SecurityDevicesComponent
+    SecurityDevicesComponent,
+    CloseCardComponent
 
   ],
   exports: [
@@ -71,7 +73,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SecurityLevelComponent,
     PremiumServicesComponent,
     WelcomeComponent,
-    SecurityDevicesComponent
+    SecurityDevicesComponent,
+    CloseCardComponent
 
   ],
   imports: [

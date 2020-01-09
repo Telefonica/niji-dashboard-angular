@@ -1,0 +1,24 @@
+<div class="row mt-3" *ngIf="open">
+  <div class="col px-0">
+    <mat-card>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-auto">
+            <img src="./../../../assets/global/img/icons/warning-nobg-icon.svg" alt="warning">
+          </div>
+          <div class="col w-100 px-0">
+            <span class="warning-status-message" [innerHTML]="config.msg"></span>
+            <div (click)="close()" class="text-right link primary mt-3" *ngIf="!config.link">
+              {{config.closeMsg}}
+            </div>
+            <div class="text-right link primary mt-3" *ngIf="config.link" routerLink="{{config.link}}">
+              {{config.linkTxt}}</div>
+          </div>
+          <div class="col-auto">
+            <mat-icon (click)="close()" class="ml-auto link close-icon">close</mat-icon>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
