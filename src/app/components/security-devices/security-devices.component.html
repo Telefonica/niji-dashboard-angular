@@ -1,5 +1,5 @@
 <mat-card-content class="device-card-content">
-  <div class="row">
+  <div class="row content">
     <div class="col-12">
       {{card[0].cardDescription}}
     </div>
@@ -18,9 +18,7 @@
           </div>
           <div class="col-auto px-0 v-line">
           </div>
-          <div class=" col d-flex align-items-center justify-content-center">
-            {{card[0].licensesCaption}}
-          </div>
+          <div class="col pl-1 pr-4 d-flex align-items-center justify-content-center">{{card[0].licensesCaption}}</div>
         </div>
       </div>
     </div>
@@ -28,9 +26,28 @@
       <div class="mx-1">
         <button class="w-100" mat-flat-button color="accept">{{card[0].btn}}</button>
       </div>
-      <div class="link primary mt-2">
-        {{card[0].dimiss}}
-      </div>
+      <div class="link primary mt-2">{{card[0].dimiss}}</div>
     </div>
   </div>
+
+  <div *ngIf="card[0].protectedDevices.length > 0" class="mt-3">
+    <mat-expansion-panel expanded="true">
+      <mat-expansion-panel-header [collapsedHeight]="'50px'" [expandedHeight]="'50px'">
+        <mat-panel-title>
+          <span class="align-middle">{{card[0].cardTitle}}</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div *ngFor="let device of card[0].protectedDevices">
+        <div class="num-list d-flex w-100 link device-list" routerLink="/{{device.link}}">
+          <div class="flex-grow-1 ">
+            <span>{{device.name}}</span>
+          </div>
+          <div class="img">
+            <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </div>
+
 </mat-card-content>

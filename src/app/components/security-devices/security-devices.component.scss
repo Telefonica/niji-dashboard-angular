@@ -3,7 +3,10 @@
 :host ::ng-deep {
   .device-card-content {
     flex-direction: column;
-    padding-left: 46px;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    margin-right: 0;
 
     .box {
       border: 1px solid $soft-grey;
@@ -12,6 +15,36 @@
 
     .v-line {
       border: 1px solid $soft-grey;
+    }
+  }
+
+  .content {
+    padding-left: 48px;
+    padding-right: 20px;
+  }
+
+  .mat-expansion-panel-header {
+    border-bottom: solid 1px $light-grey;
+    padding-left: 50px;
+  }
+
+  .mat-expansion-panel-body {
+    padding: 0;
+
+    >div {
+      border-bottom: solid 1px $light-grey;
+    }
+  }
+
+  .device-list {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 18px;
+
+    +.img {
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 }

@@ -1,15 +1,19 @@
 @import "./../../../assets/global/variables.scss";
 
 :host ::ng-deep {
+
   .custom-slider {
+
     &.mat-slider {
       padding: 0;
     }
 
     .mat-slider-track-fill {
+      background-color: $soft-grey;
       background-image: linear-gradient(to right, $gradient-bar-1 15%, $gradient-bar-2 58%, $gradient-bar-3 80%);
       height: 8px;
     }
+
 
     .mat-slider-thumb {
       position: absolute;
