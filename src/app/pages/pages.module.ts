@@ -15,12 +15,14 @@ import {
   MatSlideToggleModule,
   MatProgressSpinnerModule
 } from '@angular/material';
+import { ThreatsComponent } from './threats/threats.component';
 
 @NgModule({
   declarations: [
     MainComponent,
     ProtectionComponent,
-    DeviceProtectionMcafeeComponent
+    DeviceProtectionMcafeeComponent,
+    ThreatsComponent
   ],
   imports: [
     CommonModule,

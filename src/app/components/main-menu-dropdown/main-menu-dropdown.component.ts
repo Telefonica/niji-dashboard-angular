@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-menu-dropdown.component.scss']
 })
 export class MainMenuDropdownComponent implements OnInit {
-  panelOpenState = false;
+  // panelOpenState = false;
   public optionHeight = '54px';
   public cards = [
     {

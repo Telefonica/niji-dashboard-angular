@@ -1,0 +1,32 @@
+@import "./../../../assets/global/variables.scss";
+
+:host ::ng-deep {
+  .mat-accordion>div:not(:last-child) {
+    border-bottom: 1px solid $light-grey;
+  }
+
+  .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]) {
+    background: rgba(200, 200, 200, 0.04);
+  }
+
+  .mat-expansion-panel-body .row {
+    &:not(:last-child) {
+      padding-bottom: 15px;
+      border-bottom: 1px solid $light-grey;
+    }
+
+    &:not(:first-child) {
+      padding-top: 15px;
+    }
+  }
+
+  .date {
+    text-align: left !important;
+  }
+
+  @media (min-width: 1280px) {
+    .date {
+      text-align: right !important;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<mat-accordion multi="true" displayMode="flat">
+  <div *ngFor="let threat of threats">
+    <mat-expansion-panel expanded="{{threat.expanded}}">
+      <mat-expansion-panel-header [collapsedHeight]="optionHeight" [expandedHeight]="optionHeight">
+        <mat-panel-title>
+          {{threat.title}} ({{threat.contents.length + 1}})
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Currently I am {{panelOpenState ? 'open' : 'closed'}}
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+      <div class="row" *ngFor="let content of threat.contents">
+        <div class="col-auto">
+          <img src="{{content.icon}}" alt="">
+        </div>
+        <div class="col pl-0">
+          <div class="mb-2">
+            {{content.description}}
+          </div>
+          <div>
+            <div class="row">
+              <div class="col-12 col-lg-8">
+                {{content.name}}
+              </div>
+              <div class="col-12 col-lg-4 date">
+                {{content.date}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <p>I'm visible because I am open</p> -->
+    </mat-expansion-panel>
+  </div>
+</mat-accordion>

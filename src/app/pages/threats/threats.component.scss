@@ -1,0 +1,10 @@
+@import "./../../../assets/global/variables.scss";
+
+:host ::ng-deep {
+  mat-card {
+    box-shadow: none !important;
+    border: 1px solid $light-grey;
+    padding-bottom: 0;
+  }
+
+}

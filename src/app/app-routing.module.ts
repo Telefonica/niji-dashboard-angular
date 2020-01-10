@@ -4,6 +4,7 @@ import { MainComponent } from './pages/main/main.component';
 import { ProtectionComponent } from './pages/protection/protection.component';
 import { DeviceProtectionMcafeeComponent } from './pages/device-protection-mcafee/device-protection-mcafee.component';
 import { UserResolver } from './services/user.resolver';
+import { ThreatsComponent } from './pages/threats/threats.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,13 @@ const routes: Routes = [
     component: DeviceProtectionMcafeeComponent,
     data: {
       title: 'Seguridad Dispositivo Mcafee'
+    }
+  },
+  {
+    path: 'threats',
+    component: ThreatsComponent,
+    data: {
+      title: 'Listado de amenazas'
     }
   },
   { path: '**', redirectTo: '' }
