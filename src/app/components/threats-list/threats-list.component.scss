@@ -1,8 +1,12 @@
 @import "./../../../assets/global/variables.scss";
 
 :host ::ng-deep {
-  .mat-accordion>div:not(:last-child) {
+  .mat-accordion>div {
     border-bottom: 1px solid $light-grey;
+  }
+
+  .mat-expansion-panel {
+    margin-bottom: 1px;
   }
 
   .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]) {

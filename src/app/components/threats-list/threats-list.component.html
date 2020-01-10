@@ -3,11 +3,8 @@
     <mat-expansion-panel expanded="{{threat.expanded}}">
       <mat-expansion-panel-header [collapsedHeight]="optionHeight" [expandedHeight]="optionHeight">
         <mat-panel-title>
-          {{threat.title}} ({{threat.contents.length + 1}})
+          {{threat.title}} ({{threat.contents.length}})
         </mat-panel-title>
-        <!-- <mat-panel-description>
-          Currently I am {{panelOpenState ? 'open' : 'closed'}}
-        </mat-panel-description> -->
       </mat-expansion-panel-header>
       <div class="row" *ngFor="let content of threat.contents">
         <div class="col-auto">
@@ -29,7 +26,6 @@
           </div>
         </div>
       </div>
-      <!-- <p>I'm visible because I am open</p> -->
     </mat-expansion-panel>
   </div>
 </mat-accordion>

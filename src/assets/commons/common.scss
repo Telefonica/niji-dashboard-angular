@@ -74,6 +74,12 @@
 }
 
 // card
+.mat-card {
+  box-shadow: none !important;
+  border: 1px solid $light-grey !important;
+  background-color: $white;
+}
+
 .custom-card {
   &.mat-card {
     color: $default-text;
@@ -83,7 +89,6 @@
 
     .mat-card-header {
       padding: 16px;
-
       border-bottom: 1px solid $light-grey;
 
       .mat-card-title {
@@ -214,4 +219,11 @@ mat-progress-spinner {
   align-items: center;
   display: flex;
   margin-left: auto;
+}
+
+// custom box
+.box {
+  border: 1px solid $soft-grey;
+  border-radius: 4px;
+  background-color: $white;
 }
