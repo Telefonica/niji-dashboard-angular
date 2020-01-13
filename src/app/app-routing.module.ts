@@ -32,7 +32,8 @@ const routes: Routes = [
     path: 'threats',
     component: ThreatsComponent,
     data: {
-      title: 'Listado de amenazas'
+      title: 'Listado de amenazas',
+      hideStateHeader: true
     }
   },
   { path: '**', redirectTo: '' }

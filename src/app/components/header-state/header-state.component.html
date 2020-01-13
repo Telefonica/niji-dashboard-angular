@@ -1,21 +1,23 @@
-<div class="sub-header d-flex w-100">
-  <div class="logo link d-none d-lg-inline-block" routerLink="/"></div>
-  <div class="d-lg-inline-block w-100">
-    <div class="container">
-      <div class="row">
-        <div class="col d-flex align-items-center">
-          <div class="header-texts-container">
-            <div>¡Bienvenido!</div>
-            <div class="header-state-text">{{HEADER_TEXT}} </div>
+<div>
+  <div class="sub-header d-flex w-100">
+    <div class="logo link d-none d-lg-inline-block" routerLink="/"></div>
+    <div class="d-lg-inline-block w-100">
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex align-items-center">
+            <div class="header-texts-container">
+              <div>¡Bienvenido!</div>
+              <div class="header-state-text">{{HEADER_TEXT}} </div>
+            </div>
           </div>
-        </div>
-        <div class="col d-none d-lg-block">
-          <div class="header-lock"><img src="./../../../assets/global/img/header-lock-img.svg" alt="">
+          <div class="col d-none d-lg-block">
+            <div class="header-lock"><img src="./../../../assets/global/img/header-lock-img.svg" alt="">
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
+  </div>
+  <div class="status-header-bar" *ngIf="warning === true"></div>
 </div>
-<div class="status-header-bar" *ngIf="warning === true"></div>
