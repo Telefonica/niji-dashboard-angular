@@ -5,6 +5,7 @@ import { ProtectionComponent } from './pages/protection/protection.component';
 import { DeviceProtectionMcafeeComponent } from './pages/device-protection-mcafee/device-protection-mcafee.component';
 import { UserResolver } from './services/user.resolver';
 import { ThreatsComponent } from './pages/threats/threats.component';
+import { WhitelistComponent } from './pages/whitelist/whitelist.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,14 @@ const routes: Routes = [
     component: ThreatsComponent,
     data: {
       title: 'Listado de amenazas',
+      hideStateHeader: true
+    }
+  },
+  {
+    path: 'whitelist',
+    component: WhitelistComponent,
+    data: {
+      title: 'Páginas de confianza',
       hideStateHeader: true
     }
   },

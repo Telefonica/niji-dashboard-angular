@@ -1,0 +1,29 @@
+@import "./../../../assets/global/variables.scss";
+
+:host ::ng-deep {
+  h3 {
+    font-weight: normal;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      display: flex;
+      height: 64px;
+      border-bottom: 1px solid $soft-grey;
+      align-items: center;
+      ;
+
+      >span {
+        color: $grey;
+      }
+
+      .close-icon {
+        margin-left: auto;
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -37,6 +37,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { SecurityDevicesComponent } from './security-devices/security-devices.component';
 import { CloseCardComponent } from './close-card/close-card.component';
 import { ThreatsListComponent } from './threats-list/threats-list.component';
+import { WhitelistFormComponent } from './whitelist-form/whitelist-form.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -59,7 +60,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     WelcomeComponent,
     SecurityDevicesComponent,
     CloseCardComponent,
-    ThreatsListComponent
+    ThreatsListComponent,
+    WhitelistFormComponent,
 
   ],
   exports: [
@@ -77,8 +79,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     WelcomeComponent,
     SecurityDevicesComponent,
     CloseCardComponent,
-    ThreatsListComponent
-
+    ThreatsListComponent,
+    WhitelistFormComponent
   ],
   imports: [
     CommonModule,

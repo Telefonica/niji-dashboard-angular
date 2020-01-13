@@ -16,13 +16,15 @@ import {
   MatProgressSpinnerModule
 } from '@angular/material';
 import { ThreatsComponent } from './threats/threats.component';
+import { WhitelistComponent } from './whitelist/whitelist.component';
 
 @NgModule({
   declarations: [
     MainComponent,
     ProtectionComponent,
     DeviceProtectionMcafeeComponent,
-    ThreatsComponent
+    ThreatsComponent,
+    WhitelistComponent
   ],
   imports: [
     CommonModule,

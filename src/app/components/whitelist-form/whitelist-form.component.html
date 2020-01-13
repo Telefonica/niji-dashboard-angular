@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-12">
+    {{WHITELIST_HEADER}}
+  </div>
+  <div class="col-12 mt-4">
+    <mat-form-field class="w-100">
+      <input matInput placeholder="{{WHITELIST_PLACEHOLDER}}" (keyup)="onKey($event)">
+    </mat-form-field>
+  </div>
+  <div class="col-12 text-right">
+    <button mat-flat-button color="accept" (click)="addToWhitelist()" [disabled]="error">Añadir</button>
+  </div>
+  <div class="col-12 mt-4">
+    <h3>{{WHITELIST_LIST_TITLE}}</h3>
+    <ul>
+      <li *ngFor="let element of whithelistElements.slice().reverse() ">
+        <span>{{element}}</span>
+        <mat-icon (click)="delete($event)" class="link close-icon text-right">close</mat-icon>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+@import "./../../../assets/global/variables.scss";
+
+:host ::ng-deep {
+  .box {
+    padding: 22px 16px;
+  }
+}
