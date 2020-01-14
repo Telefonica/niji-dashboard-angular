@@ -2,13 +2,25 @@
   <div class="col-12">
     {{WHITELIST_HEADER}}
   </div>
-  <div class="col-12 mt-4">
+  <div class="col-12 mt-4" *ngIf="ERROR_MSG === ''">
     <mat-form-field class="w-100">
-      <input matInput placeholder="{{WHITELIST_PLACEHOLDER}}" (keyup)="onKey($event)">
+      <input matInput placeholder="{{WHITELIST_PLACEHOLDER}}" (keyup)="onKey($event)" [(ngModel)]="domain">
     </mat-form-field>
+
   </div>
-  <div class="col-12 text-right">
-    <button mat-flat-button color="accept" (click)="addToWhitelist()" [disabled]="error">Añadir</button>
+  <div class="col-12 text-right" *ngIf="ERROR_MSG === ''">
+    <button mat-flat-button color="accept" (click)="addToWhitelist()"
+      [disabled]="!validated && ERROR_MSG === ''">Añadir</button>
+  </div>
+  <div class="col-12 mt-4" *ngIf="ERROR_MSG != '' || error">
+    <div class="row">
+      <div class="col-auto pr-0">
+        <img src="./assets/global/img/icons/warning-nobg-icon.svg" alt="">
+      </div>
+      <div class="col">
+        {{ERROR_MSG}}
+      </div>
+    </div>
   </div>
   <div class="col-12 mt-4">
     <h3>{{WHITELIST_LIST_TITLE}}</h3>

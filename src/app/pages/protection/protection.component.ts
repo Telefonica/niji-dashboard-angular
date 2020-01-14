@@ -45,12 +45,12 @@ export class ProtectionComponent implements OnInit {
       contents: [
         {
           linkTitle: 'Historial de amenazas',
-          link: '/threats-history'
+          link: '/threats'
         },
         {
           linkTitle: 'Páginas de confianza',
           description: 'Añade a tu lista tus páginas de confianza y gestiónalas',
-          link: '/trusted-pages'
+          link: '/whitelist'
         },
       ]
     },

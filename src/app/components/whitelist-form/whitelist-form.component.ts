@@ -6,15 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./whitelist-form.component.scss']
 })
 export class WhitelistFormComponent implements OnInit {
-  public WHITELIST_HEADER = 'Añade a la lista tus sitos web de confianza y gestiona las páginas añadidas.';
-  public WHITELIST_LABEL = 'Añadir página de confianza';
-  public WHITELIST_PLACEHOLDER = 'Añadir página de confianza';
-  public WHITELIST_LIST_TITLE = 'Páginas añadidas';
-  public error = false;
-  value = '';
-  public whithelistElements = [
+  WHITELIST_HEADER = 'Añade a la lista tus sitos web de confianza y gestiona las páginas añadidas.';
+  WHITELIST_LABEL = 'Añadir página de confianza';
+  WHITELIST_PLACEHOLDER = 'Añadir página de confianza';
+  WHITELIST_LIST_TITLE = 'Páginas añadidas';
+  ERROR_MSG = '';
+  WHITELIST_MAX_DOMAINS = 250;
+  ERROR_MSG_DEFAULT = 'Se ha producido un error, inténtalo de nuevo más tarde';
+
+  error = false;
+  whithelistElements = [
     'http://www.booking.com', 'http://www.malware.com', 'http://www.virus.com'
   ];
+  domain = '';
+  validated = false;
 
   constructor() { }
 
@@ -22,12 +27,20 @@ export class WhitelistFormComponent implements OnInit {
   }
 
   onKey(event: any) {
-    this.value = event.target.value;
-    // TODO: Check errors from native angular material
+    this.domain = event.target.value;
+    this.validate(this.domain);
   }
 
   addToWhitelist() {
-    this.whithelistElements.push(this.value);
+    if (this.whithelistElements.length >= this.WHITELIST_MAX_DOMAINS) {
+      this.ERROR_MSG = 'Se ha alcanzado el número máximo de dominios, libera alguno de tu lista y vuelve a intentarlo';
+    }
+    if (this.error) {
+      //use when response fail
+      this.ERROR_MSG = this.ERROR_MSG_DEFAULT;
+    }
+    this.whithelistElements.push(this.domain);
+    this.domain = '';
   }
 
   delete(e) {
@@ -35,7 +48,19 @@ export class WhitelistFormComponent implements OnInit {
     const index = this.whithelistElements.indexOf(element);
     if (index !== -1) {
       this.whithelistElements.splice(index, 1);
+      this.ERROR_MSG = '';
     }
+  }
+  validate(domain) {
+    if (domain !== '*.*') {
+      const regexp = domain.match(/^[^\/]*?\.?([^\/.]+)\.[^\/.]+/g);
+      if (regexp !== null && this.whithelistElements.indexOf(domain) === -1) {
+        this.validated = true;
+        return true;
+      }
+    }
+    this.validated = false;
+    return false;
   }
 
 }
