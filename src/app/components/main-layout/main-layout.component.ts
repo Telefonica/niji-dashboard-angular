@@ -40,5 +40,8 @@ export class MainLayoutComponent implements OnDestroy, OnInit {
       return true;
     }
   }
+  scrollTop() {
+    document.querySelector('mat-sidenav-content').scrollTop = 0;
+  }
 }
 
