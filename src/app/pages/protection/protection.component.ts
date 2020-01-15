@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { WelcomeService } from 'src/app/services/welcome.service';
 @Component({
   selector: 'app-protection',
   templateUrl: './protection.component.html',
@@ -82,12 +83,15 @@ export class ProtectionComponent implements OnInit {
   ];
   public title: any;
 
-  constructor() {
+  constructor( private dataService: WelcomeService) {
   }
 
   ngOnInit() {
   }
-
+  showWelcome() {
+    localStorage.removeItem('welcome');
+    this.dataService.welcomeState$.emit('open');
+  }
 }
 
 

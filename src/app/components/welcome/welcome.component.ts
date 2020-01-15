@@ -3,6 +3,7 @@ import {
   SwiperComponent, SwiperDirective, SwiperConfigInterface,
   SwiperScrollbarInterface, SwiperPaginationInterface
 } from 'ngx-swiper-wrapper';
+import { WelcomeService } from 'src/app/services/welcome.service';
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -60,7 +61,6 @@ export class WelcomeComponent implements OnInit {
       button: true,
     }
   ];
-
   public onIndexChange(index: number) {
     this.index = index + 1;
 
@@ -75,11 +75,18 @@ export class WelcomeComponent implements OnInit {
     }
     this.last = false;
   }
-  constructor() { }
+  constructor(private dataService: WelcomeService) { }
 
   ngOnInit() {
-    this.welcome = this.readLocalStorageValue('welcome');
+    this.dataService.welcomeState$.subscribe(state => {
+      this.welcome = state;
+      if (state === 'open') {
+        this.open = true;
+      }
+      console.log('welcomestate: ', state);
+    });
     this.checkDisplay();
+    this.welcome = this.readLocalStorageValue('welcome');
   }
 
   readLocalStorageValue(key) {
