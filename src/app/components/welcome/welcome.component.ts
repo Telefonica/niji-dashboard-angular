@@ -4,6 +4,7 @@ import {
   SwiperScrollbarInterface, SwiperPaginationInterface
 } from 'ngx-swiper-wrapper';
 import { WelcomeService } from 'src/app/services/welcome.service';
+import { Slides } from 'src/app/components/welcome/slideContent';
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -18,6 +19,7 @@ export class WelcomeComponent implements OnInit {
   public disabled = false;
   public index = 0;
   public pagination;
+  public slides = [];
 
   public config: SwiperConfigInterface = {
     direction: 'horizontal',
@@ -38,29 +40,6 @@ export class WelcomeComponent implements OnInit {
     }
   };
 
-  public slides = [
-    {
-      name: 'Bienvenido a Conexión Segura.',
-      img: './assets/global/img/welcome/movistar.svg',
-      text: 'Disfruta de una navegación libre de riesgos dentro y fuera de casa.'
-    },
-    {
-      name: 'Libre de riesgos',
-      img: 'https://picsum.photos/id/2/1000/300',
-      text: 'Bloquea páginas webs peligrosas, consulta amenazas, evita que se hagan con tus datos personales.'
-    },
-    {
-      name: 'Navegación infantil segura',
-      img: 'https://picsum.photos/id/3/1000/300',
-      text: 'Deja de preocuparte por el contenido inadecuado que puedan encontrar los más pequeños.'
-    },
-    {
-      name: 'Servicios Premium',
-      img: 'https://picsum.photos/id/43/1000/300',
-      text: 'Antivirus, control parental … accede a servicios de calidad, protégete a ti y a los tuyos.',
-      button: true,
-    }
-  ];
   public onIndexChange(index: number) {
     this.index = index + 1;
 
@@ -75,15 +54,30 @@ export class WelcomeComponent implements OnInit {
     }
     this.last = false;
   }
-  constructor(private dataService: WelcomeService) { }
+  constructor(private dataService: WelcomeService, public slidesContent: Slides) { }
+
 
   ngOnInit() {
+    console.log('this.slidesContent.defaultSlides: ', this.slidesContent.defaultSlides);
+    this.slides = this.slidesContent.defaultSlides;
     this.dataService.welcomeState$.subscribe(state => {
       this.welcome = state;
-      if (state === 'open') {
-        this.open = true;
+      switch (state) {
+        case 'openDefault':
+          this.open = true;
+          break;
+        case 'openBrowseProtection':
+          this.slides = this.slidesContent.browseProtection;
+          this.open = true;
+          break;
+        case 'openDeviceProtection':
+          this.slides = this.slidesContent.deviceProtection;
+          this.open = true;
+          break;
+        default:
+          this.open = false;
+          break;
       }
-      console.log('welcomestate: ', state);
     });
     this.checkDisplay();
     this.welcome = this.readLocalStorageValue('welcome');

@@ -38,6 +38,7 @@ import { SecurityDevicesComponent } from './security-devices/security-devices.co
 import { CloseCardComponent } from './close-card/close-card.component';
 import { ThreatsListComponent } from './threats-list/threats-list.component';
 import { WhitelistFormComponent } from './whitelist-form/whitelist-form.component';
+import { Slides } from 'src/app/components/welcome/slideContent';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -109,7 +110,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
-    }
+    },
+    Slides
   ],
 })
 export class ComponentsModule { }

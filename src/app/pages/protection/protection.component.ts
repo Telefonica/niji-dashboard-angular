@@ -17,6 +17,7 @@ export class ProtectionComponent implements OnInit {
     {
       title: 'Protección WiFi Hogar',
       subtitleLlink: 'Descubre más',
+      helpModal: 'openBrowseProtection',
       showCheck: true,
       icon: './../../assets/global/img/icons/shield-icon.svg',
       checked: true,
@@ -76,6 +77,7 @@ export class ProtectionComponent implements OnInit {
     {
       title: 'Seguridad Dispositivo',
       subtitleLlink: 'Descubre más',
+      helpModal: 'openDeviceProtection',
       icon: './../../assets/global/img/icons/lock-icon.svg',
       secondIcon: './../../assets/global/img/icons/arrow-right-icon.svg',
 
@@ -83,15 +85,20 @@ export class ProtectionComponent implements OnInit {
   ];
   public title: any;
 
-  constructor( private dataService: WelcomeService) {
+  constructor(private dataService: WelcomeService) {
   }
 
   ngOnInit() {
   }
-  showWelcome() {
+  showWelcome(open) {
     localStorage.removeItem('welcome');
-    this.dataService.welcomeState$.emit('open');
+    this.dataService.welcomeState$.emit(open);
   }
+  // showBrowseProtection() {
+  //   console.log('openBrowseProtection');
+  //   localStorage.removeItem('welcome');
+  //   this.dataService.welcomeState$.emit('openBrowseProtection');
+  // }
 }
 
 
