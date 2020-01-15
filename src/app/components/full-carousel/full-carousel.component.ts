@@ -4,13 +4,13 @@ import {
   SwiperScrollbarInterface, SwiperPaginationInterface
 } from 'ngx-swiper-wrapper';
 import { WelcomeService } from 'src/app/services/welcome.service';
-import { Slides } from 'src/app/components/welcome/slideContent';
+import { Slides } from 'src/app/components/full-carousel/slideContent';
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss']
+  selector: 'app-full-carousel',
+  templateUrl: './full-carousel.component.html',
+  styleUrls: ['./full-carousel.component.scss']
 })
-export class WelcomeComponent implements OnInit {
+export class FullCarouselComponent implements OnInit {
   public welcome: string;
   public open = true;
   public show = true;

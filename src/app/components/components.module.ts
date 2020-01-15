@@ -33,12 +33,12 @@ import { StatusIconsComponent } from './status-icons/status-icons.component';
 import { SecStatusComponent } from './sec-status/sec-status.component';
 import { SecurityLevelComponent } from './security-level/security-level.component';
 import { PremiumServicesComponent } from './premium-services/premium-services.component';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { FullCarouselComponent } from './full-carousel/full-carousel.component';
 import { SecurityDevicesComponent } from './security-devices/security-devices.component';
 import { CloseCardComponent } from './close-card/close-card.component';
 import { ThreatsListComponent } from './threats-list/threats-list.component';
 import { WhitelistFormComponent } from './whitelist-form/whitelist-form.component';
-import { Slides } from 'src/app/components/welcome/slideContent';
+import { Slides } from 'src/app/components/full-carousel/slideContent';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -58,7 +58,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ModalDialogContent,
     SecurityLevelComponent,
     PremiumServicesComponent,
-    WelcomeComponent,
+    FullCarouselComponent,
     SecurityDevicesComponent,
     CloseCardComponent,
     ThreatsListComponent,
@@ -77,7 +77,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ModalDialogContent,
     SecurityLevelComponent,
     PremiumServicesComponent,
-    WelcomeComponent,
+    FullCarouselComponent,
     SecurityDevicesComponent,
     CloseCardComponent,
     ThreatsListComponent,
