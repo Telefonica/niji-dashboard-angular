@@ -15,6 +15,8 @@ export class WelcomeComponent implements OnInit {
   public last = false;
   public type = 'component';
   public disabled = false;
+  public index = 0;
+  public pagination;
 
   public config: SwiperConfigInterface = {
     direction: 'horizontal',
@@ -31,7 +33,7 @@ export class WelcomeComponent implements OnInit {
       hideOnClick: false,
     },
     autoplay: {
-      delay: 5000,
+      delay: 2000,
     }
   };
 
@@ -54,24 +56,25 @@ export class WelcomeComponent implements OnInit {
     {
       name: 'Servicios Premium',
       img: 'https://picsum.photos/id/43/1000/300',
-      text: 'Antivirus, control parental … accede a servicios de calidad, protégete a ti y a los tuyos.'
-
+      text: 'Antivirus, control parental … accede a servicios de calidad, protégete a ti y a los tuyos.',
+      button: true,
     }
   ];
 
   public onIndexChange(index: number) {
-    index = index + 1;
-    const pagination = document.querySelector('.swiper-pagination');
-    if (index === this.slides.length) {
-      pagination.classList.add('hide');
-      this.last = true;
-    } else {
-      pagination.classList.remove('hide');
-      this.last = false;
-    }
+    this.index = index + 1;
 
   }
 
+  public transitionIsStart() {
+    this.pagination = document.querySelector('.swiper-pagination');
+    if (this.index === this.slides.length) {
+      this.pagination.classList.add('hide');
+    } else {
+      this.pagination.classList.remove('hide');
+    }
+    this.last = false;
+  }
   constructor() { }
 
   ngOnInit() {

@@ -1,14 +1,18 @@
 <div *ngIf="open" class="welcome">
   <div class="close"><span (click)='closeWelcome()'>Saltar</span></div>
   <swiper *ngIf="type == 'component' && show" class="swiper-container" fxFlex="auto" [config]="config"
-    [disabled]="disabled" (indexChange)="onIndexChange($event)">
+    [disabled]="disabled" (indexChange)="onIndexChange($event)" (slideChangeTransitionStart)="transitionIsStart()">
     <div *ngFor="let slide of slides" class="swiper-slide">
       <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill class="slides-content">
-        <div class="img-cont"><img src={{slide.img}} alt=""></div>
-        <h1>{{slide.name}}</h1>
-        <p class="body-text">{{slide.text}}</p>
-        <button *ngIf="last" (click)='closeWelcome()' mat-flat-button color="accept" class="btn-pagination"
-          style="width: calc(100% - 40px);margin: 20px;">Entendido</button>
+        <div class="slide-main-content">
+          <div class="img-cont"><img src={{slide.img}} alt=""></div>
+          <h1>{{slide.name}}</h1>
+          <p class="body-text">{{slide.text}}</p>
+        </div>
+        <div class="slide-button-container">
+          <button *ngIf="slide.button" (click)='closeWelcome()' mat-flat-button color="accept" class="btn-close"
+            [ngClass]="{'show-btn': last}">Entendido</button>
+        </div>
       </div>
 
     </div>
