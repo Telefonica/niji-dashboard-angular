@@ -22,28 +22,8 @@ export class ProtectionComponent implements OnInit {
       icon: './../../assets/global/img/icons/shield-icon.svg',
       checked: true,
       disabled: false,
+      state: 'unprotected', // options: unprotected, undetected, detected
 
-      states: [
-
-        // samples of states
-        {
-          // unprotected: {
-          //   title: '¡Estás desprotegido!',
-          //   icon: './../../assets/global/img/icons/no-shield-tick-icon.svg',
-          //   label: 'Protección desactivada'
-          // },
-          undetected: {
-            title: '¡Sin amenazas detectadas!',
-            icon: './../../assets/global/img/icons/no-threats-detected-icon.svg',
-            label: 'Tu navegación ha sido excelente'
-          },
-          // detected: {
-          //   title: '30/04/2019 - 25/05/2019',
-          //   total: '114',
-          //   label: 'Amenazas bloqueadas'
-          // }
-        }
-      ],
       contents: [
         {
           linkTitle: 'Historial de amenazas',

@@ -51,7 +51,7 @@
           </div>
         </mat-card-header>
 
-        <app-sec-status [card]="card" class="bottom-border"></app-sec-status>
+        <app-sec-status [state]="card.state" class="bottom-border"></app-sec-status>
 
         <mat-card-content *ngFor="let content of card.contents">
           <div [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}"
