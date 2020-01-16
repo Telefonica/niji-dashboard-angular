@@ -58,7 +58,7 @@ export class FullCarouselComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log('this.slidesContent.defaultSlides: ', this.slidesContent.defaultSlides);
+
     this.slides = this.slidesContent.defaultSlides;
     this.dataService.welcomeState$.subscribe(state => {
       this.welcome = state;

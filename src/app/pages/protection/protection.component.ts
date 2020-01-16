@@ -85,6 +85,11 @@ export class ProtectionComponent implements OnInit {
   ];
   public title: any;
 
+  public carousel = [{
+    title: 'Consejos navegación segura',
+    icon: './../../assets/global/img/icons/heart-icon.svg',
+  }]
+
   constructor(private dataService: WelcomeService) {
   }
 
@@ -94,11 +99,4 @@ export class ProtectionComponent implements OnInit {
     localStorage.removeItem('welcome');
     this.dataService.welcomeState$.emit(open);
   }
-  // showBrowseProtection() {
-  //   console.log('openBrowseProtection');
-  //   localStorage.removeItem('welcome');
-  //   this.dataService.welcomeState$.emit('openBrowseProtection');
-  // }
 }
-
-
