@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {
   SwiperComponent, SwiperDirective, SwiperConfigInterface,
   SwiperScrollbarInterface, SwiperPaginationInterface
 } from 'ngx-swiper-wrapper';
 import { WelcomeService } from 'src/app/services/welcome.service';
 import { Slides } from 'src/app/components/full-carousel/slideContent';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-full-carousel',
   templateUrl: './full-carousel.component.html',
   styleUrls: ['./full-carousel.component.scss']
 })
-export class FullCarouselComponent implements OnInit {
+export class FullCarouselComponent implements OnInit, OnDestroy {
   public welcome: string;
   public open = true;
   public show = true;
@@ -20,6 +21,7 @@ export class FullCarouselComponent implements OnInit {
   public index = 0;
   public pagination;
   public slides = [];
+  private subscription: Subscription;
 
   public config: SwiperConfigInterface = {
     direction: 'horizontal',
@@ -36,7 +38,7 @@ export class FullCarouselComponent implements OnInit {
       hideOnClick: false,
     },
     autoplay: {
-      delay: 2000,
+      delay: 8000,
     }
   };
 
@@ -60,7 +62,7 @@ export class FullCarouselComponent implements OnInit {
   ngOnInit() {
 
     this.slides = this.slidesContent.defaultSlides;
-    this.dataService.welcomeState$.subscribe(state => {
+    this.subscription = this.dataService.welcomeState$.subscribe(state => {
       this.welcome = state;
       switch (state) {
         case 'openDefault':
@@ -82,7 +84,9 @@ export class FullCarouselComponent implements OnInit {
     this.checkDisplay();
     this.welcome = this.readLocalStorageValue('welcome');
   }
-
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
   readLocalStorageValue(key) {
     return localStorage.getItem(key);
   }
