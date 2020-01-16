@@ -227,3 +227,10 @@ mat-progress-spinner {
   border-radius: 4px;
   background-color: $white;
 }
+
+//form
+.error {
+  color: $error;
+  font-size: 12px;
+  margin-top: -10px;
+}

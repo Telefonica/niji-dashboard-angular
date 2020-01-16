@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './../app-routing.module';
 
-import { FormsModule } from '@angular/forms';
 import { ModalDialogComponent, ModalDialogContent } from './modal-dialog/modal-dialog.component';
 
 import {
@@ -87,6 +87,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     CommonModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     MatSliderModule,
     MatSidenavModule,
     MatToolbarModule,

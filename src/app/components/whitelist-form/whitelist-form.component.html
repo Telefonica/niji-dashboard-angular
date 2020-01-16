@@ -2,17 +2,17 @@
   <div class="col-12">
     {{WHITELIST_HEADER}}
   </div>
-  <div class="col-12 mt-4" *ngIf="ERROR_MSG === ''">
+  <div class="col-12 mt-4" *ngIf="!error">
     <mat-form-field class="w-100">
-      <input matInput placeholder="{{WHITELIST_PLACEHOLDER}}" (keyup)="onKey($event)" [(ngModel)]="domain">
+      <input matInput placeholder="{{WHITELIST_LABEL}}" [formControl]="domainIn" required spellcheck="false"
+        autocomplete="off">
+      <mat-error *ngIf="domainIn.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
-
   </div>
-  <div class="col-12 text-right" *ngIf="ERROR_MSG === ''">
-    <button mat-flat-button color="accept" (click)="addToWhitelist()"
-      [disabled]="!validated && ERROR_MSG === ''">Añadir</button>
+  <div class="col-12 text-right" *ngIf="!error">
+    <button mat-flat-button color="accept" (click)="addToWhitelist()" [disabled]="domainIn.invalid">Añadir</button>
   </div>
-  <div class="col-12 mt-4" *ngIf="ERROR_MSG != '' || error">
+  <div class="col-12 mt-4" *ngIf="error">
     <div class="row">
       <div class="col-auto pr-0">
         <img src="./assets/global/img/icons/warning-nobg-icon.svg" alt="">
