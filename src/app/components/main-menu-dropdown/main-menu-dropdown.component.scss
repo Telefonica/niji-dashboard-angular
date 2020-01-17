@@ -3,8 +3,12 @@
 :host ::ng-deep {
   .mat-expansion-panel {
     border-bottom: 1px solid $light-grey;
+    border-radius: 0;
+
 
     &.single-menu {
+      padding-bottom: 10px;
+
       &:hover {
         background: rgba(0, 0, 0, 0.04);
       }
@@ -12,7 +16,9 @@
   }
 
   .mat-expansion-panel-header {
+    border-radius: 0;
     padding-left: 0;
+    margin: 10px 0;
   }
 
   .menu-icon {
@@ -23,6 +29,7 @@
 
   .mat-expansion-panel-body {
     padding: 0 0 0 45px;
+    margin-bottom: 10px;
   }
 
   .mat-list {
@@ -30,6 +37,22 @@
 
     &:last-child {
       margin-bottom: 15px;
+    }
+  }
+
+  .mat-accordion .mat-expansion-panel:first-of-type {
+    border-radius: 0;
+  }
+
+  .selected {
+    border-left: 3px solid $primary;
+  }
+
+  @media (min-width: 1280px) {
+    .mat-accordion>div {
+      &:first-child {
+        padding-top: 12px;
+      }
     }
   }
 }

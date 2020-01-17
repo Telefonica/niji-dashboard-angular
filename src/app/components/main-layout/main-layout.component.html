@@ -8,7 +8,7 @@
 
   <mat-sidenav-container class="main-sidenav-container" [style.paddingTop.px]="checkVisible() ? 0 : 64">
     <mat-sidenav #snav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      [fixedInViewport]="mobileQuery.matches" fixedTopGap="64">
       <app-main-menu-dropdown></app-main-menu-dropdown>
     </mat-sidenav>
 

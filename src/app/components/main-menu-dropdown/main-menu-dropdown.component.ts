@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainMenuDropdownComponent implements OnInit {
   // panelOpenState = false;
-  public optionHeight = '54px';
-  public cards = [
+  public optionHeight = '34px';
+  public menus = [
     {
       title: 'Protección Red WiFi',
       icon: './../../assets/global/img/icons/wifi-icon.svg',
       expanded: true,
+      selected: true,
       contents: [{
         alias: 'Casa',
         num: '91 681 74 17',
