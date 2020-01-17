@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {
   SwiperComponent, SwiperDirective, SwiperConfigInterface,
   SwiperScrollbarInterface, SwiperPaginationInterface
@@ -11,31 +11,7 @@ import {
 })
 export class CarouselComponent implements OnInit {
   public show = true;
-
-  public slides = [
-    {
-      name: 'uno',
-      img: 'https://picsum.photos/id/1/1000/300',
-      text: 'Evita entrar a webs bancarias desde el email.'
-    },
-    {
-      name: 'dos',
-      img: 'https://picsum.photos/id/2/1000/300',
-      text: '2-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptatem cupiditate maxime deleniti quia.'
-    },
-    {
-      name: 'tres',
-      img: 'https://picsum.photos/id/3/1000/300',
-      text: '3-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptatem cupiditate maxime deleniti quia.'
-
-    },
-    {
-      name: 'cuatro',
-      img: 'https://picsum.photos/id/43/1000/300',
-      text: '4-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptatem cupiditate maxime deleniti quia.'
-
-    }
-  ];
+  @Input() slides: Array<any>;
 
   public type = 'component';
 

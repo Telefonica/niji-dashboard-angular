@@ -63,7 +63,31 @@ export class ProtectionComponent implements OnInit {
 
     },
   ];
+
   public title: any;
+
+  public slides = [{
+    name: 'uno',
+    img: 'https://picsum.photos/id/1/1000/300',
+    text: 'Evita entrar a webs bancarias desde el email.'
+  },
+  {
+    name: 'dos',
+    img: 'https://picsum.photos/id/2/1000/300',
+    text: '2-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptatem cupiditate maxime deleniti quia.'
+  },
+  {
+    name: 'tres',
+    img: 'https://picsum.photos/id/3/1000/300',
+    text: '3-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptatem cupiditate maxime deleniti quia.'
+
+  },
+  {
+    name: 'cuatro',
+    img: 'https://picsum.photos/id/43/1000/300',
+    text: '4-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptatem cupiditate maxime deleniti quia.'
+
+  }];
 
   public carousel = [{
     title: 'Consejos navegación segura',
