@@ -25,9 +25,9 @@
   <div class="col-12 mt-4">
     <h3>{{WHITELIST_LIST_TITLE}}</h3>
     <ul>
-      <li *ngFor="let element of whithelistElements.slice().reverse() ">
+      <li *ngFor="let element of domains; let i = index">
         <span>{{element}}</span>
-        <mat-icon (click)="delete($event)" class="link close-icon text-right">close</mat-icon>
+        <mat-icon (click)="delete(element)" class="link close-icon text-right">close</mat-icon>
       </li>
     </ul>
   </div>

@@ -32,6 +32,9 @@ const routes: Routes = [
   {
     path: 'threats',
     component: ThreatsComponent,
+    resolve: {
+        user: UserResolver
+    },
     data: {
       title: 'Listado de amenazas',
       hideStateHeader: true
