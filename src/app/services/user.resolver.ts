@@ -12,8 +12,8 @@ export class UserResolver implements Resolve<any> {
   constructor(private UserService: UserService) {}
 
   resolve(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
+    // route: ActivatedRouteSnapshot,
+    // state: RouterStateSnapshot
   ): Observable<any>|Promise<any>|any {
     return this.UserService.getUserProfile().subscribe(response => this.UserService.processUserProfile(response));
   }
