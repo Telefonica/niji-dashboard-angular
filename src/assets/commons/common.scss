@@ -3,40 +3,40 @@
 // ### CUSTOM CLASES ###
 
 .primary {
-  color: $primary;
+    color: $primary;
 }
 
 .primary-bg {
-  background-color: $primary;
+    background-color: $primary;
 }
 
 .inactive {
-  opacity: .3;
+    opacity: .3;
 }
 
 .link {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .ml-24 {
-  margin-left: 24px;
+    margin-left: 24px;
 }
 
 .h-28 {
-  height: 28px;
+    height: 28px;
 }
 
 .linkTitle {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .fs-20 {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 //STATUS COLORS
 .warning {
-  color: $warning;
+    color: $warning;
 }
 
 // ### COMPONENTS ###
@@ -46,191 +46,191 @@
 .mat-raised-button.mat-accept,
 .mat-fab.mat-accept,
 .mat-mini-fab.mat-accept {
-  background-color: $accept;
-  color: #FFF;
+    background-color: $accept;
+    color: #FFF;
 }
 
 .mat-flat-button.mat-cancel,
 .mat-raised-button.mat-cancel,
 .mat-fab.mat-cancel,
 .mat-mini-fab.mat-cancel {
-  background-color: $cancel;
-  color: #FFF;
+    background-color: $cancel;
+    color: #FFF;
 }
 
 //switch
 .mat-slide-toggle {
-  &.mat-primary {
-    &.mat-checked {
-      .mat-slide-toggle-bar {
-        background-color: $primary-50-op;
-      }
+    &.mat-primary {
+        &.mat-checked {
+            .mat-slide-toggle-bar {
+                background-color: $switch-bg;
+            }
 
-      .mat-slide-toggle-thumb {
-        background-color: $primary;
-      }
+            .mat-slide-toggle-thumb {
+                background-color: $switch-circle;
+            }
+        }
     }
-  }
 }
 
 // card
 .mat-card {
-  box-shadow: none !important;
-  border: 1px solid $light-grey !important;
-  background-color: $white;
+    box-shadow: none !important;
+    border: 1px solid $light-grey !important;
+    background-color: $white;
 }
 
 .custom-card {
-  &.mat-card {
-    color: $default-text;
-    padding: 0;
-    box-shadow: none;
-    border: 1px solid $light-grey;
+    &.mat-card {
+        color: $default-text;
+        padding: 0;
+        box-shadow: none;
+        border: 1px solid $light-grey;
 
-    .mat-card-header {
-      padding: 16px;
-      border-bottom: 1px solid $light-grey;
+        .mat-card-header {
+            padding: 16px;
+            border-bottom: 1px solid $light-grey;
 
-      .mat-card-title {
-        margin-bottom: 0;
+            .mat-card-title {
+                margin-bottom: 0;
 
 
-        >span:first-child {
-          width: 24px;
-          display: inline-block;
-          text-align: center;
+                >span:first-child {
+                    width: 24px;
+                    display: inline-block;
+                    text-align: center;
+                }
+            }
+
+            .mat-card-subtitle {
+                margin-bottom: 0;
+                margin-top: 5px;
+
+            }
         }
-      }
 
-      .mat-card-subtitle {
-        margin-bottom: 0;
-        margin-top: 5px;
-
-      }
+        .description,
+        .grey {
+            color: $grey;
+        }
     }
 
-    .description,
-    .grey {
-      color: $grey;
-    }
-  }
+    .imagesList {
+        .mat-card-content {
+            margin-left: 0;
+        }
 
-  .imagesList {
+        img {
+            max-width: 97px;
+        }
+
+        .type {
+            color: $image-list-type;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: 16px;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            color: $grey;
+        }
+
+        .price {
+            font-size: 20px;
+
+            span {
+                font-size: 14px;
+                color: $grey;
+            }
+        }
+    }
+
+    .num-list {
+
+        .warning-icon {
+            width: 24px;
+            text-align: center;
+        }
+
+        .services-icons {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+    }
+
+    .mat-card-header-text {
+        margin-left: 0;
+    }
+
     .mat-card-content {
-      margin-left: 0;
+        padding: 16px;
+        display: flex;
+        margin-bottom: 0;
+        padding-right: 0;
+        margin-right: 14px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $light-grey;
+        }
     }
 
-    img {
-      max-width: 97px;
+    .mat-card-subtitle,
+    .mat-card-actions {
+        margin-left: 32px;
     }
 
-    .type {
-      color: $image-list-type;
-      font-size: 12px;
-      text-transform: uppercase;
+    .swiper-container {
+        margin: 8px;
     }
-
-    .title {
-      font-size: 16px;
-    }
-
-    .subtitle {
-      font-size: 12px;
-      color: $grey;
-    }
-
-    .price {
-      font-size: 20px;
-
-      span {
-        font-size: 14px;
-        color: $grey;
-      }
-    }
-  }
-
-  .num-list {
-
-    .warning-icon {
-      width: 24px;
-      text-align: center;
-    }
-
-    .services-icons {
-      display: inline-block;
-      margin-right: 5px;
-    }
-
-  }
-
-  .mat-card-header-text {
-    margin-left: 0;
-  }
-
-  .mat-card-content {
-    padding: 16px;
-    display: flex;
-    margin-bottom: 0;
-    padding-right: 0;
-    margin-right: 14px;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid $light-grey;
-    }
-  }
-
-  .mat-card-subtitle,
-  .mat-card-actions {
-    margin-left: 32px;
-  }
-
-  .swiper-container {
-    margin: 8px;
-  }
 }
 
 //card text
 .text-description {
-  padding-left: 34px;
+    padding-left: 34px;
 
-  .grey {
-    color: $grey;
-  }
+    .grey {
+        color: $grey;
+    }
 }
 
 //loader
 mat-progress-spinner {
-  margin: 0 auto;
-  opacity: .3;
+    margin: 0 auto;
+    opacity: .3;
 }
 
 .mat-progress-spinner circle,
 .mat-spinner circle {
-  stroke: $primary;
+    stroke: $primary;
 }
 
 //carousel
 .swiper-pagination-bullet-active {
-  background-color: $primary;
+    background-color: $primary;
 }
 
 //header card icon device protection
 .second-icon {
-  align-items: center;
-  display: flex;
-  margin-left: auto;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
 }
 
 // custom box
 .box {
-  border: 1px solid $soft-grey;
-  border-radius: 4px;
-  background-color: $white;
+    border: 1px solid $soft-grey;
+    border-radius: 4px;
+    background-color: $white;
 }
 
 //form
 .error {
-  color: $error;
-  font-size: 12px;
-  margin-top: -10px;
+    color: $error;
+    font-size: 12px;
+    margin-top: -10px;
 }
