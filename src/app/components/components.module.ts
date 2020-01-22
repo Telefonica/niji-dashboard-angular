@@ -6,19 +6,19 @@ import { AppRoutingModule } from './../app-routing.module';
 import { ModalDialogComponent, ModalDialogContent } from './modal-dialog/modal-dialog.component';
 
 import {
-  MatSliderModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatIconModule,
-  MatCardModule,
-  MatButtonModule,
-  MatListModule,
-  MatSlideToggleModule,
-  MatProgressSpinnerModule,
-  MatExpansionModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatDialogModule
+    MatSliderModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatButtonModule,
+    MatListModule,
+    MatSlideToggleModule,
+    MatProgressSpinnerModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule
 } from '@angular/material';
 
 import { SwiperModule, SWIPER_CONFIG, SwiperConfigInterface } from 'ngx-swiper-wrapper';
@@ -39,80 +39,83 @@ import { CloseCardComponent } from './close-card/close-card.component';
 import { ThreatsListComponent } from './threats-list/threats-list.component';
 import { WhitelistFormComponent } from './whitelist-form/whitelist-form.component';
 import { Slides } from 'src/app/components/full-carousel/slideContent';
+import { FullLoaderComponent } from './full-loader/full-loader.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'horizontal',
-  slidesPerView: 'auto'
+    direction: 'horizontal',
+    slidesPerView: 'auto'
 };
 
 @NgModule({
-  declarations: [
-    MainLayoutComponent,
-    MainMenuDropdownComponent,
-    CarouselComponent,
-    HeaderComponent,
-    HeaderStateComponent,
-    StatusIconsComponent,
-    SecStatusComponent,
-    ModalDialogComponent,
-    ModalDialogContent,
-    SecurityLevelComponent,
-    PremiumServicesComponent,
-    FullCarouselComponent,
-    SecurityDevicesComponent,
-    CloseCardComponent,
-    ThreatsListComponent,
-    WhitelistFormComponent,
+    declarations: [
+        MainLayoutComponent,
+        MainMenuDropdownComponent,
+        CarouselComponent,
+        HeaderComponent,
+        HeaderStateComponent,
+        StatusIconsComponent,
+        SecStatusComponent,
+        ModalDialogComponent,
+        ModalDialogContent,
+        SecurityLevelComponent,
+        PremiumServicesComponent,
+        FullCarouselComponent,
+        SecurityDevicesComponent,
+        CloseCardComponent,
+        ThreatsListComponent,
+        WhitelistFormComponent,
+        FullLoaderComponent,
 
-  ],
-  exports: [
-    MainLayoutComponent,
-    MainMenuDropdownComponent,
-    CarouselComponent,
-    HeaderComponent,
-    HeaderStateComponent,
-    StatusIconsComponent,
-    SecStatusComponent,
-    ModalDialogComponent,
-    ModalDialogContent,
-    SecurityLevelComponent,
-    PremiumServicesComponent,
-    FullCarouselComponent,
-    SecurityDevicesComponent,
-    CloseCardComponent,
-    ThreatsListComponent,
-    WhitelistFormComponent
-  ],
-  imports: [
-    CommonModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSliderModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    MatButtonModule,
-    SwiperModule,
-    MatListModule,
-    MatExpansionModule,
-    MatSlideToggleModule,
-    MatProgressSpinnerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDialogModule
+    ],
+    exports: [
+        MainLayoutComponent,
+        MainMenuDropdownComponent,
+        CarouselComponent,
+        HeaderComponent,
+        HeaderStateComponent,
+        StatusIconsComponent,
+        SecStatusComponent,
+        ModalDialogComponent,
+        ModalDialogContent,
+        SecurityLevelComponent,
+        PremiumServicesComponent,
+        FullCarouselComponent,
+        SecurityDevicesComponent,
+        CloseCardComponent,
+        ThreatsListComponent,
+        WhitelistFormComponent,
+        FullLoaderComponent
+    ],
+    imports: [
+        CommonModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatSliderModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatCardModule,
+        MatButtonModule,
+        SwiperModule,
+        MatListModule,
+        MatExpansionModule,
+        MatSlideToggleModule,
+        MatProgressSpinnerModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDialogModule
 
-  ],
-  entryComponents: [
-    ModalDialogContent
-  ],
-  providers: [
-    {
-      provide: SWIPER_CONFIG,
-      useValue: DEFAULT_SWIPER_CONFIG
-    },
-    Slides
-  ],
+    ],
+    entryComponents: [
+        ModalDialogContent
+    ],
+    providers: [
+        {
+            provide: SWIPER_CONFIG,
+            useValue: DEFAULT_SWIPER_CONFIG
+        },
+        Slides
+    ],
 })
 export class ComponentsModule { }

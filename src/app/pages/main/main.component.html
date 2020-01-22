@@ -1,68 +1,69 @@
 <div class="row">
-  <div class="col col-lg-8 p-0">
+    <div class="col col-lg-8 p-0">
 
-    <div class="col mt-4">
-      <mat-card class="custom-card">
-        <mat-card-content class="m-0">
-          <mat-progress-spinner mode="indeterminate" strokeWidth="1">
-          </mat-progress-spinner>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div class="d-flex">
-      <div class="col-auto mt-4">
-        <app-modal-dialog [type]="'button'" [linkText]="'Button modal text'" [title]="'el titulo'"
-          [content]="'el contenido de la modal'" [size]="400"></app-modal-dialog>
-      </div>
-      <div class="col-auto mt-4 d-flex align-items-center">
-        <app-modal-dialog [linkText]="'Link modal text'" [title]="'el titulo'" [content]="'el contenido de la modal'">
-        </app-modal-dialog>
-      </div>
-    </div>
-    <div *ngFor="let card of cards" class="col mt-4">
-      <mat-card class="custom-card">
-        <mat-card-header>
-          <mat-card-title>
-            <span>
-              <img src="{{card.icon}}" alt="">
-            </span>
-            <span class="align-middle ml-2">{{card.title}}</span>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content *ngFor="let content of card.contents">
-          <div class="num-list d-flex w-100" [ngClass]="{'link': content.hasOwnProperty('link')}"
-            routerLink="/{{content.link}}">
-            <div class="warning-icon">
-              <img src="./../../assets/global/img/icons/warning-icon.svg" alt="" *ngIf="content.warning">
+        <!-- <div class="col mt-4">
+            <mat-card class="custom-card">
+                <mat-card-content class="m-0">
+                    <mat-progress-spinner mode="indeterminate" strokeWidth="1">
+                    </mat-progress-spinner>
+                </mat-card-content>
+            </mat-card>
+        </div> -->
+        <div class="d-flex">
+            <div class="col-auto mt-4">
+                <app-modal-dialog [type]="'button'" [linkText]="'Button modal text'" [title]="'el titulo'"
+                    [content]="'el contenido de la modal'" [size]="400"></app-modal-dialog>
             </div>
-            <div class="flex-grow-1 ml-2">
-              <div>{{content.alias}} {{content.num}}</div>
-              <div class="services-icons" *ngFor="let service of content.services">
-                <app-status-icons [service]="service"></app-status-icons>
-              </div>
+            <div class="col-auto mt-4 d-flex align-items-center">
+                <app-modal-dialog [linkText]="'Link modal text'" [title]="'el titulo'"
+                    [content]="'el contenido de la modal'">
+                </app-modal-dialog>
             </div>
-            <div *ngIf="content.link">
-              <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="">
-            </div>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
+        </div>
+        <div *ngFor="let card of cards" class="col mt-4">
+            <mat-card class="custom-card">
+                <mat-card-header>
+                    <mat-card-title>
+                        <span>
+                            <img src="{{card.icon}}" alt="">
+                        </span>
+                        <span class="align-middle ml-2">{{card.title}}</span>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content *ngFor="let content of card.contents">
+                    <div class="num-list d-flex w-100" [ngClass]="{'link': content.hasOwnProperty('link')}"
+                        routerLink="/{{content.link}}">
+                        <div class="warning-icon">
+                            <img src="./../../assets/global/img/icons/warning-icon.svg" alt="" *ngIf="content.warning">
+                        </div>
+                        <div class="flex-grow-1 ml-2">
+                            <div>{{content.alias}} {{content.num}}</div>
+                            <div class="services-icons" *ngFor="let service of content.services">
+                                <app-status-icons [service]="service"></app-status-icons>
+                            </div>
+                        </div>
+                        <div *ngIf="content.link">
+                            <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="">
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
 
-  </div>
-  <!-- It needs to be in diferent col for responsive desktop -->
-  <div class="col col-lg-4 mt-4">
-    <mat-card class="custom-card">
-      <mat-card-header>
-        <mat-card-title>
-          <span>
-            <img src="{{carousel[0].icon}}" alt="">
-          </span>
-          <span class="align-middle ml-2">{{carousel[0].title}}</span>
-        </mat-card-title>
-      </mat-card-header>
-      <app-carousel [slides]="slides"></app-carousel>
-    </mat-card>
-  </div>
+    </div>
+    <!-- It needs to be in diferent col for responsive desktop -->
+    <div class="col col-lg-4 mt-4">
+        <mat-card class="custom-card">
+            <mat-card-header>
+                <mat-card-title>
+                    <span>
+                        <img src="{{carousel[0].icon}}" alt="">
+                    </span>
+                    <span class="align-middle ml-2">{{carousel[0].title}}</span>
+                </mat-card-title>
+            </mat-card-header>
+            <app-carousel [slides]="slides"></app-carousel>
+        </mat-card>
+    </div>
 
 </div>

@@ -1,23 +1,24 @@
 <app-full-carousel></app-full-carousel>
+<!-- <app-full-loader></app-full-loader> -->
 <div class="main-container" [class.main-is-mobile]="mobileQuery.matches">
 
-  <app-header *ngIf="mobileQuery.matches" class="d-lg-none" (toggleNav)="snav.toggle()" [title]="routeDataTitle"
-    [media]="mobileQuery.matches" [menuClosed]="snav.opened">
-  </app-header>
-  <app-header-state *ngIf="checkVisible()"></app-header-state>
+    <app-header *ngIf="mobileQuery.matches" class="d-lg-none" (toggleNav)="snav.toggle()" [title]="routeDataTitle"
+        [media]="mobileQuery.matches" [menuClosed]="snav.opened">
+    </app-header>
+    <app-header-state *ngIf="checkVisible()"></app-header-state>
 
-  <mat-sidenav-container class="main-sidenav-container" [style.paddingTop.px]="checkVisible() ? 0 : 64">
-    <mat-sidenav #snav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="mobileQuery.matches" fixedTopGap="64">
-      <app-main-menu-dropdown></app-main-menu-dropdown>
-    </mat-sidenav>
+    <mat-sidenav-container class="main-sidenav-container" [style.paddingTop.px]="checkVisible() ? 0 : 64">
+        <mat-sidenav #snav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
+            [fixedInViewport]="mobileQuery.matches" fixedTopGap="64">
+            <app-main-menu-dropdown></app-main-menu-dropdown>
+        </mat-sidenav>
 
-    <mat-sidenav-content class="pb-4">
-      <div class="container h-100">
-        <router-outlet (activate)="scrollTop()"></router-outlet>
-      </div>
-    </mat-sidenav-content>
+        <mat-sidenav-content class="pb-4">
+            <div class="container h-100">
+                <router-outlet (activate)="scrollTop()"></router-outlet>
+            </div>
+        </mat-sidenav-content>
 
-  </mat-sidenav-container>
+    </mat-sidenav-container>
 
 </div>
