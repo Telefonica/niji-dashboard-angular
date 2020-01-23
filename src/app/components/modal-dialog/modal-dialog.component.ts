@@ -26,12 +26,10 @@ export class ModalDialogComponent {
   constructor(public dialog: MatDialog) { }
 
   openDialog(title, content, size): void {
-    console.log(title, content, size);
     const dialogRef = this.dialog.open(ModalDialogContent, {
       width: size + 'px',
       data: { title, content, yes: this.yes, no: this.no }
     });
-    console.log('dialogRef: ', dialogRef);
 
   }
 
@@ -48,7 +46,6 @@ export class ModalDialogContent {
     @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 
   onClick(e): void {
-    console.log('click', e);
     this.dialogRef.close();
   }
 
