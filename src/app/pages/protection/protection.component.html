@@ -1,92 +1,92 @@
 <div class="row">
-  <div class="col col-lg-8 p-0">
+    <div class="col col-lg-8 p-0">
 
-    <div class="col mt-4">
-      <div class="header-detail  px-3">
-        <div class="row">
-          <div class="col-auto pl-0">
-            <div class="header-text">{{header[0].title}}</div>
-          </div>
-          <div class="col-auto pl-0 d-flex align-items-center">
-            <img src="./../../../assets/global/img/icons/pen-icon.svg" alt="">
-          </div>
-          <div class="col-auto ml-auto pr-0" (click)="showWelcome('openDefault')">
-            <img src=" ./../../../assets/global/img/icons/question-icon.svg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col pl-0">
-            <div class="header-num">{{header[0].num}}</div>
-          </div>
-        </div>
+        <div class="col mt-4">
+            <div class="header-detail  px-3">
+                <div class="row">
+                    <div class="col-auto pl-0">
+                        <div class="header-text">{{header[0].title}}</div>
+                    </div>
+                    <div class="col-auto pl-0 d-flex align-items-center">
+                        <img src="./../../../assets/global/img/icons/pen-icon.svg" alt="">
+                    </div>
+                    <div class="col-auto ml-auto pr-0" (click)="showWelcome('openDefault')">
+                        <img src=" ./../../../assets/global/img/icons/question-icon.svg" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col pl-0">
+                        <div class="header-num">{{header[0].num}}</div>
+                    </div>
+                </div>
 
-        <app-security-level></app-security-level>
+                <app-security-level></app-security-level>
 
-      </div>
-    </div>
-
-    <div *ngFor="let card of cards" class="col mt-4">
-      <mat-card class="custom-card">
-        <mat-card-header>
-          <mat-card-title>
-            <span class="icon-title-container">
-              <img src="{{card.icon}}" alt="">
-            </span>
-            <span class="align-middle ml-2">{{card.title}}</span>
-          </mat-card-title>
-
-          <mat-card-subtitle *ngIf="card.subtitle">{{card.subtitle}}
-          </mat-card-subtitle>
-
-          <mat-card-subtitle *ngIf="card.subtitleLlink" (click)="showWelcome(card.helpModal)"
-            class="primary mat-primary link">
-            {{card.subtitleLlink}}
-          </mat-card-subtitle>
-
-          <mat-slide-toggle *ngIf="card.showCheck" class="ml-auto mt-1" color="primary" checked={{card.checked}}
-            disabled={{card.disabled}}>
-          </mat-slide-toggle>
-          <div *ngIf="card.secondIcon" class="second-icon">
-            <img src="./../../../assets/global/img/icons/device-protection-icon.svg" alt="">
-          </div>
-        </mat-card-header>
-
-        <app-sec-status [state]="card.state" class="bottom-border"></app-sec-status>
-
-        <mat-card-content *ngFor="let content of card.contents">
-          <div [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}"
-            class="d-flex w-100 ml-24">
-            <div class="ml-2">
-              <div class="linkTitle">{{content.linkTitle}}</div>
-              <div class="description mt-2">{{content.description}}</div>
             </div>
-          </div>
-          <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.linkTitle">
-        </mat-card-content>
+        </div>
 
-        <app-security-devices *ngIf="card.secondIcon"></app-security-devices>
+        <div *ngFor="let card of cards" class="col mt-4">
+            <mat-card class="custom-card">
+                <mat-card-header>
+                    <mat-card-title>
+                        <span class="icon-title-container">
+                            <img src="{{card.icon}}" alt="">
+                        </span>
+                        <span class="align-middle ml-2">{{card.title}}</span>
+                    </mat-card-title>
 
-      </mat-card>
+                    <mat-card-subtitle *ngIf="card.subtitle">{{card.subtitle}}
+                    </mat-card-subtitle>
+
+                    <mat-card-subtitle *ngIf="card.subtitleLlink" (click)="showWelcome(card.helpModal)"
+                        class="primary mat-primary link">
+                        {{card.subtitleLlink}}
+                    </mat-card-subtitle>
+
+                    <mat-slide-toggle *ngIf="card.showCheck" class="ml-auto mt-1" color="primary"
+                        checked={{card.checked}} disabled={{card.disabled}}>
+                    </mat-slide-toggle>
+                    <div *ngIf="card.secondIcon" class="second-icon">
+                        <img src="./../../../assets/global/img/icons/device-protection-icon.svg" alt="">
+                    </div>
+                </mat-card-header>
+
+                <app-sec-status *ngIf="card.state" [state]="card.state" class="bottom-border"></app-sec-status>
+
+                <mat-card-content *ngFor="let content of card.contents">
+                    <div [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}"
+                        class="d-flex w-100 ml-24">
+                        <div class="ml-2">
+                            <div class="linkTitle">{{content.linkTitle}}</div>
+                            <div class="description mt-2">{{content.description}}</div>
+                        </div>
+                    </div>
+                    <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.linkTitle">
+                </mat-card-content>
+
+                <app-security-devices *ngIf="card.secondIcon"></app-security-devices>
+
+            </mat-card>
+        </div>
+
+        <div class="col mt-4">
+
+            <app-premium-services></app-premium-services>
+
+        </div>
+
     </div>
-
-    <div class="col-12 col-lg-8 mt-4">
-
-      <app-premium-services></app-premium-services>
-
+    <div class="col col-lg-4 mt-4">
+        <mat-card class="custom-card">
+            <mat-card-header>
+                <mat-card-title>
+                    <span>
+                        <img src="{{carousel[0].icon}}" alt="">
+                    </span>
+                    <span class="align-middle ml-2">{{carousel[0].title}}</span>
+                </mat-card-title>
+            </mat-card-header>
+            <app-carousel [slides]="slides"></app-carousel>
+        </mat-card>
     </div>
-
-  </div>
-  <div class="col col-lg-4 mt-4">
-    <mat-card class="custom-card">
-      <mat-card-header>
-        <mat-card-title>
-          <span>
-            <img src="{{carousel[0].icon}}" alt="">
-          </span>
-          <span class="align-middle ml-2">{{carousel[0].title}}</span>
-        </mat-card-title>
-      </mat-card-header>
-      <app-carousel [slides]="slides"></app-carousel>
-    </mat-card>
-  </div>
 </div>

@@ -16,20 +16,24 @@ export class MainComponent implements OnInit {
             contents: [{
                 alias: 'Casa',
                 num: '91 681 74 17',
+                link: 'wifi-protection',
                 services: [{
                     name: 'service1',
                     status: 'active'
                 },
-                {
-                    name: 'service2',
-                    status: 'active'
-                },
-                {
-                    name: 'service3',
-                    status: 'inactive'
-                }],
-                link: 'wifi-protection'
-            }],
+                    // not active for Spain
+                    // {
+                    //     name: 'service2',
+                    //     status: 'active'
+                    // },
+                    // {
+                    //     name: 'service3',
+                    //     status: 'inactive'
+                    // }
+                ],
+
+            }
+            ],
         },
         {
             title: 'Protección Red Móvil',
@@ -39,19 +43,22 @@ export class MainComponent implements OnInit {
                     alias: 'Julia',
                     num: '634 567 879',
                     warning: true,
+                    link: 'otherlink',
                     services: [{
                         name: 'service1',
                         status: 'inactive'
                     },
-                    {
-                        name: 'service2',
-                        status: 'active'
-                    },
-                    {
-                        name: 'service3',
-                        status: 'active'
-                    }],
-                    link: 'otherlink'
+                        // not active for Spain
+                        // {
+                        //     name: 'service2',
+                        //     status: 'active'
+                        // },
+                        // {
+                        //     name: 'service3',
+                        //     status: 'active'
+                        // }
+                    ],
+
                 },
                 {
                     alias: 'Daniel',
@@ -60,14 +67,16 @@ export class MainComponent implements OnInit {
                         name: 'service1',
                         status: 'active'
                     },
-                    {
-                        name: 'service2',
-                        status: 'inactive'
-                    },
-                    {
-                        name: 'service3',
-                        status: 'active'
-                    }],
+                        // not active for Spain
+                        // {
+                        //     name: 'service2',
+                        //     status: 'inactive'
+                        // },
+                        // {
+                        //     name: 'service3',
+                        //     status: 'active'
+                        // }
+                    ],
                 },
                 {
                     alias: 'Iratxe',
@@ -76,14 +85,16 @@ export class MainComponent implements OnInit {
                         name: 'service1',
                         status: 'active'
                     },
-                    {
-                        name: 'service2',
-                        status: 'active'
-                    },
-                    {
-                        name: 'service3',
-                        status: 'inactive'
-                    }],
+                        // not active for Spain
+                        // {
+                        //     name: 'service2',
+                        //     status: 'active'
+                        // },
+                        // {
+                        //     name: 'service3',
+                        //     status: 'inactive'
+                        // }
+                    ],
                 }
             ],
         }

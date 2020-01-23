@@ -50,9 +50,9 @@ export class ProtectionComponent implements OnInit {
       subtitle: 'Bloquea los rastreadores de tu publicidad en tu navegador',
       subtitleLlink: 'Descubre más',
       showCheck: true,
-      icon: './../../assets/global/img/icons/lens-glass-icon.svg',
       checked: true,
-      disabled: false
+      disabled: false,
+      icon: './../../assets/global/img/icons/lens-glass-icon.svg',
     },
     {
       title: 'Seguridad Dispositivo',
