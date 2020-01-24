@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-whitelist',
+  selector: 'niji-whitelist',
   templateUrl: './whitelist.component.html',
   styleUrls: ['./whitelist.component.scss']
 })

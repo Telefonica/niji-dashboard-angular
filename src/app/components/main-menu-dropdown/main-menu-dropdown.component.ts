@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main-menu-dropdown',
+  selector: 'niji-main-menu-dropdown',
   templateUrl: './main-menu-dropdown.component.html',
   styleUrls: ['./main-menu-dropdown.component.scss']
 })

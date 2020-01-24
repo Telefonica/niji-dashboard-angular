@@ -11,7 +11,7 @@ export interface DialogData {
 
 
 @Component({
-  selector: 'app-modal-dialog',
+  selector: 'niji-modal-dialog',
   templateUrl: 'modal-dialog.component.html',
   styleUrls: ['modal-dialog.component.scss'],
 })
@@ -36,7 +36,7 @@ export class ModalDialogComponent {
 }
 
 @Component({
-  selector: 'app-modal-dialog-content',
+  selector: 'niji-modal-dialog-content',
   templateUrl: 'modal-dialog-content.html',
 })
 export class ModalDialogContent {

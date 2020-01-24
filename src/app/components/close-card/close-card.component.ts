@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-close-card',
+  selector: 'niji-close-card',
   templateUrl: './close-card.component.html',
   styleUrls: ['./close-card.component.scss']
 })

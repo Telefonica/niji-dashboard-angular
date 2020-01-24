@@ -3,7 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 //   SwiperScrollbarInterface, SwiperPaginationInterface } from 'ngx-swiper-wrapper';
 
 @Component({
-  selector: 'app-root',
+  selector: 'niji-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

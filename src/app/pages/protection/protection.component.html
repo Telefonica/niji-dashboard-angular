@@ -20,7 +20,7 @@
                     </div>
                 </div>
 
-                <app-security-level></app-security-level>
+                <niji-security-level></niji-security-level>
 
             </div>
         </div>
@@ -51,7 +51,7 @@
                     </div>
                 </mat-card-header>
 
-                <app-sec-status *ngIf="card.state" [state]="card.state" class="bottom-border"></app-sec-status>
+                <niji-sec-status *ngIf="card.state" [state]="card.state" class="bottom-border"></niji-sec-status>
 
                 <mat-card-content *ngFor="let content of card.contents">
                     <div [ngClass]="{'link': content.hasOwnProperty('link')}" routerLink="/{{content.link}}"
@@ -64,14 +64,14 @@
                     <img src="./../../assets/global/img/icons/arrow-right-icon.svg" alt="" *ngIf="content.linkTitle">
                 </mat-card-content>
 
-                <app-security-devices *ngIf="card.secondIcon"></app-security-devices>
+                <niji-security-devices *ngIf="card.secondIcon"></niji-security-devices>
 
             </mat-card>
         </div>
 
         <div class="col mt-4">
 
-            <app-premium-services></app-premium-services>
+            <niji-premium-services></niji-premium-services>
 
         </div>
 
@@ -86,7 +86,7 @@
                     <span class="align-middle ml-2">{{carousel[0].title}}</span>
                 </mat-card-title>
             </mat-card-header>
-            <app-carousel [slides]="slides"></app-carousel>
+            <niji-carousel [slides]="slides"></niji-carousel>
         </mat-card>
     </div>
 </div>

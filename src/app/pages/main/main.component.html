@@ -14,13 +14,13 @@
         </div>
         <div class="d-flex">
             <div class="col-auto mt-4">
-                <app-modal-dialog [type]="'button'" [linkText]="'Button modal text'" [title]="'el titulo'"
-                    [content]="'el contenido de la modal'" [size]="400"></app-modal-dialog>
+                <niji-modal-dialog [type]="'button'" [linkText]="'Button modal text'" [title]="'el titulo'"
+                    [content]="'el contenido de la modal'" [size]="400"></niji-modal-dialog>
             </div>
             <div class="col-auto mt-4 d-flex align-items-center">
-                <app-modal-dialog [linkText]="'Link modal text'" [title]="'el titulo'"
+                <niji-modal-dialog [linkText]="'Link modal text'" [title]="'el titulo'"
                     [content]="'el contenido de la modal'">
-                </app-modal-dialog>
+                </niji-modal-dialog>
             </div>
         </div>
         <div *ngFor="let card of cards" class="col mt-4">
@@ -42,7 +42,7 @@
                         <div class="flex-grow-1 ml-2">
                             <div>{{content.alias}} {{content.num}}</div>
                             <div class="services-icons" *ngFor="let service of content.services">
-                                <app-status-icons [service]="service"></app-status-icons>
+                                <niji-status-icons [service]="service"></niji-status-icons>
                             </div>
                         </div>
                         <div *ngIf="content.link">
@@ -65,7 +65,7 @@
                     <span class="align-middle ml-2">{{carousel[0].title}}</span>
                 </mat-card-title>
             </mat-card-header>
-            <app-carousel [slides]="slides"></app-carousel>
+            <niji-carousel [slides]="slides"></niji-carousel>
         </mat-card>
     </div>
 

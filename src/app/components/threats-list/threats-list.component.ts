@@ -3,7 +3,7 @@ import { ProtectionService } from 'src/app/services/protection.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-threats-list',
+  selector: 'niji-threats-list',
   templateUrl: './threats-list.component.html',
   styleUrls: ['./threats-list.component.scss']
 })
@@ -95,14 +95,14 @@ export class ThreatsListComponent implements OnInit {
   constructor(
     private protectionService: ProtectionService,
     private userService: UserService,
-  ) { 
-    
+  ) {
+
   }
 
   ngOnInit() {
-      if (this.userService.msisdn !== '') {
-        this.protectionService.getThreats(this.userService.msisdn)
+    if (this.userService.msisdn !== '') {
+      this.protectionService.getThreats(this.userService.msisdn)
         .subscribe(response => console.log(response));
-      }
+    }
   }
 }

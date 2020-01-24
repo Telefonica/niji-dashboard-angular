@@ -3,7 +3,7 @@ import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router';
 
 @Component({
-    selector: 'app-main-layout',
+    selector: 'niji-main-layout',
     templateUrl: 'main-layout.component.html',
     styleUrls: ['main-layout.component.scss'],
 })

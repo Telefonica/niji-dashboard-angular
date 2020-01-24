@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-header-state',
+  selector: 'niji-header-state',
   templateUrl: './header-state.component.html',
   styleUrls: ['./header-state.component.scss']
 })

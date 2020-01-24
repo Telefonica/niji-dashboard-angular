@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-security-devices',
+  selector: 'niji-security-devices',
   templateUrl: './security-devices.component.html',
   styleUrls: ['./security-devices.component.scss']
 })

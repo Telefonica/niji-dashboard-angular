@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-device-protection-mcafee',
+  selector: 'niji-device-protection-mcafee',
   templateUrl: './device-protection-mcafee.component.html',
   styleUrls: ['./device-protection-mcafee.component.scss']
 })

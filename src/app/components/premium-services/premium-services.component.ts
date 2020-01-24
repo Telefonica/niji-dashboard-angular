@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-premium-services',
+  selector: 'niji-premium-services',
   templateUrl: './premium-services.component.html',
   styleUrls: ['./premium-services.component.scss']
 })

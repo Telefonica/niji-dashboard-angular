@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-threats',
+  selector: 'niji-threats',
   templateUrl: './threats.component.html',
   styleUrls: ['./threats.component.scss']
 })

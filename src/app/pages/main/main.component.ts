@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FullLoaderService } from 'src/app/services/full-loader.service';
 @Component({
-    selector: 'app-main',
+    selector: 'niji-main',
     templateUrl: './main.component.html',
     styleUrls: ['./main.component.scss']
 })

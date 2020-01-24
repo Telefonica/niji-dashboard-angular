@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-security-level',
+  selector: 'niji-security-level',
   templateUrl: './security-level.component.html',
   styleUrls: ['./security-level.component.scss']
 })

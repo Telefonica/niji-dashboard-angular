@@ -5,7 +5,7 @@ import {
 } from 'ngx-swiper-wrapper';
 
 @Component({
-  selector: 'app-carousel',
+  selector: 'niji-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })

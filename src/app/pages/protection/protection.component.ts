@@ -2,7 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { WelcomeService } from 'src/app/services/welcome.service';
 @Component({
-  selector: 'app-protection',
+  selector: 'niji-protection',
   templateUrl: './protection.component.html',
   styleUrls: ['./protection.component.scss']
 })

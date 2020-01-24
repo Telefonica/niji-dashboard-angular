@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-status-icons',
+  selector: 'niji-status-icons',
   templateUrl: './status-icons.component.html',
   styleUrls: ['./status-icons.component.scss']
 })
 export class StatusIconsComponent implements OnInit {
-@Input() service;
+  @Input() service;
   constructor() { }
 
   ngOnInit() {

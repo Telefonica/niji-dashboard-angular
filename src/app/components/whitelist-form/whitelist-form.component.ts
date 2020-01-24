@@ -5,7 +5,7 @@ import { ProtectionService } from 'src/app/services/protection.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-    selector: 'app-whitelist-form',
+    selector: 'niji-whitelist-form',
     templateUrl: './whitelist-form.component.html',
     styleUrls: ['./whitelist-form.component.scss']
 })
@@ -28,9 +28,9 @@ export class WhitelistFormComponent implements OnInit, OnDestroy {
     domainIn = new FormControl('', [Validators.pattern(this.regexp)]);
 
     getErrorMessage() {
-        return this.domainIn.hasError('required') 
-                ? 'You must enter a value' 
-                : this.domainIn.hasError('pattern') ? this.ERROR_DOMAIN : '';
+        return this.domainIn.hasError('required')
+            ? 'You must enter a value'
+            : this.domainIn.hasError('pattern') ? this.ERROR_DOMAIN : '';
     }
 
     public domains = [];
@@ -44,9 +44,9 @@ export class WhitelistFormComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.protectionService.getWhitelist('34622001001')
-        .subscribe((response) => {
-            this.domains = response.domain_list;
-        });
+            .subscribe((response) => {
+                this.domains = response.domain_list;
+            });
     }
 
     ngOnDestroy() {
@@ -64,22 +64,22 @@ export class WhitelistFormComponent implements OnInit, OnDestroy {
         } else {
             if (this.domains.indexOf(this.domain) === -1) {
                 this.protectionService.addToWhitelist(this.domain)
-                .subscribe((response) => {
-                    this.domains.push(this.domain);
-                });
+                    .subscribe((response) => {
+                        this.domains.push(this.domain);
+                    });
             }
         }
     }
 
     delete(domain: string) {
         this.protectionService.deleteFromWhitelist(domain)
-        .subscribe((response: any) => {
-            const index = this.domains.indexOf(domain);
-            if (index !== -1) {
-                this.domains.splice(index, 1);
-                this.ERROR_MSG = '';
-                this.error = false;
-            }
-        });
+            .subscribe((response: any) => {
+                const index = this.domains.indexOf(domain);
+                if (index !== -1) {
+                    this.domains.splice(index, 1);
+                    this.ERROR_MSG = '';
+                    this.error = false;
+                }
+            });
     }
 }

@@ -7,7 +7,7 @@ import { WelcomeService } from 'src/app/services/welcome.service';
 import { Slides } from 'src/app/components/full-carousel/slideContent';
 import { Subscription } from 'rxjs';
 @Component({
-  selector: 'app-full-carousel',
+  selector: 'niji-full-carousel',
   templateUrl: './full-carousel.component.html',
   styleUrls: ['./full-carousel.component.scss']
 })

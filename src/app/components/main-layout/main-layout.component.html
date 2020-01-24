@@ -1,16 +1,16 @@
-<app-full-carousel></app-full-carousel>
-<app-full-loader></app-full-loader>
+<niji-full-carousel></niji-full-carousel>
+<niji-full-loader></niji-full-loader>
 <div class="main-container" [class.main-is-mobile]="mobileQuery.matches">
 
-    <app-header *ngIf="mobileQuery.matches" class="d-lg-none" (toggleNav)="snav.toggle()" [title]="routeDataTitle"
+    <niji-header *ngIf="mobileQuery.matches" class="d-lg-none" (toggleNav)="snav.toggle()" [title]="routeDataTitle"
         [media]="mobileQuery.matches" [menuClosed]="snav.opened">
-    </app-header>
-    <app-header-state *ngIf="checkVisible()"></app-header-state>
+    </niji-header>
+    <niji-header-state *ngIf="checkVisible()"></niji-header-state>
 
     <mat-sidenav-container class="main-sidenav-container" [style.paddingTop.px]="checkVisible() ? 0 : 64">
         <mat-sidenav #snav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
             [fixedInViewport]="mobileQuery.matches" fixedTopGap="64">
-            <app-main-menu-dropdown></app-main-menu-dropdown>
+            <niji-main-menu-dropdown></niji-main-menu-dropdown>
         </mat-sidenav>
 
         <mat-sidenav-content class="pb-4">

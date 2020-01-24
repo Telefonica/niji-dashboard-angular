@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FullLoaderService } from 'src/app/services/full-loader.service';
 import { Subscription } from 'rxjs';
 @Component({
-    selector: 'app-full-loader',
+    selector: 'niji-full-loader',
     templateUrl: './full-loader.component.html',
     styleUrls: ['./full-loader.component.scss']
 })
