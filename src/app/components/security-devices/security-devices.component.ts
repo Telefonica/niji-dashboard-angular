@@ -27,7 +27,7 @@ export class SecurityDevicesComponent implements OnInit {
         }
       ]
     }
-  ]
+  ];
   constructor() { }
 
   ngOnInit() {

@@ -26,6 +26,7 @@ export class WhitelistFormComponent implements OnInit, OnDestroy {
     domain = '';
     regexp = /^[^\/]*?\.?([^\/.]+)\.[^\/.]+/;
     domainIn = new FormControl('', [Validators.pattern(this.regexp)]);
+    public domains = [];
 
     getErrorMessage() {
         return this.domainIn.hasError('required')
@@ -33,7 +34,6 @@ export class WhitelistFormComponent implements OnInit, OnDestroy {
             : this.domainIn.hasError('pattern') ? this.ERROR_DOMAIN : '';
     }
 
-    public domains = [];
 
     constructor(
         private protectionService: ProtectionService,

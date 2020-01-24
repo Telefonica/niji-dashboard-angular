@@ -1,58 +1,91 @@
 @import "./../../../assets/global/variables.scss";
 
 :host ::ng-deep {
-  .mat-expansion-panel {
-    border-bottom: 1px solid $light-grey;
-    border-radius: 0;
 
+    .mat-expansion-panel {
+        border-bottom: 1px solid $light-grey;
+        border-radius: 0;
 
-    &.single-menu {
-      padding-bottom: 10px;
+        button {
+            padding-left: 45px !important;
+            border-radius: 0;
 
-      &:hover {
-        background: rgba(0, 0, 0, 0.04);
-      }
+            &:hover {
+                background-color: rgba(0, 169, 224, 0.06);
+            }
+        }
+
+        &.single-menu {
+            padding-bottom: 15px;
+            padding-top: 15px;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.04);
+            }
+        }
     }
-  }
 
-  .mat-expansion-panel-header {
-    border-radius: 0;
-    padding-left: 0;
-    margin: 10px 0;
-  }
-
-  .menu-icon {
-    width: 40px;
-    padding-left: 20px;
-    text-align: center;
-  }
-
-  .mat-expansion-panel-body {
-    padding: 0 0 0 45px;
-    margin-bottom: 10px;
-  }
-
-  .mat-list {
-    padding-top: 0;
-
-    &:last-child {
-      margin-bottom: 15px;
+    .mat-expansion-panel-header {
+        border-radius: 0;
+        padding-left: 0;
+        margin: 10px 0;
     }
-  }
 
-  .mat-accordion .mat-expansion-panel:first-of-type {
-    border-radius: 0;
-  }
-
-  .selected {
-    border-left: 3px solid $primary;
-  }
-
-  @media (min-width: 1280px) {
-    .mat-accordion>div {
-      &:first-child {
-        padding-top: 12px;
-      }
+    .mat-expansion-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-  }
+
+    .menu-icon {
+        width: 40px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .mat-expansion-panel-body {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .mat-list {
+        padding-top: 0;
+
+        &:last-child {
+            margin-bottom: 15px;
+        }
+    }
+
+    .mat-accordion .mat-expansion-panel:first-of-type {
+        border-radius: 0;
+    }
+
+    .selected {
+        border-left: 3px solid $primary;
+    }
+
+    .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover,
+    .mat-expansion-panel-header.mat-expanded:focus,
+    .mat-expansion-panel-header.mat-expanded:hover {
+        background-color: rgba(0, 169, 224, 0.06);
+    }
+
+    .mat-expansion-panel .mat-expansion-panel-header {
+
+        &.cdk-focused,
+        &.cdk-program-focused {
+            background-color: rgba(0, 169, 224, 0.06);
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .mat-accordion>div {
+            &:first-child {
+                padding-top: 12px;
+            }
+        }
+    }
+
 }

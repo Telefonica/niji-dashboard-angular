@@ -23,7 +23,7 @@ export class CloseCardComponent implements OnInit {
   ngOnInit() {
     if (this.config.closeMsg === undefined) {
       this.config.closeMsg = this.DEFAULT_CLOSE_MSG;
-    };
+    }
   }
   close() {
     this.open = false;

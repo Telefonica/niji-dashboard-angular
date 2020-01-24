@@ -1,40 +1,39 @@
 <mat-accordion multi="true" displayMode="flat">
-  <div *ngFor="let menu of menus">
-    <mat-expansion-panel expanded="{{menu.expanded}}" *ngIf="menu.contents !== undefined">
-      <mat-expansion-panel-header [collapsedHeight]="optionHeight" [expandedHeight]="optionHeight"
-        [ngClass]="menu.selected ? 'selected' : '' ">
-        <mat-panel-title>
-          <div class="row">
-            
-            <div class="col-auto pr-0">
-              <div class="menu-icon">
-                <img src="{{menu.icon}}" alt="">
-              </div>
+    <div *ngFor="let menu of menus">
+        <mat-expansion-panel expanded="{{menu.expanded}}" *ngIf="menu.contents !== undefined">
+            <mat-expansion-panel-header [collapsedHeight]="optionHeight" [expandedHeight]="optionHeight">
+                <mat-panel-title>
+                    <div class="row">
+                        <div class="col-auto pr-0">
+                            <div class="menu-icon">
+                                <img src="{{menu.icon}}" alt="">
+                            </div>
+                        </div>
+                        <div class="col pl-2">
+                            <span class="align-middle">{{menu.title}}</span>
+                        </div>
+                    </div>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngFor="let content of menu.contents">
+                <button mat-button class="text-left pl-0 w-100" routerLink=" {{content.link}}"
+                    [ngClass]="content.selected ? 'selected' : '' ">
+                    <span>{{content.alias}} - {{content.num}}</span>
+                </button>
+            </div>
+        </mat-expansion-panel>
+
+        <div *ngIf="menu.contents === undefined" class="mat-expansion-panel mat-expansion-panel-header single-menu"
+            routerLink="{{menu.link}}" [ngClass]="menu.selected ? 'selected' : '' ">
+            <div class=" col-auto px-0">
+                <div class="menu-icon">
+                    <img src="{{menu.icon}}" alt="">
+                </div>
             </div>
             <div class="col pl-2">
-              <span class="align-middle">{{menu.title}}</span>
+                <span class="align-middle">{{menu.title}}</span>
             </div>
-          </div>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <div *ngFor="let content of menu.contents" [ngStyle]="{'height': optionHeight}">
-        <button mat-button class="text-left pl-0 w-100" routerLink=" {{content.link}}">
-          <span>{{content.alias}} - {{content.num}}</span>
-        </button>
-      </div>
-    </mat-expansion-panel>
-
-    <div *ngIf="menu.contents === undefined" class="mat-expansion-panel mat-expansion-panel-header single-menu"
-      [ngStyle]="{'height': optionHeight}" routerLink="{{menu.link}}">
-      <div class=" col-auto px-0">
-        <div class="menu-icon">
-          <img src="{{menu.icon}}" alt="">
         </div>
-      </div>
-      <div class="col pl-2">
-        <span class="align-middle">{{menu.title}}</span>
-      </div>
-    </div>
 
-  </div>
+    </div>
 </mat-accordion>

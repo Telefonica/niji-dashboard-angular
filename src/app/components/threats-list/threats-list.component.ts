@@ -90,7 +90,7 @@ export class ThreatsListComponent implements OnInit {
       },
       ],
     }
-  ]
+  ];
 
   constructor(
     private protectionService: ProtectionService,

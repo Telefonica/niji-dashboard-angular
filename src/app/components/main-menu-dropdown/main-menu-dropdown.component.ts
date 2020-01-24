@@ -1,66 +1,67 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'niji-main-menu-dropdown',
-  templateUrl: './main-menu-dropdown.component.html',
-  styleUrls: ['./main-menu-dropdown.component.scss']
+    selector: 'niji-main-menu-dropdown',
+    templateUrl: './main-menu-dropdown.component.html',
+    styleUrls: ['./main-menu-dropdown.component.scss']
 })
 export class MainMenuDropdownComponent implements OnInit {
-  // panelOpenState = false;
-  public optionHeight = '34px';
-  public menus = [
-    {
-      title: 'Protección Red WiFi',
-      icon: './../../assets/global/img/icons/wifi-icon.svg',
-      expanded: true,
-      selected: true,
-      contents: [{
-        alias: 'Casa',
-        num: '91 681 74 17',
-        link: 'wifi-protection'
-      }],
-    },
-    {
-      title: 'Protección Red Móvil',
-      icon: './../../assets/global/img/icons/smartphone-icon.svg',
-      expanded: false,
-      contents: [
+    // "Selected" element Sample, only one element must be "selected"
+    public optionHeight = '34px';
+    public menus = [
         {
-          alias: 'Julia',
-          num: '634 567 879',
-          link: 'otherlink'
+            title: 'Protección Red WiFi',
+            icon: './../../assets/global/img/icons/wifi-icon.svg',
+            expanded: true,
+            contents: [{
+                alias: 'Casa',
+                num: '91 681 74 17',
+                link: 'wifi-protection',
+                selected: true,
+            }],
         },
         {
-          alias: 'Daniel',
-          num: '678 123 456',
-          link: 'otherlink'
+            title: 'Protección Red Móvil',
+            icon: './../../assets/global/img/icons/smartphone-icon.svg',
+            expanded: false,
+            contents: [
+                {
+                    alias: 'Julia',
+                    num: '634 567 879',
+                    link: 'otherlink'
+                },
+                {
+                    alias: 'Daniel',
+                    num: '678 123 456',
+                    link: 'otherlink'
+                },
+                {
+                    alias: 'Iratxe',
+                    num: '654 321 543',
+                    link: 'otherlink'
+                },
+            ],
         },
         {
-          alias: 'Iratxe',
-          num: '654 321 543',
-          link: 'otherlink'
+            title: 'Consejos navegación segura',
+            icon: './../../assets/global/img/icons/heart-icon.svg',
+            expanded: false,
+            link: 'otherlink',
+            selected: true,
         },
-      ],
-    },
-    {
-      title: 'Consejos navegación segura',
-      icon: './../../assets/global/img/icons/heart-icon.svg',
-      expanded: false,
-      link: 'otherlink'
-    },
-    {
-      title: 'Darse de baja',
-      icon: './../../assets/global/img/icons/alert-icon.svg',
-      link: 'otherlink'
-    },
-    {
-      title: 'Cerrar sesión',
-      icon: './../../assets/global/img/icons/log-out-icon.svg',
-      link: 'otherlink'
-    }
-  ];
-  constructor() { }
+        {
+            title: 'Darse de baja',
+            icon: './../../assets/global/img/icons/alert-icon.svg',
+            link: 'otherlink'
+        },
+        {
+            title: 'Cerrar sesión',
+            icon: './../../assets/global/img/icons/log-out-icon.svg',
+            link: 'otherlink'
+        }
+    ];
+    constructor() { }
 
-  ngOnInit() { }
+    ngOnInit() { }
 
 }

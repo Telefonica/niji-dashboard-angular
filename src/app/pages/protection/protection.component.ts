@@ -92,7 +92,7 @@ export class ProtectionComponent implements OnInit {
   public carousel = [{
     title: 'Consejos navegación segura',
     icon: './../../assets/global/img/icons/heart-icon.svg',
-  }]
+  }];
 
   constructor(private dataService: WelcomeService) {
   }
