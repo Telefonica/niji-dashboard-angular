@@ -1,34 +1,12 @@
-import {
-    NgModule
-}
+import { NgModule } from '@angular/core';
 
-    from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {
-    FormsModule,
-    ReactiveFormsModule
-}
+import { CommonModule } from '@angular/common';
 
-    from '@angular/forms';
+import { AppRoutingModule } from './../app-routing.module';
 
-import {
-    CommonModule
-}
-
-    from '@angular/common';
-
-import {
-    AppRoutingModule
-}
-
-    from './../app-routing.module';
-
-import {
-    ModalDialogComponent,
-    ModalDialogContent
-}
-
-    from './modal-dialog/modal-dialog.component';
+import { ModalDialogComponent, ModalDialogContent } from './modal-dialog/modal-dialog.component';
 
 import {
     MatSliderModule,
@@ -44,120 +22,50 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule
-}
-
-    from '@angular/material';
+} from '@angular/material';
 
 import {
     SwiperModule,
     SWIPER_CONFIG,
     SwiperConfigInterface
-}
+} from 'ngx-swiper-wrapper';
 
-    from 'ngx-swiper-wrapper';
+import { CarouselComponent } from './carousel/carousel.component';
 
-import {
-    CarouselComponent
-}
+import { HeaderComponent } from './header/header.component';
 
-    from './carousel/carousel.component';
+import { HeaderStateComponent } from './header-state/header-state.component';
 
-import {
-    HeaderComponent
-}
+import { MainLayoutComponent } from './main-layout/main-layout.component';
 
-    from './header/header.component';
+import { MainMenuDropdownComponent } from './main-menu-dropdown/main-menu-dropdown.component';
 
-import {
-    HeaderStateComponent
-}
+import { StatusIconsComponent } from './status-icons/status-icons.component';
 
-    from './header-state/header-state.component';
+import { SecStatusComponent } from './sec-status/sec-status.component';
 
-import {
-    MainLayoutComponent
-}
+import { SecurityLevelComponent } from './security-level/security-level.component';
 
-    from './main-layout/main-layout.component';
+import { PremiumServicesComponent } from './premium-services/premium-services.component';
 
-import {
-    MainMenuDropdownComponent
-}
+import { FullCarouselComponent } from './full-carousel/full-carousel.component';
 
-    from './main-menu-dropdown/main-menu-dropdown.component';
+import { SecurityDevicesComponent } from './security-devices/security-devices.component';
 
-import {
-    StatusIconsComponent
-}
+import { CloseCardComponent } from './close-card/close-card.component';
 
-    from './status-icons/status-icons.component';
+import { ThreatsListComponent } from './threats-list/threats-list.component';
 
-import {
-    SecStatusComponent
-}
+import { WhitelistFormComponent } from './whitelist-form/whitelist-form.component';
 
-    from './sec-status/sec-status.component';
+import { Slides } from 'src/app/components/full-carousel/slideContent';
 
-import {
-    SecurityLevelComponent
-}
-
-    from './security-level/security-level.component';
-
-import {
-    PremiumServicesComponent
-}
-
-    from './premium-services/premium-services.component';
-
-import {
-    FullCarouselComponent
-}
-
-    from './full-carousel/full-carousel.component';
-
-import {
-    SecurityDevicesComponent
-}
-
-    from './security-devices/security-devices.component';
-
-import {
-    CloseCardComponent
-}
-
-    from './close-card/close-card.component';
-
-import {
-    ThreatsListComponent
-}
-
-    from './threats-list/threats-list.component';
-
-import {
-    WhitelistFormComponent
-}
-
-    from './whitelist-form/whitelist-form.component';
-
-import {
-    Slides
-}
-
-    from 'src/app/components/full-carousel/slideContent';
-
-import {
-    FullLoaderComponent
-}
-
-    from './full-loader/full-loader.component';
+import { FullLoaderComponent } from './full-loader/full-loader.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     direction: 'horizontal',
     slidesPerView: 'auto'
 }
-
-    ;
 
 @NgModule({
     declarations: [MainLayoutComponent,

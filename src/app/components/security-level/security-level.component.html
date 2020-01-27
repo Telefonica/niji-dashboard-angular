@@ -1,21 +1,25 @@
 <div class="row mt-2">
-  <div class="col-auto px-0">
-    <span class="detail pl-0">{{securityLevel[0].levelCaption}}</span>
-  </div>
-  <div class="col-auto pl-1">
-    <span class="detail-level" [ngClass]="{'warning':securityLevel[0].protection <= SECURITY_LEVEL_LOW,
+    <div class="col-auto px-0">
+        <span class="detail pl-0">{{securityLevel[0].levelCaption}}</span>
+    </div>
+    <div class="col-auto pl-1">
+        <span class="detail-level" [ngClass]="{'warning':securityLevel[0].protection <= SECURITY_LEVEL_LOW,
       'primary':securityLevel[0].protection > SECURITY_LEVEL_LOW}">{{securityLevel[0].protectionCaption}}</span>
-  </div>
+    </div>
 </div>
 <div class="row mt-2">
-  <div class="col-12 px-0">
-    <mat-slider min="0" max="10" step="1" value="{{securityLevel[0].protection}}" class="custom-slider w-100 mb-0"
-      disabled="disabled"></mat-slider>
-  </div>
+    <div class="col-12 px-0">
+        <mat-slider min="0" max="10" step="1" value="{{securityLevel[0].protection}}" class="custom-slider w-100 mb-0"
+            disabled="disabled"></mat-slider>
+    </div>
 
-  <div class="col-12 px-0">
-    <span class="link primary">{{securityLevel[0].link}}</span>
-  </div>
+    <div class="col-12 px-0">
+        <!-- <span class="link primary">{{securityLevel[0].link}}</span> -->
+        <niji-modal-dialog class="link primary" [type]="'help'" [linkText]="securityLevel[0].link" [modalStyle]="'help'"
+            [size]="'100%'"></niji-modal-dialog>
+
+
+    </div>
 </div>
 
 <niji-close-card [config]="config" *ngIf="securityLevel[0].protection <= SECURITY_LEVEL_LOW">

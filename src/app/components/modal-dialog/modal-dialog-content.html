@@ -1,8 +1,55 @@
-<h1 mat-dialog-title>{{data.title}}</h1>
-<div mat-dialog-content>
-  <p>{{data.content}}</p>
+<div *ngIf="!data.modalStyle">
+    <h1 mat-dialog-title>{{data.title}}</h1>
+    <div mat-dialog-content>
+        <p>{{data.content}}</p>
+    </div>
+    <div mat-dialog-actions class="align-items-end">
+        <button mat-flat-button color="cancel" (click)="onClick(false)">{{data.no}}</button>
+        <button mat-flat-button color="accept" (click)="onClick(true)" cdkFocusInitial>{{data.yes}}</button>
+    </div>
 </div>
-<div mat-dialog-actions class="align-items-end">
-  <button mat-flat-button color="cancel" (click)="onClick(false)">{{data.no}}</button>
-  <button mat-flat-button color="accept" (click)="onClick(true)" cdkFocusInitial>{{data.yes}}</button>
+
+<div *ngIf="data.modalStyle === 'upgradeProtection'">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-right">
+                <mat-icon (click)="onClick()" class="ml-auto link close-icon">close</mat-icon>
+            </div>
+        </div>
+        <div class="col-12">
+            <img src="./../../../assets/global/img/icons/shell-upgrade-icon.svg" alt="">
+        </div>
+        <div class="col-12">
+            <h1>Nivel de protección</h1>
+            <p>Para conseguir que el nivel de protección de la barra aumente, sigue los siguiente pasos: </p>
+        </div>
+        <div class="col-12 text-right">
+            <mat-slide-toggle class="ml-auto mt-1" color="primary" checked=false>
+            </mat-slide-toggle>
+        </div>
+        <div class="row">
+            <div class="col-auto">
+                o
+            </div>
+            <div class="col">
+                <h2>Protección Básica</h2>
+                <p>Activa la Protección Red Wifi y mantente protegido de amenazas</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-auto">
+                o
+            </div>
+            <div class="col">
+                <h2>Seguridad Dispositivo</h2>
+                <p>Contrata el servicio de Seguridad Dispositivo y protege 5 dispositivos tanto dentro como fuera de
+                    casa</p>
+            </div>
+        </div>
+
+        <div class="col-12 text-right">
+            <button mat-flat-button color="accept">Activar</button>
+        </div>
+
+    </div>
 </div>

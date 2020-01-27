@@ -16,7 +16,7 @@
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <div *ngFor="let content of menu.contents">
-                <button mat-button class="text-left pl-0 w-100" routerLink=" {{content.link}}"
+                <button mat-button class="text-left pl-0 w-100" [disableRipple]="true" routerLink=" {{content.link}}"
                     [ngClass]="content.selected ? 'selected' : '' ">
                     <span>{{content.alias}} - {{content.num}}</span>
                 </button>

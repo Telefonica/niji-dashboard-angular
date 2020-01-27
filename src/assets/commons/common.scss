@@ -234,3 +234,32 @@ mat-progress-spinner {
     font-size: 12px;
     margin-top: -10px;
 }
+
+// modal
+
+.custom-dialog-container {
+
+    .mat-dialog-container {
+        height: 95vh !important;
+        margin: 0 4%;
+        padding: 20px 0;
+    }
+
+    .cdk-overlay-pane {
+        display: flex;
+        justify-content: center;
+    }
+
+    niji-modal-dialog-content {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        height: 100%;
+    }
+
+    @media (min-width: 1280px) {
+        .mat-dialog-container {
+            width: 600px !important;
+        }
+    }
+}
