@@ -9,9 +9,12 @@
         button {
             padding-left: 45px !important;
             border-radius: 0;
+            height: 50px;
 
-            &:hover {
-                background-color: rgba(0, 169, 224, 0.06);
+            &:hover,
+            &:focus {
+                background: $soft-primary;
+                opacity: 1;
             }
         }
 
@@ -22,7 +25,7 @@
             margin-bottom: 0;
 
             &:hover {
-                background: rgba(0, 0, 0, 0.04);
+                background: $soft-primary;
             }
         }
     }
@@ -30,7 +33,7 @@
     .mat-expansion-panel-header {
         border-radius: 0;
         padding-left: 0;
-        margin: 10px 0;
+        margin: 0;
     }
 
     .mat-expansion-indicator {
@@ -69,15 +72,19 @@
     .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover,
     .mat-expansion-panel-header.mat-expanded:focus,
     .mat-expansion-panel-header.mat-expanded:hover {
-        background-color: rgba(0, 169, 224, 0.06);
+        background: $soft-primary;
     }
 
     .mat-expansion-panel .mat-expansion-panel-header {
 
         &.cdk-focused,
         &.cdk-program-focused {
-            background-color: rgba(0, 169, 224, 0.06);
+            background: $soft-primary;
         }
+    }
+
+    .mat-button-focus-overlay {
+        background: $soft-primary;
     }
 
     @media (min-width: 1280px) {

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainMenuDropdownComponent implements OnInit {
     // "Selected" element Sample, only one element must be "selected"
-    public optionHeight = '34px';
+    public optionHeight = '50px';
     public menus = [
         {
             title: 'Protección Red WiFi',
