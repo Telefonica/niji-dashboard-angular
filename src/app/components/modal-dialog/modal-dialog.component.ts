@@ -8,8 +8,8 @@ export interface DialogData {
     yes: string;
     no: string;
     modalStyle: any;
+    modalContent: any;
 }
-
 
 @Component({
     selector: 'niji-modal-dialog',
@@ -22,6 +22,7 @@ export class ModalDialogComponent {
     @Input() size;
     @Input() type;
     @Input() modalStyle;
+    @Input() modalContent;
     @Input() linkText;
 
     private yes = 'Si';
@@ -37,12 +38,10 @@ export class ModalDialogComponent {
         const dialogRef = this.dialog.open(ModalDialogContent, {
             width: size,
             maxWidth: size,
-            data: { title, content, yes: this.yes, no: this.no, modalStyle },
+            data: { title, content, yes: this.yes, no: this.no, modalStyle, modalContent: this.modalContent },
             panelClass: this.customClass
         });
-
     }
-
 
 }
 

@@ -23,6 +23,20 @@ export class SecurityLevelComponent implements OnInit {
             protection: 1
         }
     ];
+
+    public modalContent = {
+        icon: './../../../assets/global/img/icons/shell-upgrade-icon.svg',
+        title: 'Nivel de protección',
+        subtitle: 'Para conseguir que el nivel de protección de la barra aumente, sigue los siguiente pasos: ',
+        switch: true,
+        listIcon: '',
+        listTitle1: 'Protección Básica',
+        listSubtile1: 'Activa la Protección Red Wifi y mantente protegido de amenazas',
+        listTitle2: 'Seguridad Dispositivo',
+        listSubtile2: 'Contrata el servicio de Seguridad Dispositivo y protege 5 dispositivos tanto dentro como fuera de casa',
+        buttonAccept: 'Activar'
+    }
+
     constructor() { }
 
     ngOnInit() {

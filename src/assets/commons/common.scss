@@ -81,6 +81,7 @@
 }
 
 .custom-card {
+
     &.mat-card {
         color: $default-text;
         padding: 0;
@@ -106,6 +107,10 @@
                 margin-bottom: 0;
                 margin-top: 5px;
 
+            }
+
+            niji-modal-dialog.mat-card-subtitle {
+                margin-left: 0;
             }
         }
 
@@ -239,6 +244,40 @@ mat-progress-spinner {
 
 .custom-dialog-container {
 
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: normal;
+    }
+
+    h1 {
+        font-size: 20px;
+        color: $default-text;
+    }
+
+    h2 {
+        font-size: 16px;
+        color: $grey;
+        margin-bottom: 24px;
+    }
+
+    h3,
+    h4 {
+        font-size: 16px;
+        color: $default-text;
+        margin-bottom: 0;
+    }
+
+    h4 {
+        color: $grey;
+    }
+
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
     .mat-dialog-container {
         height: 95vh !important;
         margin: 0 4%;
@@ -257,9 +296,12 @@ mat-progress-spinner {
         height: 100%;
     }
 
+
+
     @media (min-width: 1280px) {
         .mat-dialog-container {
-            width: 600px !important;
+            width: 100% !important;
+            margin: 0 20%;
         }
     }
 }

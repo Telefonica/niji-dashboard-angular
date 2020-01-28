@@ -38,9 +38,15 @@
                     <mat-card-subtitle *ngIf="card.subtitle">{{card.subtitle}}
                     </mat-card-subtitle>
 
-                    <mat-card-subtitle *ngIf="card.subtitleLlink" (click)="showWelcome(card.helpModal)"
+                    <mat-card-subtitle *ngIf="card.subtitleLink" (click)="showWelcome(card.helpModal)"
                         class="primary mat-primary link">
-                        {{card.subtitleLlink}}
+                        {{card.subtitleLink}}
+                    </mat-card-subtitle>
+
+                    <mat-card-subtitle *ngIf="card.subtitleModalLink" class="pl-0">
+                        <niji-modal-dialog class="link primary mat-card-subtitle" [type]="'help'"
+                            [linkText]="card.subtitleModalLink" [modalStyle]="'help'" [modalContent]="modalContent"
+                            [size]="'100%'"></niji-modal-dialog>
                     </mat-card-subtitle>
 
                     <mat-slide-toggle *ngIf="card.showCheck" class="ml-auto mt-1" color="primary"
@@ -49,6 +55,10 @@
                     <div *ngIf="card.secondIcon" class="second-icon">
                         <img src="./../../../assets/global/img/icons/device-protection-icon.svg" alt="">
                     </div>
+
+                    <!-- <niji-modal-dialog *ngIf="card.subtitleModalLink" class="link primary mat-card-subtitle"
+                        [type]="'help'" [linkText]="card.subtitleModalLink" [modalStyle]="'help'"
+                        [modalContent]="modalContent" [size]="'100%'"></niji-modal-dialog> -->
                 </mat-card-header>
 
                 <niji-sec-status *ngIf="card.state" [state]="card.state" class="bottom-border"></niji-sec-status>

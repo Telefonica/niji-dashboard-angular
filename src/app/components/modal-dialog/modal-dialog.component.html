@@ -1,5 +1,6 @@
 <button *ngIf="type === 'button'" mat-raised-button (click)="openDialog(title,content, size)">{{linkText}}</button>
 <span *ngIf="type === 'span'" class="link" (click)="openDialog(title,content, size)">{{linkText}}</span>
 
-<span *ngIf="type === 'help'" class="link" (click)="openDialog(title,content, size, 'upgradeProtection')">{{linkText}}
+<span *ngIf="type === 'help'" class="link"
+    (click)="openDialog(title,content, size, 'helpModal', modalContent)">{{linkText}}
 </span>

@@ -1,3 +1,4 @@
+<!-- dialog modal -->
 <div *ngIf="!data.modalStyle">
     <h1 mat-dialog-title>{{data.title}}</h1>
     <div mat-dialog-content>
@@ -9,46 +10,51 @@
     </div>
 </div>
 
-<div *ngIf="data.modalStyle === 'upgradeProtection'">
+<!-- help modal  -->
+<div *ngIf="data.modalStyle === 'helpModal'">
     <div class="container">
         <div class="row">
-            <div class="col-12 text-right">
+            <div class="col-12 text-right mb-4">
                 <mat-icon (click)="onClick()" class="ml-auto link close-icon">close</mat-icon>
             </div>
         </div>
-        <div class="col-12">
-            <img src="./../../../assets/global/img/icons/shell-upgrade-icon.svg" alt="">
-        </div>
-        <div class="col-12">
-            <h1>Nivel de protección</h1>
-            <p>Para conseguir que el nivel de protección de la barra aumente, sigue los siguiente pasos: </p>
-        </div>
-        <div class="col-12 text-right">
-            <mat-slide-toggle class="ml-auto mt-1" color="primary" checked=false>
-            </mat-slide-toggle>
-        </div>
         <div class="row">
-            <div class="col-auto">
-                o
+            <div class="col-12 mb-3">
+                <img src="{{data.modalContent.icon}}" alt="">
             </div>
-            <div class="col">
-                <h2>Protección Básica</h2>
-                <p>Activa la Protección Red Wifi y mantente protegido de amenazas</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-auto">
-                o
-            </div>
-            <div class="col">
-                <h2>Seguridad Dispositivo</h2>
-                <p>Contrata el servicio de Seguridad Dispositivo y protege 5 dispositivos tanto dentro como fuera de
-                    casa</p>
+            <div class="col-12">
+                <h1 [innerHTML]="data.modalContent.title"></h1>
+                <h2 [innerHTML]="data.modalContent.subtitle"></h2>
             </div>
         </div>
 
-        <div class="col-12 text-right">
-            <button mat-flat-button color="accept">Activar</button>
+        <div class="row ml-3">
+            <div class="col-auto px-0">
+                <img src="{{data.modalContent.listIcon}}" alt="">
+            </div>
+            <div class="col">
+                <h3 [innerHTML]="data.modalContent.listTitle1"></h3>
+                <h4 [innerHTML]="data.modalContent.listSubtile1"></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div *ngIf="data.modalContent.switch" class="col-12 text-right">
+                <mat-slide-toggle class="ml-auto mt-1" color="primary" checked=false>
+                </mat-slide-toggle>
+            </div>
+        </div>
+        <div class="row mt-4 ml-3">
+            <div class="col-auto px-0">
+                <img src="{{data.modalContent.listIcon}}" alt="">
+            </div>
+            <div class="col">
+                <h3 [innerHTML]="data.modalContent.listTitle2"></h3>
+                <h4 [innerHTML]="data.modalContent.listSubtile2"></h4>
+            </div>
+        </div>
+
+        <div *ngIf="data.modalContent.buttonAccept" class="col-12 text-right">
+            <button mat-flat-button color="accept">{{data.modalContent.buttonAccept}}</button>
         </div>
 
     </div>
