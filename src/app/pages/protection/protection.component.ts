@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { WelcomeService } from 'src/app/services/welcome.service';
 @Component({
     selector: 'niji-protection',
@@ -36,24 +36,25 @@ export class ProtectionComponent implements OnInit {
                 },
             ]
         },
-        {
-            title: 'Bloqueo de contenido',
-            subtitle: 'Filtrado de sitios web apropiados para la edad',
-            subtitleLink: 'Activar en Smart Wifi',
-            showCheck: true,
-            disabled: false,
-            checked: true,
-            icon: './../../assets/global/img/icons/block-icon.svg',
-        },
-        {
-            title: 'Protección contra rastreo',
-            subtitle: 'Bloquea los rastreadores de tu publicidad en tu navegador',
-            subtitleLink: 'Descubre más',
-            showCheck: true,
-            checked: true,
-            disabled: false,
-            icon: './../../assets/global/img/icons/lens-glass-icon.svg',
-        },
+        // not apply to Spain
+        // {
+        //     title: 'Bloqueo de contenido',
+        //     subtitle: 'Filtrado de sitios web apropiados para la edad',
+        //     subtitleLink: 'Activar en Smart Wifi',
+        //     showCheck: true,
+        //     disabled: false,
+        //     checked: true,
+        //     icon: './../../assets/global/img/icons/block-icon.svg',
+        // },
+        // {
+        //     title: 'Protección contra rastreo',
+        //     subtitle: 'Bloquea los rastreadores de tu publicidad en tu navegador',
+        //     subtitleLink: 'Descubre más',
+        //     showCheck: true,
+        //     checked: true,
+        //     disabled: false,
+        //     icon: './../../assets/global/img/icons/lens-glass-icon.svg',
+        // },
         {
             title: 'Seguridad Dispositivo',
             subtitleLink: 'Descubre más',

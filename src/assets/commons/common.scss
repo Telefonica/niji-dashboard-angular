@@ -58,6 +58,15 @@
     color: #FFF;
 }
 
+.mat-flat-button[disabled] {
+    color: #fff !important;
+    background-color: $btn-accept-disabled !important;
+
+    &:hover {
+        cursor: not-allowed;
+    }
+}
+
 //switch
 .mat-slide-toggle {
     &.mat-primary {
