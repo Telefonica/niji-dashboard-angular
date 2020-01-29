@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ComponentsModule } from './components/components.module';
 import { PagesModule } from './pages/pages.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [
@@ -19,7 +21,8 @@ import { PagesModule } from './pages/pages.module';
         AppRoutingModule,
         HttpClientModule,
         ComponentsModule,
-        PagesModule
+        PagesModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
 
     bootstrap: [AppComponent]
