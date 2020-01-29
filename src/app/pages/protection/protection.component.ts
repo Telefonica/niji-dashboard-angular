@@ -16,6 +16,7 @@ export class ProtectionComponent implements OnInit {
     public cards = [
         {
             title: 'Protección WiFi Hogar',
+            subtitle: false,
             subtitleModalLink: 'Descubre más',
             helpModal: 'openBrowseProtection',
             showCheck: true,
@@ -57,6 +58,7 @@ export class ProtectionComponent implements OnInit {
         // },
         {
             title: 'Seguridad Dispositivo',
+            subtitle: false,
             subtitleLink: 'Descubre más',
             helpModal: 'openDeviceProtection',
             icon: './../../assets/global/img/icons/lock-icon.svg',
@@ -95,8 +97,8 @@ export class ProtectionComponent implements OnInit {
         icon: './../../assets/global/img/icons/heart-icon.svg',
     }];
     public modalContent = {
-        icon: '',
-        title: 'Protección RedWifi ',
+        icon: './../../../assets/global/img/icons/tick-shield-modal-icon.svg',
+        title: 'Protección Red Wifi ',
         subtitle: 'Aciva la protección Red Wifi y disfruta de:',
         listIcon: './../../../assets/global/img/icons/list-check-icon.svg',
         listTitle1: 'Protección contra amenazas en tu navegación',

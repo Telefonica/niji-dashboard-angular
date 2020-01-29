@@ -29,7 +29,7 @@ export class SecurityLevelComponent implements OnInit {
         title: 'Nivel de protección',
         subtitle: 'Para conseguir que el nivel de protección de la barra aumente, sigue los siguiente pasos: ',
         switch: true,
-        listIcon: '',
+        listIcon: './../../../assets/global/img/icons/blue-bullet-icon.svg',
         listTitle1: 'Protección Básica',
         listSubtile1: 'Activa la Protección Red Wifi y mantente protegido de amenazas',
         listTitle2: 'Seguridad Dispositivo',

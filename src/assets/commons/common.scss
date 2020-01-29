@@ -252,6 +252,10 @@ mat-progress-spinner {
 // modal
 
 .custom-dialog-container {
+    &.cdk-overlay-pane {
+        display: flex;
+        justify-content: center;
+    }
 
     h1,
     h2,
@@ -288,14 +292,7 @@ mat-progress-spinner {
     }
 
     .mat-dialog-container {
-        height: 95vh !important;
-        margin: 0 4%;
-        padding: 20px 0;
-    }
-
-    .cdk-overlay-pane {
-        display: flex;
-        justify-content: center;
+        max-width: 584px;
     }
 
     niji-modal-dialog-content {
@@ -306,11 +303,9 @@ mat-progress-spinner {
     }
 
 
-
-    @media (min-width: 1280px) {
+    @media (max-width: 1279px) {
         .mat-dialog-container {
-            width: 100% !important;
-            margin: 0 20%;
+            margin: 0 6%;
         }
     }
 }

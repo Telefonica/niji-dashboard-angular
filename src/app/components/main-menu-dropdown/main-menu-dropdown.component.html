@@ -25,13 +25,17 @@
 
         <div *ngIf="menu.contents === undefined" class="mat-expansion-panel mat-expansion-panel-header single-menu"
             routerLink="{{menu.link}}" [ngClass]="menu.selected ? 'selected' : '' ">
-            <div class=" col-auto px-0">
-                <div class="menu-icon">
-                    <img src="{{menu.icon}}" alt="">
+            <div class="row w-100">
+                <div class=" col-auto px-0">
+                    <div class="menu-icon">
+                        <img src="{{menu.icon}}" alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="col pl-2">
-                <span class="align-middle">{{menu.title}}</span>
+                <div class="col pl-2">
+                    <div class="align-middle" *ngIf="!menu.welcome">{{menu.title}}</div>
+                    <div class="align-middle" *ngIf="menu.welcome" (click)="showWelcome('openDefault')">{{menu.title}}
+                    </div>
+                </div>
             </div>
         </div>
 

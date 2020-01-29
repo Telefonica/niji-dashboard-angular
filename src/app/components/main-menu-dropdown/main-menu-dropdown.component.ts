@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { WelcomeService } from 'src/app/services/welcome.service';
 @Component({
     selector: 'niji-main-menu-dropdown',
     templateUrl: './main-menu-dropdown.component.html',
@@ -46,8 +46,9 @@ export class MainMenuDropdownComponent implements OnInit {
             title: 'Consejos navegación segura',
             icon: './../../assets/global/img/icons/heart-icon.svg',
             expanded: false,
-            link: 'otherlink',
+            // link: 'otherlink',
             selected: true,
+            welcome: true
         },
         {
             title: 'Darse de baja',
@@ -60,8 +61,11 @@ export class MainMenuDropdownComponent implements OnInit {
             link: 'otherlink'
         }
     ];
-    constructor() { }
+    constructor(private dataService: WelcomeService) { }
 
     ngOnInit() { }
-
+    showWelcome(open) {
+        localStorage.removeItem('welcome');
+        this.dataService.welcomeState$.emit(open);
+    }
 }
