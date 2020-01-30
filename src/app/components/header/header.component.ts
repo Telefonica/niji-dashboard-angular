@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'niji-header',
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
   @Input() media;
   @Input() menuClosed;
 
-  constructor(public router: Router) {
+  constructor(public router: Router, private location: Location) {
   }
 
   @Output() toggleNav = new EventEmitter<string>();
@@ -22,5 +23,7 @@ export class HeaderComponent implements OnInit {
   toggleMenu() {
     this.toggleNav.emit();
   }
-
+  goBack() {
+    this.location.back();
+  } 
 }

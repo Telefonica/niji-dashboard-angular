@@ -1,6 +1,6 @@
 <mat-toolbar color="primary" class="main-toolbar">
     <div class="logo link" *ngIf="router.url === '/' || !media" routerLink="/"></div>
-    <mat-icon class="link" *ngIf="router.url !== '/' && media" routerLink="..">keyboard_backspace</mat-icon>
+    <mat-icon class="link" *ngIf="router.url !== '/' && media" (click)="goBack()">keyboard_backspace</mat-icon>
     <h1 class="d-lg-none">{{menuClosed ? 'Menu' : title}}</h1>
     <mat-icon (click)="toggleMenu()" class="ml-auto link menu-icon d-lg-none" *ngIf="!menuClosed">menu</mat-icon>
     <mat-icon (click)="toggleMenu()" class="ml-auto link close-icon d-lg-none" *ngIf="menuClosed">close</mat-icon>
