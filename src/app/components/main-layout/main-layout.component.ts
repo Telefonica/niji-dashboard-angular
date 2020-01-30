@@ -7,7 +7,7 @@ import { Router, RoutesRecognized } from '@angular/router';
     templateUrl: 'main-layout.component.html',
     styleUrls: ['main-layout.component.scss'],
 })
-export class MainLayoutComponent implements OnDestroy, OnInit {
+export class MainLayoutComponent implements OnInit {
     mobileQuery: MediaQueryList;
     routeDataTitle: string;
     routeDatahideStateHeader: string;
@@ -16,7 +16,7 @@ export class MainLayoutComponent implements OnDestroy, OnInit {
     constructor(public changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, public router: Router) {
         this.mobileQuery = media.matchMedia('(max-width: 1280px)');
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-        this.mobileQuery.addEventListener('change', () => { this._mobileQueryListener; });
+        // this.mobileQuery.addListener('change', () => { this._mobileQueryListener; });
     }
     ngOnInit() {
         this.router.events.subscribe((data) => {
@@ -27,9 +27,9 @@ export class MainLayoutComponent implements OnDestroy, OnInit {
         });
     }
 
-    ngOnDestroy(): void {
-        this.mobileQuery.removeEventListener('change', () => { this._mobileQueryListener });
-    }
+    // ngOnDestroy(): void {
+    //     this.mobileQuery.removeListener('change', () => { this._mobileQueryListener });
+    // }
     checkVisible() {
         if (this.routeDatahideStateHeader !== undefined) {
             if (this.mobileQuery.matches) {

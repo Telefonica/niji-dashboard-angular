@@ -5,7 +5,8 @@
     <niji-header *ngIf="mobileQuery.matches" class="d-lg-none" (toggleNav)="snav.toggle()" [title]="routeDataTitle"
         [media]="mobileQuery.matches" [menuClosed]="snav.opened">
     </niji-header>
-    <niji-header-state *ngIf="checkVisible()"></niji-header-state>
+    <niji-header-state [menuClosed]="snav.opened"  *ngIf="checkVisible()">
+    </niji-header-state>
 
     <mat-sidenav-container class="main-sidenav-container" [style.paddingTop.px]="checkVisible() ? 0 : 64">
         <mat-sidenav #snav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
