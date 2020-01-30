@@ -2,142 +2,152 @@
 
 :host ::ng-deep {
 
-  .logo {
-    background-image: url('./../../../assets/global/img/movistar-logo.svg');
-    width: 32px;
-    height: 23px;
+    .logo {
+        background-image: url('./../../../assets/global/img/movistar-logo.svg');
+        width: 32px;
+        height: 23px;
 
-  }
-
-  .mat-drawer-container {
-    background-color: $background;
-  }
-
-  .mat-drawer-inner-container {
-    .mat-list-base .mat-list-item .mat-list-item-content {
-      padding: 0;
-
-      button {
-        padding: 0;
-        width: 100%;
-      }
     }
 
-    .mat-expansion-panel {
-      min-width: 300px;
+    .mat-drawer-container {
+        background-color: $background;
     }
-  }
 
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+    .mat-drawer-inner-container {
+        .mat-list-base .mat-list-item .mat-list-item-content {
+            padding: 0;
 
-  .main-is-mobile .main-toolbar {
-    position: fixed;
-    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-    z-index: 2;
-  }
+            button {
+                padding: 0;
+                width: 100%;
+            }
+        }
 
-  h1.main-niji-name {
-    margin-left: 8px;
-  }
+        .mat-expansion-panel {
+            min-width: 300px;
+        }
+    }
 
-  .main-sidenav-container {
-    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .main-is-mobile .main-toolbar {
+        position: fixed;
+        /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+        z-index: 2;
+    }
+
+    h1.main-niji-name {
+        margin-left: 8px;
+    }
+
+    .main-sidenav-container {
+        /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-    flex: 1;
-  }
+        flex: 1;
+    }
 
-  .main-is-mobile .main-sidenav-container {
-    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+    .main-is-mobile .main-sidenav-container {
+        /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
        `<body>` to be our scrolling element for mobile layouts. */
-    flex: 1 0 auto;
-  }
-
-  .mat-toolbar {
-    &.mat-primary {
-      background: $primary;
-    }
-  }
-
-  mat-sidenav {
-    &.mat-drawer {
-      background-color: transparent;
-
-      .mat-expansion-panel {
-        background-color: transparent;
-      }
-
-      .mat-drawer-inner-container {
-        background-color: #f6f6f6;
-      }
-    }
-  }
-
-  .mat-expansion-panel:not([class*=mat-elevation-z]) {
-    box-shadow: none;
-    ;
-  }
-
-  .mat-drawer-inner-container {
-    scrollbar-width: thin;
-
-    // -webkit-scrollbar-button: 5px;
-    &::-webkit-scrollbar {
-      -webkit-appearance: none;
+        flex: 1 0 auto;
     }
 
-    &::-webkit-scrollbar:vertical {
-      width: 10px;
+    .mat-toolbar {
+        &.mat-primary {
+            background: $primary;
+        }
     }
 
-    &::-webkit-scrollbar-button:increment,
-    &::-webkit-scrollbar-button {
-      display: none;
+    mat-sidenav {
+        &.mat-drawer {
+            background-color: transparent;
+
+            .mat-expansion-panel {
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            .mat-drawer-inner-container {
+                background-color: $background;
+            }
+        }
     }
 
-    &::-webkit-scrollbar:horizontal {
-      height: 10px;
+    @media (max-width: 1280px) {
+        .mat-sidenav {
+            &.mat-drawer {
+                .mat-drawer-inner-container {
+                    background-color: #fff;
+                }
+            }
+        }
     }
 
-    &::-webkit-scrollbar-thumb {
-      background-color: #dadada;
-      border-radius: 20px;
-      border: 2px solid #f1f2f3;
+    .mat-expansion-panel:not([class*=mat-elevation-z]) {
+        box-shadow: none;
+        ;
     }
 
-    &::-webkit-scrollbar-track {
-      border-radius: 10px;
+    .mat-drawer-inner-container {
+        scrollbar-width: thin;
+
+        // -webkit-scrollbar-button: 5px;
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+
+        &::-webkit-scrollbar:vertical {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-button:increment,
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar:horizontal {
+            height: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #dadada;
+            border-radius: 20px;
+            border: 2px solid #f1f2f3;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
     }
-  }
 
-  .mat-drawer-inner-container {
-    .mat-list-base {
+    .mat-drawer-inner-container {
+        .mat-list-base {
 
-      .mat-list-item,
-      .mat-list-option {
-        height: 30px;
-      }
-    }
-  }
-
-  mat-sidenav.mat-drawer.mat-sidenav.mat-sidenav-fixed.mat-drawer-opened {
-    width: 100%;
-  }
-
-  @media (max-width: 599px) {
-
-    .mat-toolbar-row,
-    .mat-toolbar-single-row {
-      height: 64px;
+            .mat-list-item,
+            .mat-list-option {
+                height: 30px;
+            }
+        }
     }
 
-  }
+    mat-sidenav.mat-drawer.mat-sidenav.mat-sidenav-fixed.mat-drawer-opened {
+        width: 100%;
+    }
+
+    @media (max-width: 599px) {
+
+        .mat-toolbar-row,
+        .mat-toolbar-single-row {
+            height: 64px;
+        }
+
+    }
 
 }

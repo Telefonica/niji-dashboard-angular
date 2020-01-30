@@ -10,6 +10,12 @@ export class MainMenuDropdownComponent implements OnInit {
     public optionHeight = '50px';
     public menus = [
         {
+            title: 'Inicio',
+            icon: './../../assets/global/img/icons/log-out-icon.svg',
+            link: '/',
+            selected: true,
+        },
+        {
             title: 'Protección Red WiFi',
             icon: './../../assets/global/img/icons/wifi-icon.svg',
             expanded: true,
@@ -17,7 +23,6 @@ export class MainMenuDropdownComponent implements OnInit {
                 alias: 'Casa',
                 num: '91 681 74 17',
                 link: 'wifi-protection',
-                selected: true,
             }],
         },
         {
@@ -28,7 +33,8 @@ export class MainMenuDropdownComponent implements OnInit {
                 {
                     alias: 'Julia',
                     num: '634 567 879',
-                    link: 'otherlink'
+                    link: 'otherlink',
+                    selected: true,
                 },
                 {
                     alias: 'Daniel',
@@ -46,7 +52,7 @@ export class MainMenuDropdownComponent implements OnInit {
             title: 'Consejos navegación segura',
             icon: './../../assets/global/img/icons/heart-icon.svg',
             expanded: false,
-            // link: 'otherlink',
+            // link: 'otherlink'
             selected: true,
             welcome: true
         },

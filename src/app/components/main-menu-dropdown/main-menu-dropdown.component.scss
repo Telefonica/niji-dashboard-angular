@@ -13,7 +13,7 @@
 
             &:hover,
             &:focus {
-                background: $soft-primary;
+                background: $menu-selected;
                 opacity: 1;
             }
         }
@@ -25,7 +25,7 @@
             margin-bottom: 0;
 
             &:hover {
-                background: $soft-primary;
+                background: rgba(0, 0, 0, 0);
             }
         }
     }
@@ -50,7 +50,7 @@
 
     .mat-expansion-panel-body {
         padding: 0;
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
 
     .mat-list {
@@ -67,25 +67,43 @@
 
     .selected {
         border-left: 3px solid $primary;
+        background-color: $menu-selected !important;
+
+        >* {
+            color: $primary;
+        }
+
+        // .mat-button-wrapper {
+        //     span {
+        //         color: $primary;
+        //     }
+        // }
     }
 
     .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover,
     .mat-expansion-panel-header.mat-expanded:focus,
     .mat-expansion-panel-header.mat-expanded:hover {
-        background: $soft-primary;
+        background: $menu-selected;
     }
 
     .mat-expansion-panel .mat-expansion-panel-header {
 
         &.cdk-focused,
         &.cdk-program-focused {
-            background: $soft-primary;
+            background: rgba(0, 0, 0, 0);
         }
     }
 
     .mat-button-focus-overlay {
-        background: $soft-primary;
+        background: rgba(0, 0, 0, 0);
     }
+
+    .mat-expansion-panel-header:not(.mat-expanded) {
+        .mat-expansion-indicator::after {
+            color: $primary;
+        }
+    }
+
 
     @media (min-width: 1280px) {
         .mat-accordion>div {
