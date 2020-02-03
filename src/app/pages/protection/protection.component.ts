@@ -15,7 +15,7 @@ export class ProtectionComponent implements OnInit {
     ];
     public cards = [
         {
-            title: 'Protección WiFi Hogar',
+            title: 'Protección Red WiFi',
             subtitle: false,
             subtitleModalLink: 'Descubre más',
             helpModal: 'openBrowseProtection',
@@ -27,7 +27,7 @@ export class ProtectionComponent implements OnInit {
 
             contents: [
                 {
-                    linkTitle: 'Historial de amenazas',
+                    linkTitle: 'Listado de amenazas',
                     link: '/threats'
                 },
                 {
@@ -63,6 +63,7 @@ export class ProtectionComponent implements OnInit {
             helpModal: 'openDeviceProtection',
             icon: './../../assets/global/img/icons/lock-icon.svg',
             secondIcon: './../../assets/global/img/icons/arrow-right-icon.svg',
+            protectionActive: true
 
         },
     ];
@@ -102,7 +103,7 @@ export class ProtectionComponent implements OnInit {
         subtitle: 'Aciva la protección Red Wifi y disfruta de:',
         listIcon: './../../../assets/global/img/icons/list-check-icon.svg',
         listTitle1: 'Protección contra amenazas en tu navegación',
-        listSubtile1: ' Consulta el historial de amenazas y descubre el día, la hora y el tipo de amenaza de las que estás protegido',
+        listSubtile1: ' Consulta el Listado de amenazas y descubre el día, la hora y el tipo de amenaza de las que estás protegido',
         listTitle2: 'Sitios Web Autorizados',
         listSubtile2: 'Personaliza una lista con tus  sitios web de confianza',
     }
@@ -115,4 +116,10 @@ export class ProtectionComponent implements OnInit {
         localStorage.removeItem('welcome');
         this.dataService.welcomeState$.emit(open);
     }
+    hasSecurityLevel() {
+        // TODO: do checks
+        return true;
+    }
+
+
 }

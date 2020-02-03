@@ -25,8 +25,8 @@
             </div>
         </div>
 
-        <div *ngFor="let card of cards" class="col mt-4">
-            <mat-card class="custom-card">
+        <div *ngFor="let card of cards; let i = index" class="col mt-4">
+            <mat-card class="custom-card" *ngIf="(i !== 1) || cards[1].protectionActive">
                 <mat-card-header>
                     <mat-card-title>
                         <span class="icon-title-container">

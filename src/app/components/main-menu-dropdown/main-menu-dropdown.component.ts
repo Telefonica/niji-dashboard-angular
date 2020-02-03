@@ -11,7 +11,7 @@ export class MainMenuDropdownComponent implements OnInit {
     public menus = [
         {
             title: 'Inicio',
-            icon: './../../assets/global/img/icons/log-out-icon.svg',
+            icon: './../../assets/global/img/icons/home-icon.svg',
             link: '/',
             selected: true,
         },
@@ -22,7 +22,7 @@ export class MainMenuDropdownComponent implements OnInit {
             contents: [{
                 alias: 'Casa',
                 num: '91 681 74 17',
-                link: 'wifi-protection',
+                link: 'protection',
             }],
         },
         {

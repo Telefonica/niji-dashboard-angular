@@ -16,7 +16,7 @@ export class MainComponent implements OnInit {
             contents: [{
                 alias: 'Casa',
                 num: '91 681 74 17',
-                link: 'wifi-protection',
+                link: 'protection',
                 services: [{
                     name: 'service1',
                     status: 'active'

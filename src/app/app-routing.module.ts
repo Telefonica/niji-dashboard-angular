@@ -8,51 +8,51 @@ import { ThreatsComponent } from './pages/threats/threats.component';
 import { WhitelistComponent } from './pages/whitelist/whitelist.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: MainComponent,
-    resolve: {
-      user: UserResolver
-    }
-  },
-  {
-    path: 'wifi-protection',
-    component: ProtectionComponent,
-    data: {
-      title: 'Protección Wifi Hogar'
-    }
-  },
-  {
-    path: 'device-protection-mcafee',
-    component: DeviceProtectionMcafeeComponent,
-    data: {
-      title: 'Seguridad Dispositivo Mcafee'
-    }
-  },
-  {
-    path: 'threats',
-    component: ThreatsComponent,
-    resolve: {
-        user: UserResolver
+    {
+        path: '',
+        component: MainComponent,
+        resolve: {
+            user: UserResolver
+        }
     },
-    data: {
-      title: 'Listado de amenazas',
-      hideStateHeader: true
-    }
-  },
-  {
-    path: 'whitelist',
-    component: WhitelistComponent,
-    data: {
-      title: 'Páginas de confianza',
-      hideStateHeader: true
-    }
-  },
-  { path: '**', redirectTo: '' }
+    {
+        path: 'protection',
+        component: ProtectionComponent,
+        data: {
+            title: 'Protección'
+        }
+    },
+    {
+        path: 'device-protection-mcafee',
+        component: DeviceProtectionMcafeeComponent,
+        data: {
+            title: 'Seguridad Dispositivo Mcafee'
+        }
+    },
+    {
+        path: 'threats',
+        component: ThreatsComponent,
+        resolve: {
+            user: UserResolver
+        },
+        data: {
+            title: 'Listado de amenazas',
+            hideStateHeader: true
+        }
+    },
+    {
+        path: 'whitelist',
+        component: WhitelistComponent,
+        data: {
+            title: 'Páginas de confianza',
+            hideStateHeader: true
+        }
+    },
+    { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
