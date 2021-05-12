@@ -30,7 +30,7 @@
     "material-design-icons": "^3.0.1",
     "ngx-swiper-wrapper": "^8.0.2",
     "rxjs": "~6.4.0",
-    "swiper": "^5.2.1",
+    "swiper": "^6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
